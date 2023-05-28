@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>markdown常用语法总结</title>
+    <url>/2023/05/28/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95_2023_05_28/</url>
+    <content><![CDATA[<hr>
+<h1 id="Markdown常用语法介绍"><a href="#Markdown常用语法介绍" class="headerlink" title="Markdown常用语法介绍 "></a>Markdown常用语法介绍 </h1><p>Markdown是一种使用一定的语法将普通的文本转换成HTML标签文本的编辑语言，它的特点是可以使用普通的文本编辑器来编写，只需要按照特定的语法标记就可以得到丰富多样的HTML格式的文本。本文就来介绍一些常用的Markdown语法以及推荐几款方便又实用的Markdown编辑器。</p>
+<h1 id="换行问题"><a href="#换行问题" class="headerlink" title="换行问题"></a>换行问题</h1><p>换行是markdown最基本的语法规则，也是它不同于普通文本的地方，想要在某一行之后进行换行只按常规的Enter键是不行的。换行有3种方式：</p>
+<ol>
+<li>在行的末尾添加至少两个空格，然后再接Enter另起一行；</li>
+<li>第2种方式是在需要换行的两行内容之间空一行；</li>
+<li>第3种方式是在需要换行的内容末尾添加一个换行标签，也就是<code>&lt;br&gt;</code>标签。</li>
+</ol>
+<h1 id="标题分级"><a href="#标题分级" class="headerlink" title="标题分级"></a>标题分级</h1><p>在当前行之前输入 “#”+”空格”可以使当前行被识别为标题</p>
+<blockquote>
+<p>“# “ -&gt; 一级标题是<br>“## “ -&gt; 二级标题<br>“### “ -&gt; 三级标题</p>
+</blockquote>
+<h2 id="标题分级另一种写法"><a href="#标题分级另一种写法" class="headerlink" title="标题分级另一种写法"></a>标题分级另一种写法</h2><p>在当前行的下一行输入一个或者多个”&#x3D;”和”-“可以使当前行被识别为标题</p>
+<blockquote>
+<p>“这是一个一级标题”<br>“&#x3D;”</p>
+<p>“这是一个二级标题”<br>“-“</p>
+</blockquote>
+<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>使用三个或以上的 “-“ 或者 “*“ 表示(混合的不行)，且这一行只有符号，<strong>注意不要被识别为二级标题即可，意思是上面需要是空行</strong>，例如中间或者前面可以加空格。</p>
+<blockquote>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法*********  "></a><strong>语法</strong><br>***<br>******  </h2><hr>
+</blockquote>
+<h1 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h1><p>使用 (<code>*</code>或者<code>_</code> )和( <code>**</code>或者<code>__</code>) 分别表示斜体和粗体，删除线使用两个 <code>~</code> 表示</p>
+<blockquote>
+<p><strong>语法</strong><br>*我是斜体*<br><em>我是斜体</em><br>**我是加粗**<br><strong>我是加粗</strong><br>~~我是删除~~<br>***我是又粗又斜***<br><em><strong>我是又粗又斜</strong></em></p>
+</blockquote>
+<h1 id="超链接和图片引用"><a href="#超链接和图片引用" class="headerlink" title="超链接和图片引用"></a>超链接和图片引用</h1><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><h3 id="内联超链接"><a href="#内联超链接" class="headerlink" title="内联超链接"></a>内联超链接</h3><p>使用<code>[链接文字](链接地址)</code>来表示，如果要给链接一个提示信息，可以在链接用引号把文字包围起来，就像这样<code>[链接文字](链接地址+空格+&quot;文字说明&quot;)</code></p>
+<blockquote>
+<p><strong>语法</strong><br>[链接例子《就是外在文字》](<a href="http://www.baidu.com/">http://www.baidu.com/</a>“ 我是说明文字：我其实就是HTML 的&lt;a&gt; 标签的 Title 属性”)</p>
+</blockquote>
+<h3 id="自动超链接"><a href="#自动超链接" class="headerlink" title="自动超链接"></a>自动超链接</h3><p>以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用<code>&lt;&gt;</code>包起来， Markdown 就会自动把它转成链接</p>
+<blockquote>
+<p><strong>语法</strong><br>&lt;<a href="http://example.com//%3E">http://example.com/\&gt;</a></p>
+</blockquote>
+<h3 id="引用式链接"><a href="#引用式链接" class="headerlink" title="引用式链接"></a>引用式链接</h3><p>在任意地方使用<code>[链接引用标记]:链接地址+空格+&quot;文字说明&quot;</code> 来定义引用的链接地址,然后使用<code>[链接文字][链接引用标记]</code>放在需要插入链接的地方</p>
+<blockquote>
+<p><strong>语法</strong><br>[link1]:<a href="http://www.baidu.com/">http://www.baidu.com/</a> “baidu.com 其实就是HTML 的&lt;a&gt; 标签的 Title 属性”<br>[引用式链接例子《就是外在文字》][link1]</p>
+</blockquote>
+<h4 id="引用式链接-简化"><a href="#引用式链接-简化" class="headerlink" title="引用式链接-简化"></a>引用式链接-简化</h4><p>该功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，只要在链接文字后面加上一个空的方括号，如果你要让 “Google” 链接到 <a href="http://google.com/">google.com</a>,这么写就行</p>
+<blockquote>
+<p><strong>语法</strong><br>[Google][]<br>[Google]: <a href="http://google.com/">http://google.com/</a></p>
+</blockquote>
+<h2 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h2><h3 id="内联式图片引用"><a href="#内联式图片引用" class="headerlink" title="内联式图片引用"></a>内联式图片引用</h3><p>图片引用仅在超链接前多了一个 <code>!</code> ，一般是<code>![图片文字](图片地址+空格+&quot;文字说明&quot;)</code></p>
+<blockquote>
+<p><strong>语法</strong><br>![图片例子《就是Alt属性》](<a href="http://www.baidu.com/images/logo.png">http://www.baidu.com/images/logo.png</a> “我是说明文字：我其实就是HTML 的&lt;a&gt; 标签的 Title 属性”)</p>
+</blockquote>
+<h3 id="引用式图片引用"><a href="#引用式图片引用" class="headerlink" title="引用式图片引用"></a>引用式图片引用</h3><p>在任意地方使用<code>[图片引用标记]:图片地址+空格+&quot;文字说明&quot;</code> 来定义引用的图片链接地址,然后使用<code>[图片文字][图片引用标记]</code>放在需要插入图片链接的地方</p>
+<blockquote>
+<p><strong>语法</strong><br>[link2]:<a href="http://www.baidu.com/images/logo.png">http://www.baidu.com/images/logo.png</a> “baidu.com 其实就是HTML 的&lt;a&gt; 标签的 Title 属性”<br>![引用式图片链接例子《就是Alt属性》][link2]</p>
+</blockquote>
+<h2 id="带有链接的图片"><a href="#带有链接的图片" class="headerlink" title="带有链接的图片"></a>带有链接的图片</h2><p>部分markdown编辑器只需要将链接代码套在图片代码外边就可以实现。</p>
+<blockquote>
+<p><strong>语法</strong><br>[![图片例子](<a href="http://www.baidu.com/images/logo.png">http://www.baidu.com/images/logo.png</a> “图片说明文字”)](<a href="http://www.baidu.com/">http://www.baidu.com/</a> “链接说明文字”)</p>
+</blockquote>
+<h1 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h1><p>使用 <code>-</code>、<code>+</code> 和 <code>*</code>+<code>空格</code> +<code>文字内容</code> 表示无序列表<br>可用<code>tab</code> 或者<code>空格</code> + <code>-</code>、<code>+</code> 或者 <code>*</code> +<code>文字内容</code>使列表嵌套<br><strong>成功嵌套的条件是</strong> 下一层的<code>-</code>、<code>+</code> 和 <code>*</code> 的前面的空白长度满足以下条件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">tab长度×(层数-<span class="number">1</span>) &lt; 空白长度 ≤ tab长度×层数</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>  + 第一层<br>    * 第二层<br>        + 第三层</p>
+<p>  + 再来一个第一层</p>
+</blockquote>
+<h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><p>使用 <code>1.</code> +<code>空格</code> +<code>文字内容</code> 表示有序列表，可嵌套。<br>可用<code>tab</code> 或者<code>空格</code> + <code>-</code>、<code>+</code> 或者 <code>*</code> +<code>文字内容</code>使列表嵌套<br><strong>成功嵌套的条件是</strong> 下一层的<code>-</code>、<code>+</code> 和 <code>*</code> 的前面的空白长度满足以下条件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">tab长度×(层数-<span class="number">1</span>) &lt; 空白长度 ≤ tab长度×层数</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>语法</strong><br> 1. 第一层<br>   1. 第二层<br>    1. 第三层</p>
+<p>  2. 再来一个第一层<br><strong>实例</strong></p>
+<ol>
+<li><p>第一层</p>
+</li>
+<li><p>第二层.1</p>
+</li>
+<li><p>第二层.2</p>
+<ol>
+<li>第三层.1</li>
+<li>第三层.2</li>
+</ol>
+</li>
+<li><p>第二层.3</p>
+</li>
+<li><p>在列表结束敲二个空行，在第二个空行中写入任何内容都可以重开一个计数列表</p>
+</li>
+</ol>
+</blockquote>
+<h1 id="文字引用"><a href="#文字引用" class="headerlink" title="文字引用"></a>文字引用</h1><p>使用 <code>&gt;</code> 表示，可以有多个 <code>&gt;</code>，表示层级更深</p>
+<p>要从深层到浅层需要在浅层上方留一个有与层数相同个数 <code>&gt;</code>的空行</p>
+<blockquote>
+<p><strong>语法</strong><br>&gt;文字内容<br>&gt;文字内容<br>&gt;&gt;文字内容<br>&gt;<br>&gt;文字内容<br>&gt;文字内容<br><strong>实例</strong><br>文字内容<br>文字内容</p>
+<blockquote>
+<p>文字内容</p>
+</blockquote>
+<p>文字内容<br>文字内容</p>
+</blockquote>
+<h1 id="行内代码块-java、html、text、nginx等"><a href="#行内代码块-java、html、text、nginx等" class="headerlink" title="行内代码块(java、html、text、nginx等)"></a>行内代码块(java、html、text、nginx等)</h1><p>使用 “ ` “ 把代码包围起来即可</p>
+<blockquote>
+<p><strong>语法</strong><br>`a &#x3D; 1`</p>
+</blockquote>
+<p>如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：</p>
+<blockquote>
+<p><strong>语法</strong><br>`` There is a literal backtick (`) here.``</p>
+</blockquote>
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>使用四个空格缩进表示代码块，</p>
+<blockquote>
+<p><strong>语法</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="title function_">print</span><span class="params">(<span class="string">&quot;hello world&quot;</span>)</span></span><br><span class="line">def <span class="title function_">show_time</span><span class="params">()</span>:</span><br><span class="line"><span class="keyword">return</span> time.time()</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>一些 IDE 支持行数提示和着色，一般使用三个 “ ` “ 表示，例如<br>代码块使用3个 “ ` “包围起来表示，而且代码块的第一行的3个 “ ` “ 后面可以写上代码的编程语言，方便Markdown转化之后进行高亮显示，如写上python或者js</p>
+<blockquote>
+<p><strong>语法</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">```python</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="title function_">print</span><span class="params">(<span class="string">&quot;hello world&quot;</span>)</span></span><br><span class="line">def <span class="title function_">show_time</span><span class="params">()</span>:</span><br><span class="line"><span class="keyword">return</span> time.time()</span><br><span class="line">`` `</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>表格由3个部分组成</p>
+<p>第一个部分是表格的标题，使用<code>|</code>来作为列的分割<br>第二个部分是表示列的对齐方式，有左对齐、居中对齐和居右对齐三种类型，直接看例子吧， <code>---</code> 表示了默认的<strong>左对齐</strong> ， <code>:---</code> 表示 <strong>左对齐</strong> ， <code>---:</code> 表示 <strong>右对齐</strong> ， <code>:---:</code> 表示<strong>居中对齐</strong><br>第三个部分就是内容了，表示方式跟标题一样，可以有多行</p>
+<blockquote>
+<p><strong>语法</strong><br>|左对齐标题|右对齐标题|居中对齐标题|<br>|-|——: |:——: |<br>|居左|居右|居中|<br>|测试文本|测试文本|测试文本|<br><strong>实例</strong></p>
+<table>
+<thead>
+<tr>
+<th>左对齐标题</th>
+<th align="right">右对齐标题</th>
+<th align="center">居中对齐标题</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>居左</td>
+<td align="right">居右</td>
+<td align="center">居中</td>
+</tr>
+<tr>
+<td>测试文本</td>
+<td align="right">测试文本</td>
+<td align="center">测试文本</td>
+</tr>
+</tbody></table>
+</blockquote>
+<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><p>不同的Markdown解析器原理不同，不一定支持流程图<br>obsidian 支持 mermaid 流程图。其他的流程图也许要安装插件<br>mermaid文档: <a href="https://mermaid-js.github.io/mermaid/#/README">https://mermaid-js.github.io/mermaid/#/README</a><br>mermaid在线编辑器: <a href="https://mermaid-js.github.io/mermaid-live-editor">https://mermaid-js.github.io/mermaid-live-editor</a></p>
+<blockquote>
+<p><strong>语法</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">```mermaid </span><br><span class="line">sequenceDiagram</span><br><span class="line">Alice-&gt;&gt;John: Hello John, how are you?</span><br><span class="line">loop Healthcheck</span><br><span class="line">John-&gt;&gt;John: Fight against hypochondria</span><br><span class="line">end</span><br><span class="line">Note right of John: Rational thoughts!</span><br><span class="line">John--&gt;&gt;Alice: Great!</span><br><span class="line">John-&gt;&gt;Bob: How about you?</span><br><span class="line">Bob--&gt;&gt;John: Jolly good!</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p><strong>实例</strong><br>Alice John Bob Hello John, how are you? Fight against hypochondria loop [Healthcheck] Rational thoughts! Great! How about you? Jolly good! Alice John Bob</p>
+</blockquote>
+<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><p>支持 LaTeX 编辑显示支持，<br>使用 <code>$</code> 表示，其中一个 <code>$</code> 表示在行内，两个 <code>$</code> 表示独占一行。</p>
+<blockquote>
+<p>eg : ∑ i &#x3D; 1 n a i &#x3D; 0 \sum_{i&#x3D;1}^n a_i&#x3D;0 ∑i&#x3D;1nai&#x3D;0</p>
+</blockquote>
+<p>参考教程：<a href="https://1024th.github.io/MathJax_Tutorial_CN">https://1024th.github.io/MathJax_Tutorial_CN</a></p>
+<p>推荐一个常用的数学公式在线编译网站：<a href="https://www.latexlive.com/">https://www.latexlive.com</a></p>
+<h1 id="HTML引用"><a href="#HTML引用" class="headerlink" title="HTML引用"></a>HTML引用</h1><p>直接在Markdown里面写HTML即可</p>
+<h2 id="CSS-样式相关"><a href="#CSS-样式相关" class="headerlink" title="CSS 样式相关"></a>CSS 样式相关</h2><h3 id="样式标签"><a href="#样式标签" class="headerlink" title="样式标签"></a>样式标签</h3><blockquote>
+<p>&lt;b&gt;加粗&lt;&#x2F;b&gt;<br>&lt;strong&gt;加粗&lt;&#x2F;strong&gt;<br>&lt;i&gt;倾斜&lt;&#x2F;i&gt;<br>&lt;em&gt;倾斜&lt;&#x2F;em&gt;<br>&lt;u&gt;下划线&lt;&#x2F;u&gt;<br>&lt;ins&gt;下划线&lt;&#x2F;ins&gt;<br>&lt;s&gt;删除线&lt;&#x2F;s&gt;<br>&lt;del&gt;删除线&lt;&#x2F;del&gt;<br>&lt;sub&gt;下标&lt;&#x2F;sub&gt;<br>&lt;sup&gt;上标&lt;&#x2F;sup&gt;</p>
+</blockquote>
+<h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><blockquote>
+<p>&lt;b style&#x3D;”font-size:80px; color:red”&gt;加粗&lt;&#x2F;b&gt;</p>
+</blockquote>
+<h3 id="lt-style-gt-标签"><a href="#lt-style-gt-标签" class="headerlink" title="&lt;style&gt;标签"></a>&lt;style&gt;标签</h3><blockquote>
+<p>&lt;style&gt;<br>h1{<br>font-size:80px;<br>color:#7ecef4;<br>text-intent:10px;<br>}<br>&lt;&#x2F;style&gt;</p>
+</blockquote>
+<h3 id="lt-link-gt-引用外部CSS"><a href="#lt-link-gt-引用外部CSS" class="headerlink" title="&lt;link&gt;引用外部CSS"></a>&lt;link&gt;引用外部CSS</h3><blockquote>
+<p>&lt;link href&#x3D;”main.css” rel&#x3D;”stylesheet”&gt;</p>
+</blockquote>
+<p>这种方式，某些Markdown渲染器可以，反正obsidian是不行</p>
+<h2 id="HTML-内容相关"><a href="#HTML-内容相关" class="headerlink" title="HTML 内容相关"></a>HTML 内容相关</h2><p>在Markdown中可以展示出网页内容<br>支持的也就是普通的内容，交互式的标签基本都被和谐了<br>HTML教程：<a href="https://www.runoob.com/html/html-tutorial.html">https://www.runoob.com/html/html-tutorial.html</a></p>
+<blockquote>
+<p><strong>例子，用html的 <code>&lt;a&gt;</code> 和 <code>&lt;img&gt;</code> 标签实现带连接的图片</strong><br>&lt;a href &#x3D;”超链接地址”&gt;&lt;img src&#x3D;”图片地址”&gt;&lt;&#x2F;a&gt;</p>
+</blockquote>
+<h2 id="JavaScript-脚本相关"><a href="#JavaScript-脚本相关" class="headerlink" title="JavaScript 脚本相关"></a>JavaScript 脚本相关</h2><p>很多Markdown渲染器是不允许js跑起来的</p>
+<blockquote>
+<p><strong>外部引用和直接写这两种基本都跑不起来</strong><br>&lt;script src&#x3D;”javascript.js”&gt;&lt;&#x2F;script&gt;</p>
+<p>&lt;script&gt;<br>console.log(“hello world!”)<br>&lt;&#x2F;script&gt;<br><strong>内联事件的js可能可以跑起来,反正obsidian是不行</strong><br>&lt;div οnclick&#x3D;”(function(){ alert(1)})()”&gt;js测试按钮&lt;&#x2F;div&gt;</p>
+</blockquote>
+<h1 id="反斜杠转义"><a href="#反斜杠转义" class="headerlink" title="反斜杠转义"></a>反斜杠转义</h1><p>由于Markdown的语法基本都是用的符号表示，所以当需要直接输出某些特定的符号的时候，就必须使用反斜杠的转义作用了，使用方法很简单，跟大部分的编程语言的用法一样，只需要在特定的符号前面加上一个反斜杠就可以了，例如输出<code>\</code>本身，就需要使用<code>\\</code>来表示了。</p>
+<h1 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h1><p><code>-/+/*</code>+<code>空格</code>+<code>[</code>+<code>空格/x</code>+<code>]</code> +<code>空格</code>+文字内容</p>
+<blockquote>
+<p><strong>语法</strong></p>
+<ul>
+<li>[ ] 待办事项  </li>
+<li>[x] 已完成的待办事项<br><strong>实例</strong></li>
+</ul>
+<ul>
+<li><input disabled="" type="checkbox"> 待办事项</li>
+<li><input checked="" disabled="" type="checkbox"> 已完成的待办事项</li>
+</ul>
+</blockquote>
+<h1 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h1><p>在文档末尾写上<code>[</code>+<code>^+数字</code>+<code>]:</code>+文字内容 声明一个脚注<br>然后就跟文献引用一样，在要引用该脚注的文字后插入<code>[</code>+<code>^+数字</code>+<code>]</code>即可</p>
+<blockquote>
+<p><strong>语法</strong><br>该方法根据实验证明有效[^1]<br>[^1]:文章链接</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>markdown</category>
+      </categories>
+      <tags>
+        <tag>语法</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java中代码优化的30个小技巧</title>
+    <url>/2023/05/28/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96_2023_05_28/</url>
+    <content><![CDATA[<br />
+
+<h2 id="1-用String-format拼接字符串"><a href="#1-用String-format拼接字符串" class="headerlink" title="1.用String.format拼接字符串 "></a>1.用String.format拼接字符串 </h2><p><em><strong>String.format</strong></em>方法拼接url请求参数，日志打印等字符串。</p>
+<p>但不建议在for循环中用它拼接字符串，因为它的执行效率，比使用+号拼接字符串，或者使用StringBuilder拼接字符串都要慢一些。</p>
+<h2 id="2-创建可缓冲的IO流"><a href="#2-创建可缓冲的IO流" class="headerlink" title="2.创建可缓冲的IO流"></a>2.创建可缓冲的IO流</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//尽量使用try-with-resources语句，可以在程序结束时自动关闭资源</span></span><br><span class="line"><span class="keyword">try</span> (<span class="type">ServletOutputStream</span> <span class="variable">outStr</span> <span class="operator">=</span> response.getOutputStream();</span><br><span class="line">     <span class="type">BufferedOutputStream</span> <span class="variable">buff</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedOutputStream</span>(outStr))&#123;</span><br><span class="line">    buff.write(text.getBytes(<span class="string">&quot;UTF-8&quot;</span>));</span><br><span class="line">    buff.flush();</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">    log.error(<span class="string">&quot;导出文件文件出错:&#123;&#125;&quot;</span>,e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用缓冲流</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">File</span> <span class="variable">srcFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;/Users/Documents/test1/1.txt&quot;</span>);</span><br><span class="line"><span class="type">File</span> <span class="variable">destFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(<span class="string">&quot;/Users/Documents/test1/2.txt&quot;</span>);</span><br><span class="line"><span class="keyword">try</span>(<span class="type">FileInputStream</span> <span class="variable">fis</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(srcFile);</span><br><span class="line">    <span class="type">FileOutputStream</span> <span class="variable">fos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(destFile);</span><br><span class="line"><span class="type">BufferedInputStream</span> <span class="variable">bis</span>  <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedInputStream</span>(fis);</span><br><span class="line"><span class="type">BufferedOutputStream</span> <span class="variable">bos</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedOutputStream</span>(fos)) &#123;</span><br><span class="line">    <span class="type">byte</span>[] buffer = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">    <span class="type">int</span> len;</span><br><span class="line">    <span class="keyword">while</span> ((len = bis.read(buffer)) != -<span class="number">1</span>) &#123;</span><br><span class="line">        bos.write(buffer, <span class="number">0</span>, len);</span><br><span class="line">    &#125;</span><br><span class="line">    bos.flush();</span><br><span class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h2 id="3-减少循环次数"><a href="#3-减少循环次数" class="headerlink" title="3.减少循环次数"></a>3.减少循环次数</h2><p>如果循环层级比较深，循环中套循环，可能会影响代码的执行效率。</p>
+<p>如果有两层循环，如果userList和roleList数据比较多的话，需要循环遍历很多次，才能获取我们所需要的数据，非常消耗cpu资源。</p>
+<p>如下代码所示：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//正常逻辑2层for循环处理</span></span><br><span class="line"><span class="keyword">for</span>(User user: userList) &#123;</span><br><span class="line">   <span class="keyword">for</span>(Role role: roleList) &#123;</span><br><span class="line">      <span class="keyword">if</span>(user.getRoleId().equals(role.getId())) &#123;</span><br><span class="line">         user.setRoleName(role.getName());</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优化后的代码如下所示：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;Long, List&lt;Role&gt;&gt; roleMap = roleList.stream().collect(Collectors.groupingBy(Role::getId));</span><br><span class="line"><span class="keyword">for</span> (User user : userList) &#123;</span><br><span class="line">    List&lt;Role&gt; roles = roleMap.get(user.getRoleId());</span><br><span class="line">    <span class="keyword">if</span>(CollectionUtils.isNotEmpty(roles)) &#123;</span><br><span class="line">        user.setRoleName(roles.get(<span class="number">0</span>).getName());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优化思想就是减少循环次数，最简单的办法是，把第二层循环的集合变成<em><strong>map</strong></em>，这样可以直接通过<em><strong>key</strong></em>，获取想要的<em><strong>value</strong></em>数据。</p>
+<p>虽说map的key存在<em><strong>hash冲突</strong></em>的情况，但遍历存放数据的<em><strong>链表</strong></em>或者<em><strong>红黑树</strong></em>的<em><strong>时间复杂度</strong></em>，比遍历整个list集合要小很多。</p>
+<h2 id="4-用完资源记得及时关闭"><a href="#4-用完资源记得及时关闭" class="headerlink" title="4.用完资源记得及时关闭"></a>4.用完资源记得及时关闭</h2><p>参考第二点尽量使用try-with-resources语句或者手动关闭资源</p>
+<h2 id="5-使用池技术"><a href="#5-使用池技术" class="headerlink" title="5.使用池技术"></a>5.使用池技术</h2><p>数据库连接池、线程池</p>
+<h2 id="6-消除if…else的锦囊妙计，反射时添加缓存"><a href="#6-消除if…else的锦囊妙计，反射时添加缓存" class="headerlink" title="6.消除if…else的锦囊妙计，反射时添加缓存"></a>6.消除if…else的锦囊妙计，反射时添加缓存</h2><p>我们都知道通过<em><strong>反射</strong></em>创建对象实例，比使用<em><strong>new</strong></em>关键字要慢很多。</p>
+<p>由此，不太建议在用户请求过来时，每次都通过反射<em><strong>实时</strong></em>创建实例。</p>
+<p>有时候，为了代码的灵活性，又不得不用反射创建实例，这时该怎么办呢？</p>
+<p>答：加<em><strong>缓存</strong></em>。</p>
+<p>先看以下代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">publicinterface IPay &#123;  </span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">()</span>;  </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line">publicclass AliaPay <span class="keyword">implements</span> <span class="title class_">IPay</span> &#123;  </span><br><span class="line">     <span class="meta">@Override</span></span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">()</span> &#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;===发起支付宝支付===&quot;</span>);  </span><br><span class="line">     &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line">publicclass WeixinPay <span class="keyword">implements</span> <span class="title class_">IPay</span> &#123;  </span><br><span class="line">     <span class="meta">@Override</span></span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">()</span> &#123;  </span><br><span class="line">         System.out.println(<span class="string">&quot;===发起微信支付===&quot;</span>);  </span><br><span class="line">     &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line">publicclass JingDongPay <span class="keyword">implements</span> <span class="title class_">IPay</span> &#123;  </span><br><span class="line">     <span class="meta">@Override</span></span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">()</span> &#123;  </span><br><span class="line">        System.out.println(<span class="string">&quot;===发起京东支付===&quot;</span>);  </span><br><span class="line">     &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line">publicclass PayService &#123;  </span><br><span class="line">     <span class="meta">@Autowired</span></span><br><span class="line">     <span class="keyword">private</span> AliaPay aliaPay;  </span><br><span class="line">     <span class="meta">@Autowired</span></span><br><span class="line">     <span class="keyword">private</span> WeixinPay weixinPay;  </span><br><span class="line">     <span class="meta">@Autowired</span></span><br><span class="line">     <span class="keyword">private</span> JingDongPay jingDongPay;  </span><br><span class="line">    </span><br><span class="line">   </span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">toPay</span><span class="params">(String code)</span> &#123;  </span><br><span class="line">         <span class="keyword">if</span> (<span class="string">&quot;alia&quot;</span>.equals(code)) &#123;  </span><br><span class="line">             aliaPay.pay();  </span><br><span class="line">         &#125; elseif (<span class="string">&quot;weixin&quot;</span>.equals(code)) &#123;  </span><br><span class="line">              weixinPay.pay();  </span><br><span class="line">         &#125; elseif (<span class="string">&quot;jingdong&quot;</span>.equals(code)) &#123;  </span><br><span class="line">              jingDongPay.pay();  </span><br><span class="line">         &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">              System.out.println(<span class="string">&quot;找不到支付方式&quot;</span>);  </span><br><span class="line">         &#125;  </span><br><span class="line">     &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里违法了设计模式六大原则的：<em><strong>开闭原则</strong></em> 和 <em><strong>单一职责原则</strong></em>。</p>
+<p>开闭原则：对扩展开放，对修改关闭。就是说增加新功能要尽量少改动已有代码。</p>
+<p>单一职责原则：顾名思义，要求逻辑尽量单一，不要太复杂，便于复用。</p>
+<ol>
+<li>先创建一个注解</li>
+<li>在所有的支付类上都加上该注解</li>
+<li>增加最关键的类PayService2</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span>: Ywh</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2022/7/25 14:50</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@Target(ElementType.TYPE)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> PayCode &#123;</span><br><span class="line">    String <span class="title function_">value</span><span class="params">()</span>;</span><br><span class="line">    String <span class="title function_">name</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@PayCode(value = &quot;alia&quot;, name = &quot;支付宝支付&quot;)</span></span><br><span class="line"><span class="meta">@Component(&quot;alia&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AliaPay</span> <span class="keyword">implements</span> <span class="title class_">IPay</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;===发起支付宝支付===&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@PayCode(value = &quot;jingdong&quot;, name = &quot;京东支付&quot;)</span></span><br><span class="line"><span class="meta">@Component(&quot;jingdong&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JingDongPay</span> <span class="keyword">implements</span> <span class="title class_">IPay</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;===发起京东支付===&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@PayCode(value = &quot;weixin&quot;, name = &quot;微信支付&quot;)</span></span><br><span class="line"><span class="meta">@Component(&quot;weixin&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WeixinPay</span> <span class="keyword">implements</span> <span class="title class_">IPay</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;===发起微信支付===&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PayService2</span> <span class="keyword">implements</span> <span class="title class_">ApplicationListener</span>&lt;ContextRefreshedEvent&gt; &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Map&lt;String, IPay&gt; payMap = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onApplicationEvent</span><span class="params">(ContextRefreshedEvent contextRefreshedEvent)</span> &#123;</span><br><span class="line">        <span class="comment">//在初始化或刷新ApplicationContext时发布</span></span><br><span class="line">        <span class="type">ApplicationContext</span> <span class="variable">applicationContext</span> <span class="operator">=</span> contextRefreshedEvent.getApplicationContext();</span><br><span class="line">        <span class="comment">//获取所有拥有特定payCode注解的Bean（AliPay、WeiXinPay、JindDongPay）</span></span><br><span class="line">        Map&lt;String, Object&gt; beansWithAnnotation = applicationContext.getBeansWithAnnotation(PayCode.class);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (beansWithAnnotation != <span class="literal">null</span>) &#123;</span><br><span class="line">            payMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">            beansWithAnnotation.forEach((key, value) -&gt; &#123;</span><br><span class="line">                <span class="type">String</span> <span class="variable">bizType</span> <span class="operator">=</span> value.getClass().getAnnotation(PayCode.class).value();</span><br><span class="line">                payMap.put(bizType, (IPay) value);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">(String code)</span> &#123;</span><br><span class="line">        payMap.get(code).pay();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/pay&quot;)</span></span><br><span class="line">    <span class="meta">@ApiOperation(&quot;测试支付&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pay</span><span class="params">(String code)</span>&#123;</span><br><span class="line">        payService2.pay(code);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>PayService2类实现了<em><strong>ApplicationListener</strong></em>接口，这样在<em><strong>onApplicationEvent</strong></em>方法中，就可以拿到<em><strong>ApplicationContext</strong></em>的实例。这一步，其实是在spring容器启动的时候，spring通过反射我们处理好了。</p>
+<p>我们再获取打了PayCode注解的类，放到一个<em><strong>map</strong></em>中，map中的<em><strong>key</strong></em>就是PayCode注解中定义的value，跟code参数一致，<em><strong>value</strong></em>是支付类的实例。</p>
+<p>这样，每次就可以每次直接通过code获取支付类实例，而不用if…else判断了。如果要加新的支付方法，只需在支付类上面打上PayCode注解定义一个新的code即可。</p>
+<p>注意：这种方式的code可以没有业务含义，可以是纯数字，只要不重复就行。</p>
+<h2 id="7-多线程处理"><a href="#7-多线程处理" class="headerlink" title="7.多线程处理"></a>7.多线程处理</h2><p>一句话把串行执行的接口变成并行执行；</p>
+<p><img src="https://img-blog.csdnimg.cn/0f115e004f5b4a21b78f201d0792216c.png"></p>
+<p>并行执行</p>
+<p><img src="https://img-blog.csdnimg.cn/51849d4f6a7446f6bde89286dbfe347e.png"></p>
+<p>在java8之前可以通过实现<em><strong>Callable</strong></em>接口，获取线程返回结果。</p>
+<p>java8以后通过<em><strong>CompleteFuture</strong></em>类实现该功能。我们这里以CompleteFuture为例：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> UserInfo <span class="title function_">getUserInfo</span><span class="params">(Long id)</span> <span class="keyword">throws</span> InterruptedException, ExecutionException &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="type">UserInfo</span> <span class="variable">userInfo</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">UserInfo</span>();</span><br><span class="line">    <span class="type">CompletableFuture</span> <span class="variable">userFuture</span> <span class="operator">=</span> CompletableFuture.supplyAsync(() -&gt; &#123;</span><br><span class="line">        getRemoteUserAndFill(id, userInfo);</span><br><span class="line">        <span class="keyword">return</span> Boolean.TRUE;</span><br><span class="line">    &#125;, executor);</span><br><span class="line"></span><br><span class="line">    <span class="type">CompletableFuture</span> <span class="variable">bonusFuture</span> <span class="operator">=</span> CompletableFuture.supplyAsync(() -&gt; &#123;</span><br><span class="line">        getRemoteBonusAndFill(id, userInfo);</span><br><span class="line">        <span class="keyword">return</span> Boolean.TRUE;</span><br><span class="line">    &#125;, executor);</span><br><span class="line"></span><br><span class="line">    <span class="type">CompletableFuture</span> <span class="variable">growthFuture</span> <span class="operator">=</span> CompletableFuture.supplyAsync(() -&gt; &#123;</span><br><span class="line">        getRemoteGrowthAndFill(id, userInfo);</span><br><span class="line">        <span class="keyword">return</span> Boolean.TRUE;</span><br><span class="line">    &#125;, executor);</span><br><span class="line">    CompletableFuture.allOf(userFuture, bonusFuture, growthFuture).join();</span><br><span class="line"></span><br><span class="line">    userFuture.get();</span><br><span class="line">    bonusFuture.get();</span><br><span class="line">    growthFuture.get();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> userInfo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-懒加载"><a href="#8-懒加载" class="headerlink" title="8.懒加载"></a>8.懒加载</h2><p>有时候，创建对象是一个非常耗时的操作，特别是在该对象的创建过程中，还需要创建很多其他的对象时。</p>
+<p>我们以单例模式为例。</p>
+<p>在介绍单例模式的时候，必须要先介绍它的两种非常著名的实现方式：<em><strong>饿汉模式</strong></em> 和 <em><strong>懒汉模式</strong></em>。</p>
+<h3 id="8-1-饿汉模式"><a href="#8-1-饿汉模式" class="headerlink" title="8.1 饿汉模式"></a>8.1 <em><strong>饿汉模式</strong></em></h3><p>实例在初始化的时候就已经建好了，不管你有没有用到，先建好了再说。具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SimpleSingleton</span> &#123;</span><br><span class="line">    <span class="comment">//持有自己类的引用</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">SimpleSingleton</span> <span class="variable">INSTANCE</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleSingleton</span>();</span><br><span class="line"></span><br><span class="line">    <span class="comment">//私有的构造方法</span></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">SimpleSingleton</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//对外提供获取实例的静态方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> SimpleSingleton <span class="title function_">getInstance</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用饿汉模式的好处是：<em><strong>没有线程安全的问题</strong></em>，但带来的坏处也很明显。</p>
+<h3 id="8-2-懒汉模式"><a href="#8-2-懒汉模式" class="headerlink" title="8.2 懒汉模式"></a>8.2 <em><strong>懒汉模式</strong></em></h3><p>顾名思义就是实例在用到的时候才去创建，”比较懒”，用的时候才去检查有没有实例，如果有则返回，没有则新建。具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SimpleSingleton2</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SimpleSingleton2 INSTANCE;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="title function_">SimpleSingleton2</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> SimpleSingleton2 <span class="title function_">getInstance</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (INSTANCE == <span class="literal">null</span>) &#123;</span><br><span class="line">            INSTANCE = <span class="keyword">new</span> <span class="title class_">SimpleSingleton2</span>();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例中的INSTANCE对象一开始是空的，在调用getInstance方法才会真正实例化。</p>
+<p>懒汉模式相对于饿汉模式，没有提前实例化对象，在真正使用的时候再实例化，在实例化对象的阶段效率更高一些。</p>
+<p><strong>除了单例模式之外，懒加载的思想，使用比较多的可能是：</strong></p>
+<ol>
+<li><p>spring的@Lazy注解。在spring容器启动的时候，不会调用其getBean方法初始化实例。</p>
+</li>
+<li><p>mybatis的懒加载。在mybatis做级联查询的时候，比如查用户的同时需要查角色信息。如果用了懒加载，先只查用户信息，真正使用到角色了，才取查角色信息。</p>
+</li>
+</ol>
+<h2 id="9-初始化集合时指定大小"><a href="#9-初始化集合时指定大小" class="headerlink" title="9.初始化集合时指定大小"></a>9.初始化集合时指定大小</h2><p>在创建集合时指定了大小，比没有指定大小，添加10万个元素的效率提升了一倍。</p>
+<p>如果你看过<em><strong>ArrayList</strong></em>源码，你就会发现它的默认大小是<em><strong>10</strong></em>，如果添加元素超过了一定的阀值，会按<em><strong>1.5</strong></em>倍的大小扩容。</p>
+<p>你想想，如果装10万条数据，需要扩容多少次呀？而每次扩容都需要不停的复制元素，从老集合复制到新集合中，需要浪费多少时间呀。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//示例</span></span><br><span class="line">List&lt;Integer&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//正例 </span></span><br><span class="line">List&lt;Integer&gt; list2 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(<span class="number">100000</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-不要满屏try…catch异常"><a href="#10-不要满屏try…catch异常" class="headerlink" title="10.不要满屏try…catch异常"></a>10.不要满屏try…catch异常</h2><p>可以使用全局异常处理：<em><strong>RestControllerAdvice</strong></em></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RestControllerAdvice</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GlobalExceptionHandler</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExceptionHandler(Exception.class)</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">handleException</span><span class="params">(Exception e)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (e <span class="keyword">instanceof</span> ArithmeticException) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;数据异常&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (e <span class="keyword">instanceof</span> Exception) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;服务器内部异常&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        retur nnull;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-位运算效率更高"><a href="#11-位运算效率更高" class="headerlink" title="11.位运算效率更高"></a>11.位运算效率更高</h2><h2 id="12-巧用第三方工具类"><a href="#12-巧用第三方工具类" class="headerlink" title="12.巧用第三方工具类"></a>12.巧用第三方工具类</h2><p>如果你引入<em><strong>com.google.guava</strong></em>的pom文件，会获得很多好用的小工具。这里推荐一款<em><strong>com.google.common.collect</strong></em>包下的集合工具：<em><strong>Lists</strong></em>。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"> <span class="comment">//guava提供的字符串工具类</span></span><br><span class="line">Strings.isNullOrEmpty(<span class="string">&quot;&quot;</span>);<span class="comment">//返回true</span></span><br><span class="line">Strings.nullToEmpty(<span class="literal">null</span>);<span class="comment">//&quot;&quot;</span></span><br><span class="line">Strings.nullToEmpty(<span class="string">&quot;chen&quot;</span>);<span class="comment">//返回&quot;chen&quot;</span></span><br><span class="line">Strings.emptyToNull(<span class="string">&quot;&quot;</span>);<span class="comment">//返回null</span></span><br><span class="line">Strings.emptyToNull(<span class="string">&quot;chen&quot;</span>);<span class="comment">//返回&quot;chen&quot;  </span></span><br><span class="line"> </span><br><span class="line">Strings.commonPrefix(<span class="string">&quot;aaab&quot;</span>, <span class="string">&quot;aac&quot;</span>);<span class="comment">//&quot;aa&quot;否则返回&quot;&quot;</span></span><br><span class="line">Strings.commonSuffix(<span class="string">&quot;aaac&quot;</span>, <span class="string">&quot;aac&quot;</span>);<span class="comment">//&quot;aac&quot;否则返回&quot;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="13-用同步代码块代替同步方法"><a href="#13-用同步代码块代替同步方法" class="headerlink" title="13.用同步代码块代替同步方法"></a>13.用同步代码块代替同步方法</h2><p>在某些业务场景中，为了防止多个线程并发修改某个共享数据，造成数据异常。</p>
+<p>为了解决并发场景下，多个线程同时修改数据，造成数据不一致的情况。通常情况下，我们会：<em><strong>加锁</strong></em>。</p>
+<p>但如果锁加得不好，导致<em><strong>锁的粒度太粗</strong></em>，也会非常影响接口性能。</p>
+<p>在java中提供了<em><strong>synchronized</strong></em>关键字给我们的代码加锁。</p>
+<p>通常有两种写法：<em><strong>在方法上加锁</strong></em> 和 <em><strong>在代码块上加锁</strong></em>。</p>
+<p>先看看如何在方法上加锁：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="title function_">doSave</span><span class="params">(String fileUrl)</span> &#123;</span><br><span class="line">    mkdir();</span><br><span class="line">    uploadFile(fileUrl);</span><br><span class="line">    sendMessage(fileUrl);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里加锁的目的是为了防止并发的情况下，创建了相同的目录，第二次会创建失败，影响业务功能。</p>
+<p>但这种直接在方法上加锁，锁的粒度有点粗。因为doSave方法中的上传文件和发消息方法，是不需要加锁的。只有创建目录方法，才需要加锁。</p>
+<p>我们都知道文件上传操作是非常耗时的，如果将整个方法加锁，那么需要等到整个方法执行完之后才能释放锁。显然，这会导致该方法的性能很差，变得得不偿失。</p>
+<p>这时，我们可以改成在代码块上加锁了，具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doSave</span><span class="params">(String path,String fileUrl)</span> &#123;</span><br><span class="line">    <span class="keyword">synchronized</span>(<span class="built_in">this</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span>(!exists(path)) &#123;</span><br><span class="line">          mkdir(path);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    uploadFile(fileUrl);</span><br><span class="line">    sendMessage(fileUrl);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样改造之后，锁的粒度一下子变小了，只有并发创建目录功能才加了锁。而创建目录是一个非常快的操作，即使加锁对接口的性能影响也不大。</p>
+<p>最重要的是，其他的上传文件和发送消息功能，任然可以并发执行。</p>
+<h2 id="14-不用的数据及时清理"><a href="#14-不用的数据及时清理" class="headerlink" title="14.不用的数据及时清理"></a>14.不用的数据及时清理</h2><p>在Java中保证线程安全的技术有很多，可以使用<em><strong>synchroized</strong></em>、<em><strong>Lock</strong></em>等关键字给代码块<code>加锁</code>。</p>
+<p>但是它们有个共同的特点，就是加锁会对代码的性能有一定的损耗。</p>
+<p>其实，在jdk中还提供了另外一种思想即：<code>用空间换时间</code>。</p>
+<p>没错，使用<em><strong>ThreadLocal</strong></em>类就是对这种思想的一种具体体现。</p>
+<p>ThreadLocal为每个使用变量的线程提供了一个独立的变量副本，这样每一个线程都能独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
+<p>ThreadLocal的用法大致是这样的：</p>
+<ol>
+<li><p>先创建一个CurrentUser类，其中包含了ThreadLocal的逻辑。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CurrentUser</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> ThreadLocal&lt;UserInfo&gt; THREA_LOCAL = <span class="keyword">new</span> <span class="title class_">ThreadLocal</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(UserInfo userInfo)</span> &#123;</span><br><span class="line">        THREA_LOCAL.set(userInfo);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> UserInfo <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">       THREA_LOCAL.get();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span> &#123;</span><br><span class="line">       THREA_LOCAL.remove();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在业务代码中调用CurrentUser类。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doSamething</span><span class="params">(UserDto userDto)</span> &#123;</span><br><span class="line">   <span class="type">UserInfo</span> <span class="variable">userInfo</span> <span class="operator">=</span> convert(userDto);</span><br><span class="line">   CurrentUser.set(userInfo);</span><br><span class="line">   ...</span><br><span class="line"></span><br><span class="line">   <span class="comment">//业务代码</span></span><br><span class="line">   <span class="type">UserInfo</span> <span class="variable">userInfo</span> <span class="operator">=</span> CurrentUser.get();</span><br><span class="line">   ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在业务代码的第一行，将userInfo对象设置到CurrentUser，这样在业务代码中，就能通过CurrentUser.get()获取到刚刚设置的userInfo对象。特别是对业务代码调用层级比较深的情况，这种用法非常有用，可以减少很多不必要传参。</p>
+<p>但在高并发的场景下，这段代码有问题，只往ThreadLocal存数据，数据用完之后并没有及时清理。</p>
+<p>ThreadLocal即使使用了<em><strong>WeakReference</strong></em>（弱引用）也可能会存在<code>内存泄露</code>问题，因为 entry对象中只把key(即threadLocal对象)设置成了弱引用，但是value值没有。</p>
+<p>那么，如何解决这个问题呢？</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">doSamething</span><span class="params">(UserDto userDto)</span> &#123;</span><br><span class="line">   <span class="type">UserInfo</span> <span class="variable">userInfo</span> <span class="operator">=</span> convert(userDto);</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">try</span>&#123;</span><br><span class="line">     CurrentUser.set(userInfo);</span><br><span class="line">     ...</span><br><span class="line">     </span><br><span class="line">     <span class="comment">//业务代码</span></span><br><span class="line">     <span class="type">UserInfo</span> <span class="variable">userInfo</span> <span class="operator">=</span> CurrentUser.get();</span><br><span class="line">     ...</span><br><span class="line">   &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">      CurrentUser.remove();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要在<em><strong>finally</strong></em>代码块中，调用<em><strong>remove</strong></em>方法清理没用的数据。</p>
+<h2 id="15-用equals方法比较是否相等"><a href="#15-用equals方法比较是否相等" class="headerlink" title="15.用equals方法比较是否相等"></a>15.用equals方法比较是否相等</h2><h2 id="16-避免创建大集合"><a href="#16-避免创建大集合" class="headerlink" title="16.避免创建大集合"></a>16.避免创建大集合</h2><p>尽量分页处理</p>
+<h2 id="17-状态用枚举"><a href="#17-状态用枚举" class="headerlink" title="17.状态用枚举"></a>17.状态用枚举</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">OrderStatusEnum</span> &#123;  </span><br><span class="line">     CREATE(<span class="number">1</span>, <span class="string">&quot;下单&quot;</span>),  </span><br><span class="line">     PAY(<span class="number">2</span>, <span class="string">&quot;支付&quot;</span>),  </span><br><span class="line">     DONE(<span class="number">3</span>, <span class="string">&quot;完成&quot;</span>),  </span><br><span class="line">     CANCEL(<span class="number">4</span>, <span class="string">&quot;撤销&quot;</span>);  </span><br><span class="line"></span><br><span class="line">     <span class="keyword">private</span> <span class="type">int</span> code;  </span><br><span class="line">     <span class="keyword">private</span> String message;  </span><br><span class="line"></span><br><span class="line">     OrderStatusEnum(<span class="type">int</span> code, String message) &#123;  </span><br><span class="line">         <span class="built_in">this</span>.code = code;  </span><br><span class="line">         <span class="built_in">this</span>.message = message;  </span><br><span class="line">     &#125;  </span><br><span class="line">   </span><br><span class="line">     <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getCode</span><span class="params">()</span> &#123;  </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.code;  </span><br><span class="line">     &#125;  </span><br><span class="line"></span><br><span class="line">     <span class="keyword">public</span> String <span class="title function_">getMessage</span><span class="params">()</span> &#123;  </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.message;  </span><br><span class="line">     &#125;  </span><br><span class="line">  </span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">static</span> OrderStatusEnum <span class="title function_">getOrderStatusEnum</span><span class="params">(<span class="type">int</span> code)</span> &#123;  </span><br><span class="line">        <span class="keyword">return</span> Arrays.stream(OrderStatusEnum.values()).filter(x -&gt; x.code == code).findFirst().orElse(<span class="literal">null</span>);  </span><br><span class="line">     &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而且使用枚举的好处是：</p>
+<ol>
+<li><p>代码的可读性变强了，不同的状态，有不同的枚举进行统一管理和维护。</p>
+</li>
+<li><p>枚举是天然单例的，可以直接使用&#x3D;&#x3D;号进行比较。</p>
+</li>
+<li><p>code和message可以成对出现，比较容易相关转换。</p>
+</li>
+<li><p>枚举可以消除if…else过多问题。</p>
+</li>
+</ol>
+<h2 id="18-把固定值定义成静态常量"><a href="#18-把固定值定义成静态常量" class="headerlink" title="18.把固定值定义成静态常量"></a>18.把固定值定义成静态常量</h2><p>使用<em><strong>static final</strong></em>关键字修饰静态常量，<em><strong>static</strong></em>表示<code>静态</code>的意思，即类变量，而<em><strong>final</strong></em>表示<em><strong>不允许修改</strong></em>。</p>
+<p>两个关键字加在一起，告诉Java虚拟机这种变量，在内存中只有一份，在全局上是唯一的，不能修改，也就是<em><strong>静态常量</strong></em>。</p>
+<h2 id="19-避免大事务"><a href="#19-避免大事务" class="headerlink" title="19.避免大事务"></a>19.避免大事务</h2><p>很多小伙伴在使用spring框架开发项目时，为了方便，喜欢使用***@Transactional***注解提供事务功能。</p>
+<p>没错，使用@Transactional注解这种声明式事务的方式提供事务功能，确实能少写很多代码，提升开发效率。</p>
+<p>但也容易造成大事务，引发其他的问题。</p>
+<p>下面用一张图看看大事务引发的问题。</p>
+<p><img src="https://img-blog.csdnimg.cn/d313f62e4a01487790cbf8cf4c474787.png"></p>
+<p>从图中能够看出，大事务问题可能会造成接口超时，对接口的性能有直接的影响。</p>
+<p>我们该如何优化大事务呢？</p>
+<ol>
+<li><p>少用@Transactional注解</p>
+</li>
+<li><p>将查询(select)方法放到事务外</p>
+</li>
+<li><p>事务中避免远程调用</p>
+</li>
+<li><p>事务中避免一次性处理太多数据</p>
+</li>
+<li><p>有些功能可以非事务执行</p>
+</li>
+<li><p>有些功能可以异步处理</p>
+</li>
+</ol>
+<p>大家可以参考关于大事务的这篇文章《<a href="https://mp.weixin.qq.com/s?__biz=MzkwNjMwMTgzMQ==&mid=2247490259&idx=1&sn=1dd11c5f49103ca303a61fc82ce406e0&chksm=c0ebc23bf79c4b2db58b28ef752560bd91a1932ceb6713c9b19b821db0f29e1c58275d334076&token=2041133408&lang=zh_CN&scene=21#wechat_redirect" title="让人头痛的大事务问题到底要如何解决？">让人头痛的大事务问题到底要如何解决？</a>》</p>
+<h2 id="20-消除过长的if…else"><a href="#20-消除过长的if…else" class="headerlink" title="20.消除过长的if…else"></a>20.消除过长的if…else</h2><p>更详细的内容可以看看这篇文章《<a href="https://mp.weixin.qq.com/s?__biz=MzkwNjMwMTgzMQ==&mid=2247490272&idx=1&sn=c5db63c7b52e7518b7a42e48c70927fc&scene=21#wechat_redirect" title="消除if...else是9条锦囊妙计">消除if…else是9条锦囊妙计</a>》</p>
+<h2 id="21-防止死循环"><a href="#21-防止死循环" class="headerlink" title="21.防止死循环"></a>21.防止死循环</h2><h2 id="22-注意BigDecimal的坑"><a href="#22-注意BigDecimal的坑" class="headerlink" title="22.注意BigDecimal的坑"></a>22.注意BigDecimal的坑</h2><p>通常我们会把一些小数类型的字段（比如：金额），定义成<em><strong>BigDecimal</strong></em>，而不是<em><strong>Double</strong></em>，避免丢失精度问题。</p>
+<p>常识告诉我们使用<em><strong>BigDecimal</strong></em>能避免丢失精度。</p>
+<p>但是使用BigDecimal能避免丢失精度吗？</p>
+<p>答案是否定的。</p>
+<p>为什么？</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">amount1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="number">0.02</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">amount2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="number">0.03</span>);</span><br><span class="line">System.out.println(amount2.subtract(amount1));</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<blockquote>
+<p>0.0099999999999999984734433411404097569175064563751220703125</p>
+</blockquote>
+<p>不科学呀，为啥还是丢失精度了？</p>
+<p>使用BigDecimal构造函数初始化对象，也会丢失精度。</p>
+<p>那么，如何才能不丢失精度呢？</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">amount1</span> <span class="operator">=</span> BigDecimal.valueOf(<span class="number">0.02</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">amount2</span> <span class="operator">=</span> BigDecimal.valueOf(<span class="number">0.03</span>);</span><br><span class="line">System.out.println(amount2.subtract(amount1));</span><br></pre></td></tr></table></figure>
+
+<h2 id="23-尽可能复用代码"><a href="#23-尽可能复用代码" class="headerlink" title="23.尽可能复用代码"></a>23.尽可能复用代码</h2><h2 id="24-foreach循环中不remove元素"><a href="#24-foreach循环中不remove元素" class="headerlink" title="24.foreach循环中不remove元素"></a>24.foreach循环中不remove元素</h2><p>循环有很多种写法，比如：while、for、foreach等。  </p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        List&lt;String&gt; list = Lists.newArrayList(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (String temp : list) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">&quot;c&quot;</span>.equals(temp)) &#123;</span><br><span class="line">                list.remove(temp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//执行结果：</span></span><br><span class="line">Exception in thread <span class="string">&quot;main&quot;</span> java.util.ConcurrentModificationException</span><br><span class="line"> at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:<span class="number">901</span>)</span><br><span class="line"> at java.util.ArrayList$Itr.next(ArrayList.java:<span class="number">851</span>)</span><br><span class="line"> at com.sue.jump.service.test1.Test2.main(Test2.java:<span class="number">24</span>)</span><br></pre></td></tr></table></figure>
+
+<p>这种在<em><strong>foreach</strong></em>循环中调用<em><strong>remove</strong></em>方法删除元素，可能会报<em><strong>ConcurrentModificationException</strong></em>异常。</p>
+<p>如果想在遍历集合时，删除其中的元素，可以用for循环，例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;String&gt; list = Lists.newArrayList(<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>);</span><br><span class="line">       <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line">           <span class="type">String</span> <span class="variable">temp</span> <span class="operator">=</span> list.get(i);</span><br><span class="line">           <span class="keyword">if</span> (<span class="string">&quot;c&quot;</span>.equals(temp)) &#123;</span><br><span class="line">               list.remove(temp);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       System.out.println(list);</span><br></pre></td></tr></table></figure>
+
+<h2 id="25-避免随意打印日志"><a href="#25-避免随意打印日志" class="headerlink" title="25.避免随意打印日志"></a>25.避免随意打印日志</h2><p>使用<em><strong>isDebugEnabled</strong></em>判断一下，如果当前的日志级别是<em><strong>debug</strong></em>才打印日志。生产环境默认日志级别是<em><strong>info</strong></em>，在有些紧急情况下，把某个接口或者方法的日志级别改成debug，打印完我们需要的日志后，又调整回去。</p>
+<p>方便我们定位问题，又不会产生大量的垃圾日志，一举两得</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;/query&quot;)</span></span><br><span class="line"><span class="keyword">public</span> List&lt;User&gt; <span class="title function_">query</span><span class="params">(<span class="meta">@RequestBody</span> List&lt;Long&gt; ids)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (log.isDebugEnabled()) &#123;</span><br><span class="line">        log.debug(<span class="string">&quot;request params:&#123;&#125;&quot;</span>, ids);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    List&lt;User&gt; userList = userService.query(ids);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (log.isDebugEnabled()) &#123;</span><br><span class="line">        log.debug(<span class="string">&quot;response:&#123;&#125;&quot;</span>, userList);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> userList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="26-比较时把常量写前面"><a href="#26-比较时把常量写前面" class="headerlink" title="26.比较时把常量写前面"></a>26.比较时把常量写前面</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">FOUND_NAME</span> <span class="operator">=</span> <span class="string">&quot;苏三&quot;</span>;</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="literal">null</span> == user) &#123;</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(FOUND_NAME.equals(user.getName())) &#123;</span><br><span class="line">   System.out.println(<span class="string">&quot;找到：&quot;</span>+user.getName());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在使用<em><strong>equals</strong></em>做比较时，尽量将<em><strong>常量</strong></em>写在前面，即equals方法的左边。</p>
+<p>这样即使user.getName()返回的数据为null，equals方法会直接返回false，而不再是报空指针异常。</p>
+<h2 id="27-名称要见名知意"><a href="#27-名称要见名知意" class="headerlink" title="27.名称要见名知意"></a>27.名称要见名知意</h2><h2 id="28-SimpleDateFormat线程不安全"><a href="#28-SimpleDateFormat线程不安全" class="headerlink" title="28.SimpleDateFormat线程不安全"></a>28.SimpleDateFormat线程不安全</h2><p>使用java8的DateTimeFormatter类。  </p>
+<h2 id="29-少用Executors创建线程池"><a href="#29-少用Executors创建线程池" class="headerlink" title="29.少用Executors创建线程池"></a>29.少用Executors创建线程池</h2><p>我们都知道<em><strong>JDK5</strong></em>之后，提供了<em><strong>ThreadPoolExecutor</strong></em>类，用它可以<em><strong>自定义线程池</strong></em>。</p>
+<p>线程池的好处有很多，下面主要说说这3个方面。</p>
+<ol>
+<li><p><em><strong>降低资源消耗</strong></em>：避免了频繁的创建线程和销毁线程，可以直接复用已有线程。而我们都知道，创建线程是非常耗时的操作。</p>
+</li>
+<li><p><em><strong>提供速度</strong></em>：任务过来之后，因为线程已存在，可以拿来直接使用。</p>
+</li>
+<li><p><em><strong>提高线程的可管理性</strong></em>：线程是非常宝贵的资源，如果创建过多的线程，不仅会消耗系统资源，甚至会影响系统的稳定。使用线程池，可以非常方便的创建、管理和监控线程。</p>
+</li>
+</ol>
+<p>当然JDK为了我们使用更便捷，专门提供了：<em><strong>Executors</strong></em>类，给我们快速创建<em><strong>线程池</strong></em>。</p>
+<p>该类中包含了很多<em><strong>静态方法</strong></em>：</p>
+<ul>
+<li><p><em><strong>newCachedThreadPool</strong></em>：创建一个可缓冲的线程，如果线程池大小超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。</p>
+</li>
+<li><p><em><strong>newFixedThreadPool</strong></em>：创建一个固定大小的线程池，如果任务数量超过线程池大小，则将多余的任务放到队列中。</p>
+</li>
+<li><p><em><strong>newScheduledThreadPool</strong></em>：创建一个固定大小，并且能执行定时周期任务的线程池。</p>
+</li>
+<li><p><em><strong>newSingleThreadExecutor</strong></em>：创建只有一个线程的线程池，保证所有的任务安装顺序执行。</p>
+</li>
+</ul>
+<p>在高并发的场景下，如果大家使用这些静态方法创建线程池，会有一些问题。</p>
+<p>那么，我们一起看看有哪些问题？</p>
+<ul>
+<li><p><em><strong>newFixedThreadPool</strong></em>：允许请求的队列长度是Integer.MAX_VALUE，可能会堆积大量的请求，从而导致OOM。</p>
+</li>
+<li><p><em><strong>newSingleThreadExecutor</strong></em>：允许请求的队列长度是Integer.MAX_VALUE，可能会堆积大量的请求，从而导致OOM。</p>
+</li>
+<li><p><em><strong>newCachedThreadPool</strong></em>：允许创建的线程数是Integer.MAX_VALUE，可能会创建大量的线程，从而导致OOM。</p>
+</li>
+</ul>
+<p>那我们该怎办呢？</p>
+<p>优先推荐使用<em><strong>ThreadPoolExecutor</strong></em>类，我们自定义线程池。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ExecutorService</span> <span class="variable">threadPool</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(</span><br><span class="line">    <span class="number">8</span>, <span class="comment">//corePoolSize线程池中核心线程数</span></span><br><span class="line">    <span class="number">10</span>, <span class="comment">//maximumPoolSize 线程池中最大线程数</span></span><br><span class="line">    <span class="number">60</span>, <span class="comment">//线程池中线程的最大空闲时间，超过这个时间空闲线程将被回收</span></span><br><span class="line">    TimeUnit.SECONDS,<span class="comment">//时间单位</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">ArrayBlockingQueue</span>(<span class="number">500</span>), <span class="comment">//队列</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>.CallerRunsPolicy()); <span class="comment">//拒绝策略</span></span><br></pre></td></tr></table></figure>
+
+<p>顺便说一下，如果是一些低并发场景，使用<em><strong>Executors</strong></em>类创建线程池也未尝不可，也不能完全一棍子打死。在这些低并发场景下，很难出现<em><strong>OOM</strong></em>问题，所以我们需要根据实际业务场景选择。</p>
+<h2 id="30-Arrays-asList转换的集合别修改"><a href="#30-Arrays-asList转换的集合别修改" class="headerlink" title="30.Arrays.asList转换的集合别修改"></a>30.Arrays.asList转换的集合别修改</h2><p>在我们日常工作中，经常需要把<em><strong>数组</strong></em>转换成<em><strong>List</strong></em>集合。</p>
+<p>因为数组的长度是固定的，不太好扩容，而List的长度是可变的，它的长度会根据元素的数量动态扩容。</p>
+<p>在JDK的<em><strong>Arrays</strong></em>类中提供了<em><strong>asList</strong></em>方法，可以把<em><strong>数组</strong></em>转换成<em><strong>List</strong></em>。</p>
+<p><em><strong>正例</strong></em>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String [] array = <span class="keyword">new</span> <span class="title class_">String</span> [] &#123;<span class="string">&quot;a&quot;</span>,<span class="string">&quot;b&quot;</span>,<span class="string">&quot;c&quot;</span>&#125;;</span><br><span class="line">List&lt;String&gt; list = Arrays.asList(array);</span><br><span class="line"><span class="keyword">for</span> (String str : list) &#123;</span><br><span class="line">    System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，使用Arrays.asList方法将array数组，直接转换成了list。然后在for循环中遍历list，打印出它里面的元素。</p>
+<p>如果转换后的list，只是使用，没新增或修改元素，不会有问题。</p>
+<p><em><strong>反例</strong></em>：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String[] array = <span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>&#125;;</span><br><span class="line">List&lt;String&gt; list = Arrays.asList(array);</span><br><span class="line">list.add(<span class="string">&quot;d&quot;</span>);</span><br><span class="line"><span class="keyword">for</span> (String str : list) &#123;</span><br><span class="line">    System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行结果：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Exception in thread <span class="string">&quot;main&quot;</span> java.lang.UnsupportedOperationException</span><br><span class="line">at java.util.AbstractList.add(AbstractList.java:<span class="number">148</span>)</span><br><span class="line">at java.util.AbstractList.add(AbstractList.java:<span class="number">108</span>)</span><br><span class="line">at com.sue.jump.service.test1.Test2.main(Test2.java:<span class="number">24</span>)</span><br></pre></td></tr></table></figure>
+
+<p>会直接报<code>UnsupportedOperationException</code>异常。</p>
+<p>为什么呢？</p>
+<p>答：使用<em><strong>Arrays.asList</strong></em>方法转换后的<em><strong>ArrayList</strong></em>，是<em><strong>Arrays</strong></em>类的内部类，并非<em><strong>java.util</strong></em>包下我们常用的<em><strong>ArrayList</strong></em>。</p>
+<p>Arrays类的内部ArrayList类，它没有实现父类的add和remove方法,用的是父类AbstractList的默认实现。</p>
+<p>我们看看<em><strong>AbstractList</strong></em>是如何实现的：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> index, E element)</span> &#123;</span><br><span class="line">   <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">UnsupportedOperationException</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> index)</span> &#123;</span><br><span class="line">   <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">UnsupportedOperationException</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>该类的<em><strong>add</strong></em>和<em><strong>remove</strong></em>方法直接抛异常了，因此调用Arrays类的内部ArrayList类的add和remove方法，同样会抛异常。</p>
+<p>说实话，Java代码优化是一个比较大的话题，它里面可以优化的点非常多，我没办法一一列举完。在这里只能抛砖引玉，介绍一下比较常见的知识点，更全面的内容，需要小伙伴们自己去思考和探索。</p>
+<p>这篇文章写了很久，花了很多时间和心思，如果你看了文章有些收获，记得给我点赞鼓励一下喔。</p>
+<p>bye</p>
+<br />]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>优化</tag>
+        <tag>代码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十分钟让你熟练掌握linux命令</title>
+    <url>/2023/05/28/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4_2023_05_28/</url>
+    <content><![CDATA[<hr>
+<p><a href="https://blog.csdn.net/weixin_44624117/article/details/101368670">1、常用Linux命令</a><br><a href="https://blog.csdn.net/lydms/article/details/128926048">2、Linux下脚本编写</a><br><a href="https://blog.csdn.net/weixin_44624117/article/details/103768670">3、windows下CMD常用命令</a></p>
+<hr>
+<br />
+
+
+<p>Linux 系统目录</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">├── bin -&gt; usr/bin # 用于存放二进制命令</span><br><span class="line">├── boot # 内核及引导系统程序所在的目录</span><br><span class="line">├── dev # 所有设备文件的目录（如磁盘、光驱等）</span><br><span class="line">├── etc # 配置文件默认路径、服务启动命令存放目录</span><br><span class="line">├── home # 用户家目录，root用户为/root</span><br><span class="line">├── lib -&gt; usr/lib # 32位库文件存放目录</span><br><span class="line">├── lib64 -&gt; usr/lib64 # 64位库文件存放目录</span><br><span class="line">├── media # 媒体文件存放目录</span><br><span class="line">├── mnt # 临时挂载设备目录</span><br><span class="line">├── opt # 自定义软件安装存放目录</span><br><span class="line">├── proc # 进程及内核信息存放目录</span><br><span class="line">├── root # Root用户家目录</span><br><span class="line">├── run # 系统运行时产生临时文件，存放目录</span><br><span class="line">├── sbin -&gt; usr/sbin # 系统管理命令存放目录</span><br><span class="line">├── srv # 服务启动之后需要访问的数据目录</span><br><span class="line">├── sys # 系统使用目录</span><br><span class="line">├── tmp # 临时文件目录</span><br><span class="line">├── usr # 系统命令和帮助文件目录</span><br><span class="line">└── var # 存放内容易变的文件的目录</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="一、目录操作"><a href="#一、目录操作" class="headerlink" title="一、目录操作 "></a>一、目录操作 </h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pwd				查看当前工作目录</span><br><span class="line">clear 			清除屏幕</span><br><span class="line">cd ~			当前用户目录</span><br><span class="line">cd /			根目录</span><br><span class="line">cd -			上一次访问的目录</span><br><span class="line">cd ..			上一级目录</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看目录内信息</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ll				查看当前目录下内容（LL的小写）</span><br></pre></td></tr></table></figure>
+
+<p><strong>创建目录</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir aaa		在当前目录下创建aaa目录，相对路径；</span><br><span class="line">mkdir ./bbb		在当前目录下创建bbb目录，相对路径；</span><br><span class="line">mkdir /ccc		在根目录下创建ccc目录，绝对路径；</span><br></pre></td></tr></table></figure>
+
+<p><strong>递归创建目录（会创建里面没有的目录文件夹）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p temp/nginx </span><br></pre></td></tr></table></figure>
+
+<p><strong>搜索命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -name &#x27;b&#x27;		查询根目录下（包括子目录），名以b的目录和文件；</span><br><span class="line">find / -name &#x27;b*&#x27;		查询根目录下（包括子目录），名以b开头的目录和文件； </span><br></pre></td></tr></table></figure>
+
+<p><strong>重命名</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv 原先目录 文件的名称   mv tomcat001 tomcat </span><br></pre></td></tr></table></figure>
+
+<p><strong>剪切命令(有目录剪切到制定目录下，没有的话剪切为指定目录）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv	/aaa /bbb		    将根目录下的aaa目录，移动到bbb目录下(假如没有bbb目录，则重命名为bbb)；</span><br><span class="line">mv	bbbb usr/bbb		将当前目录下的bbbb目录，移动到usr目录下，并且修改名称为bbb；</span><br><span class="line">mv	bbb usr/aaa			将当前目录下的bbbb目录，移动到usr目录下，并且修改名称为aaa；</span><br></pre></td></tr></table></figure>
+
+<p><strong>复制目录</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cp -r /aaa /bbb			将/目录下的aaa目录复制到/bbb目录下，在/bbb目录下的名称为aaa</span><br><span class="line">cp -r /aaa /bbb/aaa		将/目录下的aa目录复制到/bbb目录下，且修改名为aaa;</span><br></pre></td></tr></table></figure>
+
+<p><strong>强制式删除指定目录</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf /bbb			强制删除/目录下的bbb目录。如果bbb目录中还有子目录，也会被强制删除，不会提示；</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除目录</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -r /bbb			普通删除。会询问你是否删除每一个文件</span><br><span class="line">rmdir test01		目录的删除</span><br></pre></td></tr></table></figure>
+
+<p>查看树状目录结构</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tree test01/</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/50cfc9a5d07a410d8a49cabe470b288f.png" alt="在这里插入图片描述"></p>
+<h3 id="1、批量操作"><a href="#1、批量操作" class="headerlink" title="1、批量操作"></a>1、批量操作</h3><p>需要采用<code>&#123;&#125;</code>进行参数的传入了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir &#123;dirA,dirB&#125;  # 批量创建测试目录</span><br><span class="line">touch dirA/&#123;A1,A2,A3&#125;     # dirA创建三个文件dirA/A1,dirA/A2,dirA/A3</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、文件操作"><a href="#二、文件操作" class="headerlink" title="二、文件操作"></a>二、文件操作</h2><p><strong>删除</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -r a.java		删除当前目录下的a.java文件（每次回询问是否删除y：同意）</span><br></pre></td></tr></table></figure>
+
+<p><strong>强制删除</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf a.java		强制删除当前目录下的a.java文件</span><br><span class="line">rm -rf ./a*			强制删除当前目录下以a开头的所有文件；</span><br><span class="line">rm -rf ./*			强制删除当前目录下所有文件（慎用）；</span><br></pre></td></tr></table></figure>
+
+<p>创建文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">touch testFile</span><br></pre></td></tr></table></figure>
+
+<p>递归删除.pyc格式的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &#x27;*.pyc&#x27; -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<p>打印当前文件夹下指定大小的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &quot;*&quot; -size 145800c -print</span><br></pre></td></tr></table></figure>
+
+<p>递归删除指定大小的文件(145800)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &quot;*&quot; -size 145800c -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<p>递归删除指定大小的文件，并打印出来</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &quot;*&quot; -size 145800c -print -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>&quot;.&quot;</code> 表示从当前目录开始递归查找</li>
+<li><code>&quot; -name &#39;*.exe&#39; &quot;</code>根据名称来查找，要查找所有以.exe结尾的文件夹或者文件</li>
+<li><code>&quot; -type f &quot;</code>查找的类型为文件</li>
+<li><code>&quot;-print&quot;</code> 输出查找的文件目录名</li>
+<li><code>-size 145800c</code> 指定文件的大小</li>
+<li><code>-exec rm -rf &#123;&#125; \;</code> 递归删除（前面查询出来的结果）</li>
+</ul>
+<p>split拆分文件</p>
+<p>split命令：可以将一个大文件分割成很多个小文件，有时需要将文件分割成更小的片段，比如为提高可读性，生成日志等。</p>
+<blockquote>
+<p>b：值为每一输出档案的大小，单位为 byte。<br>-C：每一输出档中，单行的最大 byte 数。<br>-d：使用数字作为后缀。<br>-l：值为每一输出档的行数大小。<br>-a：指定后缀长度(默认为2)。</p>
+</blockquote>
+<p>使用split命令将上面创建的date.file文件分割成大小为10KB的小文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost split]# split -b 10k date.file </span><br><span class="line">[root@localhost split]# ls</span><br><span class="line">date.file  xaa  xab  xac  xad  xae  xaf  xag  xah  xai  xaj</span><br></pre></td></tr></table></figure>
+
+<p>文件被分割成多个带有字母的后缀文件，如果想用数字后缀可使用-d参数，同时可以使用-a length来指定后缀的长度：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost split]# split -b 10k date.file -d -a 3</span><br><span class="line">[root@localhost split]# ls</span><br><span class="line">date.file  x000  x001  x002  x003  x004  x005  x006  x007  x008  x009</span><br></pre></td></tr></table></figure>
+
+<p>为分割后的文件指定文件名的前缀：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost split]# split -b 10k date.file -d -a 3 split_file</span><br><span class="line">[root@localhost split]# ls</span><br><span class="line">date.file  split_file000  split_file001  split_file002  split_file003  split_file004  split_file005  split_file006  split_file007  split_file008  split_file009</span><br></pre></td></tr></table></figure>
+
+<p>使用-l选项根据文件的行数来分割文件，例如把文件分割成每个包含10行的小文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">split -l 10 date.file</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、文件内容操作（查看日志，更改配置文件）"><a href="#三、文件内容操作（查看日志，更改配置文件）" class="headerlink" title="三、文件内容操作（查看日志，更改配置文件）"></a>三、文件内容操作（查看日志，更改配置文件）</h2><p><strong>修改文件内容</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim a.java   	进入一般模式</span><br><span class="line">i(按键)   		进入插入模式(编辑模式)</span><br><span class="line">ESC(按键)  		退出</span><br><span class="line">:wq 			保存退出（shift+：调起输入框）</span><br><span class="line">:q！			不保存退出（shift+：调起输入框）（内容有更改）(强制退出，不保留更改内容)</span><br><span class="line">:q		  	不保存退出（shift+：调起输入框）（没有内容更改）</span><br><span class="line">ctrl-f ctrl-b    	整页翻页</span><br><span class="line">ctrl-e			向下滚一行</span><br><span class="line">ctrl-y			向上滚一行</span><br><span class="line">Shift + g		查看该脚本的最后一行</span><br><span class="line">键盘按下小写gg		查看该脚本的第一行</span><br></pre></td></tr></table></figure>
+
+<p><strong>文件内容的查看</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat a.java		查看a.java文件的最后一页内容；</span><br><span class="line">more a.java		从第一页开始查看a.java文件内容，按回车键一行一行进行查看，</span><br><span class="line">                    	按空格键一页一页进行查看，q退出；</span><br><span class="line">less a.java		从第一页开始查看a.java文件内容，按回车键一行一行的看，</span><br><span class="line">                    	按空格键一页一页的看，支持使用PageDown和PageUp翻页，q退出；</span><br></pre></td></tr></table></figure>
+
+<p><strong>总结下more 和 less的区别:</strong></p>
+<ol>
+<li>less可以按键盘上下方向键显示上下内容,more不能通过上下方向键控制显示</li>
+<li>less不必读整个文件，加载速度会比more更快</li>
+<li>less退出后shell不会留下刚显示的内容,而more退出后会在shell上留下刚显示的内容.</li>
+<li>由于more不能后退.</li>
+</ol>
+<p><strong>实时查看文件后几行(实时查看日志)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tail -f a.java			查看a.java文件的后10行内容；</span><br></pre></td></tr></table></figure>
+
+<p><strong>前后几行查看</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">head a.java			查看a.java文件的前10行内容；</span><br><span class="line">tail -f a.java			查看a.java文件的后10行内容；</span><br><span class="line">head -n 7 a.java		查看a.java文件的前7行内容；</span><br><span class="line">tail -n 7 a.java		查看a.java文件的后7行内容；</span><br></pre></td></tr></table></figure>
+
+<p><strong>文件内部搜索指定的内容</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行；</span><br><span class="line">grep -n under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行及行号；</span><br><span class="line">grep -v under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示没搜索到的行；</span><br><span class="line">grep -i under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行；</span><br><span class="line">grep -ni under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行及行号；</span><br></pre></td></tr></table></figure>
+
+<p><strong>终止当前操作</strong></p>
+<p><code>Ctrl+c</code>和<code>Ctrl+z</code>都是中断命令，但是作用却不一样。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ctrl+z</span><br><span class="line">ctrl+c</span><br></pre></td></tr></table></figure>
+
+<p><strong>Ctrl+Z</strong> 就扮演了类似的角色，将任务中断，但是任务并没有结束，在进程中只是维持挂起的状态，用户可以使用fg&#x2F;bg操作前台或后台的任务，fg命令重新启动前台被中断的任务，bg命令把被中断的任务放在后台执行。<br><strong>Ctrl+C</strong>也扮演类似的角色，强制中断程序的执行。</p>
+<p><strong>重定向功能</strong><br>可以使用 &gt; 或 &lt; 将命令的输出的命令重定向到test.txt文件中（没有则创建一个）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &#x27;Hello World&#x27; &gt; /root/test.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="1、grep-检索文件内容"><a href="#1、grep-检索文件内容" class="headerlink" title="1、grep(检索文件内容)"></a>1、grep(检索文件内容)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep [options] pattern file</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>全称：Global Regular Expression Print。</li>
+<li>作用：查找文件里符合条件的字符串。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//	从test开头文件中，查找含有start的行</span><br><span class="line">grep &quot;start&quot; test*</span><br><span class="line">// 查看包含https的行，并展示前1行(-A)，后1行(-B)</span><br><span class="line">grep -A 1 -B 1 &quot;https&quot; wget-log</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、awk-数据统计"><a href="#2、awk-数据统计" class="headerlink" title="2、awk(数据统计)"></a>2、awk(数据统计)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk [options] &#x27;cmd&#x27; file</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一次读取一行文本，按输入分隔符进行切片，切成多个组成部分。</li>
+<li>将切片直接保存在内建的变量中，$1,$2…($0表示行的全部)。</li>
+<li>支持对单个切片的判断，支持循环判断，默认分隔符为空格。</li>
+<li>-F 指定分隔符(默认为空格)</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/8aa520d43c214eceb85dd9109d11985b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAaGFfbHlkbXM=,size_17,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<p><strong>1. 将<code>email.out</code>进行切分，打印出第1&#x2F;3列内容</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$3&#125;&#x27; email.out  </span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 将<code>email.out</code>进行切分，打印出第1&#x2F;3列内容</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$3&#125;&#x27; email.out </span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 将<code>email.out</code>进行切分，当第1列为tcp,第2列为1的列，全部打印</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;$1==&quot;tcp&quot; &amp;&amp; $2==1&#123;print $0&#125;&#x27; email.out</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 在上面的基础上将表头进行打印(NR表头)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;($1==&quot;tcp&quot; &amp;&amp; $2==1)|| NR==1 &#123;print $0&#125;&#x27; email.out</span><br></pre></td></tr></table></figure>
+
+<p><strong>5. 以<code>,</code>为分隔符，切分数据，并打印第二列的内容</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk -F &quot;,&quot; &#x27;&#123;print $2&#125;&#x27; test.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>6. 将日志中第1&#x2F;3列进行打印，并对第1列的数据进行分类统计</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$3&#125;&#x27; email.out | awk &#x27;&#123;count[$1]++&#125; END &#123;for(i in count) print i &quot;\t&quot; count[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/15d767bbcf4f4a5db0a36142829e6169.png" alt="请添加图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/f6cf47f790d74ec6b902f11badc61d11.png" alt="请添加图片描述"></p>
+<p><strong>7. 根据逗号<code>,</code>切分数据，并将第一列存在文件<code>test01.txt</code>中</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk -F &quot;,&quot; &#x27;&#123;print $1 &gt;&gt; &quot;test01.txt&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、sed-替换文件内容"><a href="#3、sed-替换文件内容" class="headerlink" title="3、sed(替换文件内容)"></a>3、sed(替换文件内容)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed [option] &#x27;sed commond&#x27; filename</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>全名Stream Editor，流编辑器</li>
+<li>适合用于对文本行内容进行处理</li>
+<li>sed commond为正则表达式</li>
+<li>sed commond中为三个&#x2F;，分别为源内容，替换后的内容</li>
+</ul>
+<p><strong>sed替换标记</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">g # 表示行内全面替换。  </span><br><span class="line">p # 表示打印行。  </span><br><span class="line">w # 表示把行写入一个文件。  </span><br><span class="line">x # 表示互换模板块中的文本和缓冲区中的文本。  </span><br><span class="line">y # 表示把一个字符翻译为另外的字符（但是不用于正则表达式）</span><br><span class="line">\1 # 子串匹配标记</span><br><span class="line">&amp; # 已匹配字符串标记</span><br></pre></td></tr></table></figure>
+
+<p><strong>1. 替换解析</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/^Str/String/&#x27; replace.java </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/292866c8325a4b10b413de20cde5ccb4.png" alt="请添加图片描述"></p>
+<p><strong>2. 将末尾的.替换为；(转义.)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/\.$/\;/&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 全文将Jack替换为me(g是全部替换,不加只替换首个)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/Jack/me/g/ replace.java</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 删除replace.java中的空格(d是删除)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;/^ *$/d&#x27; replace.java</span><br></pre></td></tr></table></figure>
+
+<p><strong>5. 删除包含Interger的行(d是删除)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;/Interger/d&#x27; replace.java</span><br></pre></td></tr></table></figure>
+
+<p><strong>6.多命令一起执行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;input&#x27; 123.txt | sed &#x27;s/\&quot;//g; s/,/\n/g&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>7. 替换后将数据保存在文中</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep  123.txt | sed -n &#x27;s/\&quot;//gw test01.txt&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、管道操作符"><a href="#4、管道操作符" class="headerlink" title="4、管道操作符|"></a>4、管道操作符<code>|</code></h3><ul>
+<li>可将指令连接起来，前一个指令的输出作为后一个指令的输入</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find ~ |grep &quot;test&quot;</span><br><span class="line">find ~                //查找当前用户所有文件</span><br><span class="line">grep &quot;test&quot;            //从文件中</span><br></pre></td></tr></table></figure>
+
+<p>使用管道注意的要点</p>
+<ul>
+<li>只处理前一个命令正确输出，不处理错误输出。</li>
+<li>右边命令必须能够接收标准输入流，否则传递过程中数据会被抛弃</li>
+<li>sed，awk，grep，cut，head，top，less，more，c，join，sort，split等</li>
+</ul>
+<p><strong>1.从email.log文件中查询包含error的行</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;error&#x27; email.log</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.获取到error的行,并取[]含有数字的</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;error&#x27; email.log | grep -o &#x27;\[0-9\]&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3. 并过滤掉含有当前进程</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -ef|grep tomcat |grep -v </span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 替换后将数据保存在文中</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep  123.txt | sed -n &#x27;s/\&quot;//gw test01.txt&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>5. 将文件<code>123.txt</code>，按<code>,</code>切分，去除<code>&quot;</code>，按<code>:</code>切分后，将第一列存到文件<code>test01.txt</code>中</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;input&#x27; 123.txt | awk -F &#x27;,&#x27; &#x27;&#123;print $2&#125;&#x27; | sed &#x27;s/\&quot;//g; s/,/\n/g&#x27; | awk -F &quot;:&quot; &#x27;&#123;print $1 &gt;&gt; &quot;test01.txt&quot;&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、cut-数据裁剪"><a href="#5、cut-数据裁剪" class="headerlink" title="5、cut(数据裁剪)"></a>5、cut(数据裁剪)</h3><ul>
+<li>从文件的每一行剪切字节、字符和字段并将这些字节、字符和字段输出。</li>
+<li>也可采用管道输入。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-f</td>
+<td>列号，提取第几列</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>分隔符，按照指定分隔符分割列，默认是制表符”\t”</td>
+</tr>
+</tbody></table>
+<p>文件截取</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos shell]# cut -d &quot;：&quot; -f 1 cut.txt </span><br><span class="line">1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p>管道截取</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos shell]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin</span><br><span class="line"></span><br><span class="line"># 按:分割。截取第3列</span><br><span class="line">[root@VM-0-9-centos shell]# echo $PATH | cut -d &quot;:&quot; -f 3</span><br><span class="line">/usr/sbin</span><br><span class="line"></span><br><span class="line"># 按:分割。截取第3列之后数据</span><br><span class="line">[root@VM-0-9-centos shell]# echo $PATH | cut -d &quot;:&quot; -f 3-</span><br><span class="line">/usr/sbin:/usr/bin:/root/bin</span><br><span class="line">[root@VM-0-9-centos shell]# </span><br></pre></td></tr></table></figure>
+
+<h2 id="四、系统日志位置"><a href="#四、系统日志位置" class="headerlink" title="四、系统日志位置"></a>四、系统日志位置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/redhat-release			查看操作系统版本</span><br><span class="line">/var/log/message			系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一</span><br><span class="line">/var/log/message			系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一 </span><br><span class="line">/var/log/secure				与安全相关的日志信息 </span><br><span class="line">/var/log/maillog			与邮件相关的日志信息 </span><br><span class="line">/var/log/cron				与定时任务相关的日志信息 </span><br><span class="line">/var/log/spooler			与UUCP和news设备相关的日志信息 </span><br><span class="line">/var/log/boot.log			守护进程启动和停止相关的日志消息 </span><br></pre></td></tr></table></figure>
+
+<p><strong>查看某文件下的用户操作日志</strong><br>到达操作的目录下，执行下面的程序：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat .bash_history</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、创建与删除软连接"><a href="#五、创建与删除软连接" class="headerlink" title="五、创建与删除软连接"></a>五、创建与删除软连接</h2><p><strong>1、创建软连接</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -s /usr/local/app /data</span><br></pre></td></tr></table></figure>
+
+<p>注意：创建软连接时，data目录后不加 &#x2F; (加上后是查找其下一级目录)；</p>
+<p><img src="https://img-blog.csdnimg.cn/20191104170912257.png" alt="在这里插入图片描述"><br><strong>2、删除软连接</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf /data</span><br></pre></td></tr></table></figure>
+
+<p>注意：取消软连接最后没有&#x2F;，rm -rf 软连接。加上&#x2F;是删除文件夹；</p>
+<p><img src="https://img-blog.csdnimg.cn/20191104172803658.png" alt="在这里插入图片描述"></p>
+<h2 id="六、压缩和解压缩"><a href="#六、压缩和解压缩" class="headerlink" title="六、压缩和解压缩"></a>六、压缩和解压缩</h2><p><strong>tar</strong><br><img src="https://img-blog.csdnimg.cn/b9c15842223742d58e62b8912548a4d5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAaGFfbHlkbXM=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<p>tar</p>
+<p>压缩(-c)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar -cvf start.tar a.java b.java		//将当前目录下a.java、b.java打包</span><br><span class="line">tar -cvf start.tar ./*				//将当前目录下的所欲文件打包压缩成haha.tar文件</span><br><span class="line"></span><br><span class="line">tar -zcvf start.tar.gz a.java b.java		//将当前目录下a.java、b.java打包</span><br><span class="line">tar -zcvf start.tar.gz ./*			//将当前目录下的所欲文件打包压缩成start.tar.gz文件</span><br></pre></td></tr></table></figure>
+
+<p>解压缩(-x)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar -xvf start.tar				//解压start.tar压缩包，到当前文件夹下；</span><br><span class="line">tar -xvf start.tar -C usr/local 		//（C为大写，中间无空格）</span><br><span class="line">						//解压start.tar压缩包，到/usr/local目录下；</span><br><span class="line"></span><br><span class="line">tar -zxvf start.tar.gz				//解压start.tar.gz压缩包，到当前文件夹下；</span><br><span class="line">tar -zxvf start.tar.gz -C usr/local 		//（C为大写，中间无空格）</span><br><span class="line">						//解压start.tar.gz压缩包，到/usr/local目录下；</span><br></pre></td></tr></table></figure>
+
+<p>解压缩<code>tar.xz</code>文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar xf node-v12.18.1-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+
+<p>unzip&#x2F;zip</p>
+<p>压缩(zip)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">zip lib.zip tomcat.jar					//将单个文件压缩(lib.zip)</span><br><span class="line">zip -r lib.zip lib/					//将目录进行压缩(lib.zip)</span><br><span class="line">zip -r lib.zip tomcat-embed.jar xml-aps.jar		//将多个文件压缩为zip文件(lib.zip)	</span><br></pre></td></tr></table></figure>
+
+<p>解压缩(unzip)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">unzip file1.zip  					//解压一个zip格式压缩包</span><br><span class="line">unzip -d /usr/app/com.lydms.english.zip			//将`english.zip`包，解压到指定目录下`/usr/app/`</span><br></pre></td></tr></table></figure>
+
+<h2 id="七、Linux下文件的详细信息"><a href="#七、Linux下文件的详细信息" class="headerlink" title="七、Linux下文件的详细信息"></a>七、Linux下文件的详细信息</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> R:Read  w:write  x: execute执行</span><br><span class="line">-rw-r--r-- 1 root root  34942 Jan 19  2018 bootstrap.jar</span><br><span class="line">前三位代表当前用户对文件权限：可以读/可以写/不能执行</span><br><span class="line">中间三位代表当前组的其他用户对当前文件的操作权限：可以读/不能写/不能执行</span><br><span class="line">后三位其他用户对当前文件权限：可以读/不能写/不能执行</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190925153418897.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDYyNDExNw==,size_16,color_FFFFFF,t_70" alt="文件"></p>
+<p><strong>更改文件的权限</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod u+x web.xml （---x------）		为文件拥有者（user）添加执行权限；</span><br><span class="line">chmod g+x web.xml （------x---）		为文件拥有者所在组（group）添加执行权限；</span><br><span class="line">chmod 111 web.xml  （---x--x--x）		为所有用户分类，添加可执行权限；</span><br><span class="line">chmod 222 web.xml （--w--w--w-）		为所有用户分类，添加可写入权限；	</span><br><span class="line">chmod 444 web.xml （-r--r--r--）		为所有用户分类，添加可读取权限；</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/5cebd0bd95c6497d97cb18bcab4c8d2e.png#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="八、常用的docker容器的命令："><a href="#八、常用的docker容器的命令：" class="headerlink" title="八、常用的docker容器的命令："></a>八、常用的docker容器的命令：</h2><p><strong>1、下载镜像</strong><br>Linux服务器下载安装包镜像命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.huaweicloud.com/elasticsearch/7.8.0/elasticsearch-7.8.0-windows-x86_64.zip</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://mirrors.huaweicloud.com/">华为开源镜像站</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://mirrors.huaweicloud.com/</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、常用命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1、查看docker中下载好的镜像：</span><br><span class="line">docker images</span><br><span class="line"> #2、查询需要的容器名称：</span><br><span class="line">docker search mysql</span><br><span class="line">#3、将需要的docker容器下载运行到本地(名称、端口号、msyql密码、ID)：</span><br><span class="line">docker run -di --name=first -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root 26d26dsfsd31a</span><br><span class="line">#4、查看运行的docker容器：</span><br><span class="line">docker ps</span><br><span class="line">#5、查看所有的docker容器（包括未运行的）：</span><br><span class="line">docker ps -a</span><br><span class="line">#6、停止当前运行的docker容器：</span><br><span class="line">docker stop first</span><br><span class="line">#7、启动docker容器：</span><br><span class="line">docker start first</span><br><span class="line">#8、重启docker容器：</span><br><span class="line">docker restart first</span><br><span class="line">#9、删除docker容器：</span><br><span class="line">docker rm first</span><br></pre></td></tr></table></figure>
+
+<h2 id="九、运维常用命令"><a href="#九、运维常用命令" class="headerlink" title="九、运维常用命令"></a>九、运维常用命令</h2><h3 id="1、查看服务器端口号是否可用"><a href="#1、查看服务器端口号是否可用" class="headerlink" title="1、查看服务器端口号是否可用"></a>1、查看服务器端口号是否可用</h3><p><strong>查看服务器是否可用</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ping 49.32.587.164</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看服务器指定端口是否可用</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">telnet 49.32.587.164 8093</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.csdn.net/lydms/article/details/113698856">Telnet安装</a></p>
+<p>这是我写过的一个Linux安装Telnet的文章。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/lydms/article/details/113698856</span><br></pre></td></tr></table></figure>
+
+<p><strong>1、shutdown(关闭计算机)</strong></p>
+<p>shutdown是最常用也是最安全的关机和重启命令，它会在关机之前调用fsck检查磁盘，其中-h和-r是最常用的参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-h：停止系统服务并关机  </span><br><span class="line">-r： 停止系统服务后重启  </span><br></pre></td></tr></table></figure>
+
+<p>案例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">shutdown -h now  --立即关机  </span><br><span class="line">shutdown -h 10:53  --到10:53关机，如果该时间小于当前时间，则到隔天  </span><br><span class="line">shutdown -h +10  --10分钟后自动关机  </span><br><span class="line">shutdown -r now  --立即重启  </span><br><span class="line">shutdown -r +30 &#x27;The System Will Reboot in 30 Mins&#x27;   --30分钟后重启并并发送通知给其它在线用户  </span><br></pre></td></tr></table></figure>
+
+<p><strong>2、查看处于各种连接状态数量(ESTABLISHED、CLOSE_WAIT、TIME_WAIT)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -n | awk &#x27;/^tcp/ &#123;++S[$NF]&#125; END &#123;for(a in S) print a, S[a]&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200710160201853.png" alt="在这里插入图片描述"><br>查看处于<code>ESTABLISHED</code>状态连接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nt | awk &#x27;&#123;if($NF==&quot;ESTABLISHED&quot;)&#123;wait[$5]++&#125;&#125;END&#123;for(i in wait) print i,wait[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>查看处于<code>CLOSE_WAIT</code>状态连接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nt | awk &#x27;&#123;if($NF==&quot;CLOSE_WAIT&quot;)&#123;wait[$5]++&#125;&#125;END&#123;for(i in wait) print i,wait[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>查看处于<code>TIME_WAIT</code>状态连接</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nt | awk &#x27;&#123;if($NF==&quot;TIME_WAIT&quot;)&#123;wait[$5]++&#125;&#125;END&#123;for(i in wait) print i,wait[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、ping命令</strong><br>对 <a href="http://www.lydms.com/">www.lydms.com</a> 发送 4 个 ping 包, 检查与其是否联通</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ping -c 4 www.lydms.com</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、netstat 命令</strong><br><code>netstat 命令用于显示各种网络相关信息，如网络连接, 路由表, 接口状态等等;</code><br>列出所有处于监听状态的tcp端口:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -lt</span><br></pre></td></tr></table></figure>
+
+<p>查看所有的端口信息, 包括 PID 和进程名称</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -tulpn</span><br></pre></td></tr></table></figure>
+
+<p><strong>5、查看当前端口号占用情况</strong><br>1.用于查看某一端口的占用情况</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">lsof -i:8080</span><br></pre></td></tr></table></figure>
+
+<p>2.显示tcp，udp的端口和进程等相关情况</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -tunlp</span><br></pre></td></tr></table></figure>
+
+<p>3.指定端口号的进程情况</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -tunlp|grep 8080</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.查看PID进程信息</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -aux |grep 28990</span><br></pre></td></tr></table></figure>
+
+<p>根据PID，查看JVM中各线程信息(‘0x9eb’为nid值)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jstack 2246|grep &#x27;0x9eb&#x27; -A 50</span><br></pre></td></tr></table></figure>
+
+<p><strong>6、ps 命令</strong><br>过滤得到当前系统中的 ssh 进程信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps aux | grep &#x27;ssh&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><strong>7、管道命令</strong><br><code>简单来说, Linux 中管道的作用是将上一个命令的输出作为下一个命令的输入, 像 pipe 一样将各个命令串联起来执行, 管道的操作符是 |</code><br>管道命令查看当前运行的程序中，名称为java的程序</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -ef|grep java</span><br></pre></td></tr></table></figure>
+
+<p>查看&#x2F;etc&#x2F;passwd文件中的root内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/passwd | grep &#x27;root&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>查看当前系统的ip连接（Windows和Linux通用）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure>
+
+<p>将sh test.sh任务放到后台，并将打印的日志输出到<code>nohup.out</code>文件中，<strong>终端不再能够接收任何输入（标准输入）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nohup sh test.sh  &amp;</span><br></pre></td></tr></table></figure>
+
+<p>将sh test.sh任务放到后台，并将打印的日志输出到<code>test.out</code>文件中，<strong>终端不再能够接收任何输入（标准输入）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nohup sh test.sh &gt;&gt; test.out  &amp;</span><br></pre></td></tr></table></figure>
+
+<p>将sh test.sh任务放到后台，并将打印的日志输出到nohup.out文件中，<strong>终端能够接收任何输入</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nohup sh test.sh  &amp;</span><br></pre></td></tr></table></figure>
+
+<p>8、添加Host地址<br>打开配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure>
+
+<p>在打开的文件中添加</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">49.235.32.164 www.lydms.com</span><br></pre></td></tr></table></figure>
+
+<p>保存文件后，重启网络</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/init.d/network restart</span><br></pre></td></tr></table></figure>
+
+<p>重新加载成功：<br><img src="https://img-blog.csdnimg.cn/20200921141541487.jpg#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="十、yum常用命令"><a href="#十、yum常用命令" class="headerlink" title="十、yum常用命令"></a>十、yum常用命令</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install iptables-services			下载并安装iptables</span><br><span class="line">yum list					列出当前系统中安装的所有包</span><br><span class="line">yum search package_name				在rpm仓库中搜寻软件包</span><br><span class="line">yum update package_name.rpm			更新当前系统中所有安装的rpm包</span><br><span class="line">yum update package_name				更新一个rpm包</span><br><span class="line">yum remove package_name				删除一个rpm包</span><br><span class="line">yum clean all					删除所有缓存的包和头文件</span><br></pre></td></tr></table></figure>
+
+<h2 id="十一、其他命令"><a href="#十一、其他命令" class="headerlink" title="十一、其他命令"></a>十一、其他命令</h2><h3 id="1、xargs"><a href="#1、xargs" class="headerlink" title="1、xargs"></a>1、xargs</h3><p>给其他命令传递参数的一个过滤器</p>
+<p><strong>补充说明</strong></p>
+<p><strong>xargs 命令</strong> 是给其他命令传递参数的一个过滤器，也是组合多个命令的一个工具。它擅长将标准输入数据转换成命令行参数，xargs 能够处理管道或者 stdin 并将其转换成特定命令的命令参数。xargs 也可以将单行或多行文本输入转换为其他格式，例如多行变单行，单行变多行。xargs 的默认命令是 echo，空格是默认定界符。这意味着通过管道传递给 xargs 的输入将会包含换行和空白，不过通过 xargs 的处理，换行和空白将被空格取代。xargs 是构建单行命令的重要组件之一。</p>
+<p><strong>xargs 命令用法</strong></p>
+<p>xargs 用作替换工具，读取输入数据重新格式化后输出。</p>
+<p><code>-n</code>：指定每行输出数量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat test.txt | xargs -n3</span><br><span class="line">a b c</span><br><span class="line">d e f</span><br><span class="line">g h i</span><br><span class="line">j k l</span><br><span class="line">m n o</span><br></pre></td></tr></table></figure>
+
+<p><code>-d</code>：按指定内容分隔文本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos ~] echo &quot;nameXnameXnameXname&quot; | xargs -dX</span><br><span class="line">name name name name</span><br></pre></td></tr></table></figure>
+
+<p><code>-l</code>：文本命令替换</p>
+<p>xargs 的一个 选项 -I ，使用 -I 指定一个替换字符串{}，这个字符串在 xargs 扩展时会被替换掉，当 -I 与 xargs 结合使用，每一个参数命令都会被执行一次：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls *.jpg | xargs -n1 -I cp &#123;&#125; /data/images</span><br></pre></td></tr></table></figure>
+
+<p><code>-t</code>：将执行的命令，打印出来</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-t echo&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls * |xargs -t -n1 -I &#123;&#125; cp -r &#123;&#125; /root/ddd/ echo&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结合使用—指定X切分，并每行2个</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos ~] echo &quot;nameXnameXnameXname&quot; | xargs -dX -n2</span><br><span class="line">name name</span><br><span class="line">name name</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>查看历史使用命令</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history</span><br></pre></td></tr></table></figure>
+
+<p>过滤与<code>es</code>相关命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history | grep es</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看占用资源</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -au			占用的资源是从进程启动开始，计算的平均占用资源，比如cpu等</span><br><span class="line">top			实时占用的资源；</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看当前目录所占存储</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">du -lh					查看当前文件下各文件夹占用存储空间</span><br><span class="line">du -sh					查看当前文件夹所占存储空间</span><br><span class="line">du --max-depth=&lt;目录层数&gt; 		超过指定层数的目录后，予以忽略。</span><br><span class="line">du --max-depth=1 			只查看当前目录下文件占用的存储空间</span><br></pre></td></tr></table></figure>
+
+<p><strong>管道命令：</strong><br>根据项目查看进程，更加PID查看项目，以及项目路径</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -ef 						查看所有的进程</span><br><span class="line">ps -ef | grep mysql				查看mysql相关的进程</span><br></pre></td></tr></table></figure>
+
+<p>通过进程PID查看所占用的端口号</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nap |grep 进程ID(PID)</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看Linux下系统存储使用率</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">df -h			查看系统硬盘使用情况</span><br></pre></td></tr></table></figure>
+
+<p><strong>杀死进程(根据PID)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">kill -9 2630		进程pid</span><br></pre></td></tr></table></figure>
+
+<p><strong>关闭防火墙</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service iptables stop      临时关闭防火墙</span><br><span class="line">chkconfig iptables off     防火墙开启不启动</span><br><span class="line">service iptables status    查看防火墙状态</span><br></pre></td></tr></table></figure>
+
+<p><strong>开机启动选项</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">msconfig					查看开机启动选项</span><br><span class="line">chkconfig					查看开机启动服务列表</span><br></pre></td></tr></table></figure>
+
+<p><strong>查看MySQL服务的程序的状态</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service mysql start        开启MySQL    </span><br><span class="line">service mysql status       查看MySQL的状态    </span><br><span class="line">service mysql stop         关闭MySQL    </span><br></pre></td></tr></table></figure>
+
+<p><strong>查看系统变量</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo $USER   	输出某个变量</span><br><span class="line">set	         输出所有变量</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、curl语法"><a href="#2、curl语法" class="headerlink" title="2、curl语法"></a>2、curl语法</h3><p><strong>GET请求</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl &quot;http://www.wangchujiang.com&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>POST请求</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#  普通文本</span><br><span class="line">curl -d&#x27;login=emma＆password=123&#x27; -X POST https://wangchujiang.com/login</span><br><span class="line">#  Json格式</span><br><span class="line">curl -l -H &quot;Content-type: application/json&quot; -X POST -d &#x27;&#123;&quot;phone&quot;:&quot;13521389587&quot;,&quot;password&quot;:&quot;test&quot;&#125;&#x27; http://wangchujiang.com/apis/users.json</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>详细可以看我写的另一篇：<a href="https://blog.csdn.net/lydms/article/details/127655845">curl语法整理</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/lydms/article/details/127655845</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、查询支持解析器"><a href="#3、查询支持解析器" class="headerlink" title="3、查询支持解析器"></a>3、查询支持解析器</h3><p>Centos默认的解析器是<code>bash</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
+
+<p>列表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/sh</span><br><span class="line"># Centos默认的解析器是bash</span><br><span class="line">/bin/bash</span><br><span class="line">/sbin/nologin</span><br><span class="line">/usr/bin/sh</span><br><span class="line">/usr/bin/bash</span><br><span class="line">/usr/sbin/nologin</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/csh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/3624493cd41a411e9a4724402bf1e5c3.png" alt="在这里插入图片描述"><br>指定解析器执行<br>脚本以<code>#!/bin/bash</code>开头（指定解析器）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">echo &quot;helloworld&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="十二、Linux内核优化"><a href="#十二、Linux内核优化" class="headerlink" title="十二、Linux内核优化"></a>十二、Linux内核优化</h2><p>打开配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
+
+<p>加载新的配置(需开启防火墙iptables，否则会报错)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.cnblogs.com/lldsn/p/10489593.html">收藏的详情地址</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://www.cnblogs.com/lldsn/p/10489593.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="十三、用户权限操作"><a href="#十三、用户权限操作" class="headerlink" title="十三、用户权限操作"></a>十三、用户权限操作</h2><h3 id="1、用户操作"><a href="#1、用户操作" class="headerlink" title="1、用户操作"></a>1、用户操作</h3><p>添加用户<code>sum</code>:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">useradd --d /usr/sum -m sum</span><br></pre></td></tr></table></figure>
+
+<p>关于useradd的某些参数：</p>
+<p><strong>-u：</strong> 指定 UID，这个 UID 必须是大于等于500，并没有其他用户占用的 UID</p>
+<p><strong>-g：</strong> 指定默认组，可以是 GID 或者 GROUPNAME，同样也必须真实存在</p>
+<p><strong>-G：</strong> 指定额外组</p>
+<p><strong>-c：</strong> 指定用户的注释信息</p>
+<p><strong>-d：</strong> 指定用户的家目录</p>
+<p>已创建的用户<code>sum</code>设置密码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">passwd sum</span><br></pre></td></tr></table></figure>
+
+<p>用户添加<code>root</code>权限</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></table></figure>
+
+<p>找到<code>root</code>用户权限位置<br>添加与<code>root</code>用户相同权限</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">## Allow root to run any commands anywhere</span><br><span class="line">root    ALL=(ALL)       ALL</span><br><span class="line">eses    ALL=(ALL)       ALL</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/5e5c085c3e4649dda55ce82d405d23f9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAaGFfbHlkbXM=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<p>新建的用户在面显示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/passwd</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20200827143920513.png#pic_center" alt="反反复复"></p>
+<p>切换下刚才添加的用户</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">su sum</span><br></pre></td></tr></table></figure>
+
+<p>sum: x:1000:1000:: &#x2F;usr&#x2F;sum :&#x2F;bin&#x2F;bash<br>sum: x:0:1000:: &#x2F;usr&#x2F;sum :&#x2F;bin&#x2F;bash</p>
+<p>回到root用户</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<p><strong>修改已有用户信息<code>usermod</code></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">usermod 选项 用户名</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/6750ee77e3354cfaa983de3683019ad0.png" alt="请添加图片描述"></p>
+<p>删除用户文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf /usr/sum</span><br></pre></td></tr></table></figure>
+
+<p>删除用户<code>sum</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">userdel sum</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/e57effd8b85b49fd8b87b9e1c16b5f58.png" alt="请添加图片描述"></p>
+<h3 id="2、添加组"><a href="#2、添加组" class="headerlink" title="2、添加组"></a>2、添加组</h3><p><strong>添加用户组</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">groupadd groupname</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/5fe1a6b1a99d406dbe90115777933fb4.png" alt="请添加图片描述"><br><strong>修改用户组</strong><br>使用者权限：管理员用户</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">groupmod 选项 用户组</span><br><span class="line">groupmod  -n new-usergroup  usergroup</span><br></pre></td></tr></table></figure>
+
+<p>常用的选项有：</p>
+<ul>
+<li>-g GID 为用户组指定新的组标识号。</li>
+<li>-o 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。</li>
+<li>-n新用户组 将用户组的名字改为新名字<br><img src="https://img-blog.csdnimg.cn/6147e2f2c09c4bd6ad4e17decbe9a870.png" alt="在这里插入图片描述"></li>
+</ul>
+<p><strong>删除用户组</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">groupdel groupname</span><br></pre></td></tr></table></figure>
+
+<p>可以看到自己的分组和分组id</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/group</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、sudo用户权限操作"><a href="#3、sudo用户权限操作" class="headerlink" title="3、sudo用户权限操作"></a>3、sudo用户权限操作</h3><blockquote>
+<p>比如我们使用普通用户操作用户或者操作用户组、以及修改网卡配置文件的时候，需要切换到root用户才操作，此时我们可以使用sudo命令提高普通用户的操作权限，以达到操作目的</p>
+</blockquote>
+<p><code>sudo</code>：控制用户对系统命令的使用权限,root允许的操作。<br>通过sudo可以提高普通用户的操作权限。<br><strong>使用者权限</strong>：普通用户</p>
+<p>使用root用户权限执行命令，操作</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo -s</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo   vi /etc/sysconfig/network-scripts/ifcfg-ens33 </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/ea77820e3298431681dc420a6263455d.png" alt="在这里插入图片描述"></p>
+<h3 id="4、更换文件所有者"><a href="#4、更换文件所有者" class="headerlink" title="4、更换文件所有者"></a>4、更换文件所有者</h3><p>格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown [-R] 所有者 		文件或目录</span><br><span class="line">chown [-R] 所有者:所属组 	文件或目录</span><br></pre></td></tr></table></figure>
+
+<p>将<code>kibana-8.3.3-linux-x86_64.tar.gz</code>所有者改为用户<code>sum</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R sum /usr/sum/kibana-8.3.3-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>将<code>kibana-8.3.3-linux-x86_64.tar.gz</code>所有者改为用户<code>sum</code>、所有组改为<code>sum</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R sum:sum /usr/sum/kibana-8.3.3-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h2 id="十四、TOP"><a href="#十四、TOP" class="headerlink" title="十四、TOP"></a>十四、TOP</h2><p>实时占用的资源:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/16d9a61fc63848b888ebc3ea1136db18.jpeg#pic_center" alt="在这里插入图片描述"></p>
+<p>top命令执行结果分为两个区域：<strong>统计信息区</strong> 和<strong>进程信息区</strong></p>
+<h3 id="1、统计信息区"><a href="#1、统计信息区" class="headerlink" title="1、统计信息区"></a>1、统计信息区</h3><p><strong>TOP：任务队列信息，与uptime命令执行结果相同.</strong></p>
+<ul>
+<li>15:33:39：系统时间</li>
+<li>up 5:40：主机已运行时间</li>
+<li>2 users：用户连接数（不是用户数，who命令）</li>
+<li>load average: 1.09, 1.04, 0.98：系统平均负载，统计最近1，5，15分钟的系统平均负载</li>
+</ul>
+<p><strong>Tasks：进程信息</strong></p>
+<ul>
+<li>123 total：进程总数</li>
+<li>3 running：正在运行的进程数</li>
+<li>120 sleeping：睡眠的进程数</li>
+<li>0 stopped：停止的进程数</li>
+<li>0 zombie：僵尸进程数</li>
+</ul>
+<p><strong>%CPU(s)：CPU信息（当有多个CPU时，这些内容可能会超过两行）</strong></p>
+<ul>
+<li>42.1 us：用户空间所占CPU百分比</li>
+<li>2.0 sy：内核空间占用CPU百分比</li>
+<li>0.0 ni：用户进程空间内改变过优先级的进程占用CPU百分比</li>
+<li>49.2 id：空闲CPU百分比</li>
+<li>0.0 wa：等待输入输出的CPU时间百分比</li>
+<li>6.0 hi：硬件CPU终端占用百分比</li>
+<li>0.7 si：软中断占用百分比</li>
+<li>0.0 st：虚拟机占用百分比</li>
+</ul>
+<p><strong>KiB Mem：内存信息（与第五行的信息类似与free命令类似）</strong></p>
+<ul>
+<li>3780.9 total：物理内存总量</li>
+<li>727.4 free：已使用的内存总量</li>
+<li>668.8 used：空闲的内存总量（free + userd &#x3D; total）</li>
+<li>2384.7 buff&#x2F;cache：用作内核缓存的内存量</li>
+</ul>
+<p><strong>KiB：swap信息</strong></p>
+<ul>
+<li>2048.0 total：交换分区总量</li>
+<li>2046.0 free：已使用的交换分区总量</li>
+<li>2.0 used：空闲交换分区总量</li>
+<li>859.6 avail：缓冲的交换区总量，内存中的内容被换出到交换区，然后又被换入到内存，但是使用过的交换区没有被覆盖，交换区的这些内容已存在于内存中的交换区的大小，相应的内存再次被换出时可不必再对交换区写入。</li>
+</ul>
+<h3 id="2、进程信息区"><a href="#2、进程信息区" class="headerlink" title="2、进程信息区"></a>2、进程信息区</h3><ul>
+<li><p>PID:进程id</p>
+</li>
+<li><p>USER:进程所有者的用户名</p>
+</li>
+<li><p>PR:优先级</p>
+</li>
+<li><p>NI:nice值。负值表示高优先级，正值表示低优先级</p>
+</li>
+<li><p>RES:进程使用的、未被换出的物理内存的大小</p>
+</li>
+<li><p>%CPU:上次更新到现在的CPU时间占用百分比</p>
+</li>
+<li><p>%MEM:进程使用的物理内存百分比</p>
+</li>
+<li><p>TIME+：进程所使用的CPU时间总计，单位1&#x2F;100秒</p>
+</li>
+<li><p>COMMAND:命令名&#x2F;行</p>
+</li>
+<li><p>PPID:父进程id</p>
+</li>
+<li><p>RUSER:Real user name（看了好多，都是这样写，也不知道和user有什么区别，欢迎补充此处）</p>
+</li>
+<li><p>UID:进程所有者的id</p>
+</li>
+<li><p>VIRT:进程使用的虚拟内存总量，单位kb。VIRT&#x3D;SWAP+RES</p>
+</li>
+<li><p>GROUP:进程所有者的组名</p>
+</li>
+<li><p>TTY:启动进程的终端名。不是从终端启动的进程则显示为?</p>
+</li>
+<li><p>NI:nice值。负值表示高优先级，正值表示低优先级</p>
+</li>
+<li><p>P:最后使用的CPU，仅在多CPU环境下有意义</p>
+</li>
+<li><p>TIME:进程使用的CPU时间总计，单位秒</p>
+</li>
+<li><p>SWAP:进程使用的虚拟内存中被被换出的大小</p>
+</li>
+<li><p>CODE:可执行代码占用的物理内存大小</p>
+</li>
+<li><p>DATA:可执行代码以外的部分（数据段+栈）占用的物理内存大小</p>
+</li>
+<li><p>SHR:共享内存大小</p>
+</li>
+<li><p>nFLT:页面错误次数</p>
+</li>
+<li><p>nDRT:最后一次写入到现在，被修改过的页面数</p>
+</li>
+<li><p>S:进程状态（D&#x3D;不可中断的睡眠状态，R&#x3D;运行，S&#x3D;睡眠，T&#x3D;跟踪&#x2F;停止，Z&#x3D;僵尸进程）</p>
+</li>
+<li><p>WCHAN:若该进程在睡眠，则显示睡眠中的系统函数名</p>
+</li>
+<li><p>Flags:任务标志</p>
+</li>
+</ul>
+<h2 id="十五、文件安装"><a href="#十五、文件安装" class="headerlink" title="十五、文件安装"></a>十五、文件安装</h2><h3 id="1、文件下载-lrzsz"><a href="#1、文件下载-lrzsz" class="headerlink" title="1、文件下载(lrzsz)"></a>1、文件下载(lrzsz)</h3><p>下载文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y lrzsz</span><br></pre></td></tr></table></figure>
+
+<p>上传文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rz</span><br></pre></td></tr></table></figure>
+
+<p>保存文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sz</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>命令</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+</search>
