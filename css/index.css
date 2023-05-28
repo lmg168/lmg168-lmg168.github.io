@@ -4693,7 +4693,7 @@ h1.page-title + .tag-cloud-list {
   padding-right: 4px;
 }
 #vcomment textarea {
-  background: url("/imgs/R-C.jpg") 100% 100% no-repeat;
+  background: url("https://imge.ablog168.cn/2023-05-28/R-C.jpg") 100% 100% no-repeat;
 }
 #vcomment textarea:focus {
   background-image: none;
