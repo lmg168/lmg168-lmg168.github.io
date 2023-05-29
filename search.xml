@@ -159,7 +159,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">tab长度×(层数-<span class="number">1</span>) &lt; 空白长度 ≤ tab长度×层数</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>  + 第一层<br>    * 第二层<br>          + 第三层</p>
+<p>  + 第一层<br>    * 第二层<br>            + 第三层</p>
 <p>  + 再来一个第一层</p>
 </blockquote>
 <h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><p>使用 <code>1.</code> +<code>空格</code> +<code>文字内容</code> 表示有序列表，可嵌套。<br>可用<code>tab</code> 或者<code>空格</code> + <code>-</code>、<code>+</code> 或者 <code>*</code> +<code>文字内容</code>使列表嵌套<br><strong>成功嵌套的条件是</strong> 下一层的<code>-</code>、<code>+</code> 和 <code>*</code> 的前面的空白长度满足以下条件</p>
