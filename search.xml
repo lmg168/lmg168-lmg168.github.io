@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>本博客部署详解——前置环境安装(一)</title>
+    <url>/2023/05/29/2023-05-29_%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2_%E5%89%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h3 id="博客背景介绍"><a href="#博客背景介绍" class="headerlink" title="博客背景介绍"></a>博客背景介绍</h3><hr>
+<p>​		本博客是由<a href="https://hexo.io/zh-cn/docs/index.html">hexo</a>生成的纯静态页面的html代码，使用<a href="https://butterfly.js.org/posts/21cfbf15/">butterfly</a>模板作为基础来进行改进而来的。他不需要服务器的支撑，会减少购买服务器等方面的费用，这也是我选择它的原因。源代码完全由github进行管理，只需要你访问仓库地址即相当于访问你的博客。再配置过程中，往往需要下载一些组件以及提交代码到<a href="https://github.com/lmg168">github</a>，所以需要安装<a href="https://blog.csdn.net/qq_42006801/article/details/124830995?ops_request_misc=&request_id=&biz_id=102&utm_term=node%E5%AE%89%E8%A3%85%E5%8F%8A%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-124830995.nonecase&spm=1018.2226.3001.4187">node</a>、<a href="https://blog.csdn.net/mukes/article/details/115693833?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168533659716800227456787%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=168533659716800227456787&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-115693833-null-null.142%5Ev88%5Einsert_down1,239%5Ev2%5Einsert_chatgpt&utm_term=git%E5%AE%89%E8%A3%85&spm=1018.2226.3001.4187">git</a>等开发工具，下面详细讲述。</p>
+<br>
+
+<h3 id="node安装"><a href="#node安装" class="headerlink" title="node安装"></a>node安装</h3><hr>
+<ol>
+<li>node可以去他的官网下载 <a href="https://nodejs.org/zh-cn/download/releases">node.js</a>，选择对应的版本后，点进去下载相关的系统安装程序，windows下载msi后缀的程序，X86是32位，X64是64位。具体如下图</li>
+</ol>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529142134572.png" alt="image-20230529142134572"></p>
+<br>
+
+<ol start="2">
+<li>下载完node安装包之后便进行安装，这里选择的是你的node安装位置，默认是c盘，你可以根据自己的想法进行修改；然后一直点击下一步直至安装完成。</li>
+</ol>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529142807002.png" alt="image-20230529142807002"></p>
+<br>
+
+<ol start="3">
+<li>然后你在电脑上找到运行或者win+r打开命令框输入cmd命令，打开命令窗口。输入 <strong>node -v</strong>命令可以看到有显示版本信息，输入<strong>npm -v</strong>也会有输出对应的版本信息。那就证明你已经安装完成可以使用了。</li>
+</ol>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529143229326.png" alt="image-20230529143229326"></p>
+<ol start="4">
+<li><p>现在你们全局的仓库是安装在c盘下的，可以通过npm list -global命令查看；所以当你们使用npm安装全局模块的时候会安装到c盘下面的文件夹，这会使得你们c盘数据庞大，所以我们便可以修改默认存储地址；但是如果你们c盘本身比较大，不在乎多存的这点数据，那就可以忽略不计这一步。在你安装node的文件夹下新建两个文件夹；node_cache(缓存文件夹)node_global(全局仓库文件夹)</p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529143609324.png" alt="image-20230529143609324"></p>
+</li>
+</ol>
+<p>​		然后再命令行输入</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm config set prefix &quot;node_global的地址&quot; </span><br><span class="line">npm config set prefix &quot;node_global的地址&quot; </span><br></pre></td></tr></table></figure>
+
+<p>​		这时候你的全局仓库地址和缓存地址就已经修改完成；你可以使用命令行安装某个东西测试一下；比如我全局安装一下webpack，你就会看到node_global下面出现了webpack的文件夹，以后你全局安装的任何模块都可以再这个文件夹里面找到。</p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529144209507.png" alt="image-20230529144209507"></p>
+<ol start="5">
+<li><p>添加环境变量，进入环境变量，编辑【系统变量】下的变量【Path】</p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529144737263.png" alt="image-20230529144737263"></p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529144806124.png" alt="image-20230529144806124"></p>
+</li>
+</ol>
+<p>​		<strong>注意：</strong>由于 node 全局模块大多数都是可以通过命令行访问的，还要把【node_global】的路径“E:\devTools\nodejs\node_global”加入到【系统变量 】下的【PATH】 变量中，方便直接使用命令行运行，如下图所示：</p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529144950261.png" alt="image-20230529144950261"></p>
+<ol start="6">
+<li><p>设置淘宝镜像，将npm默认的registry修改为淘宝registry说明：npm 默认的 registry ,也就是下载 npm 包时会从国外的服务器下载，国内下载会很慢，可以更换为国内镜像： <a href="https://registry.npmmirror.com./">https://registry.npmmirror.com。</a></p>
+<p>a. 查看当前使用的镜像路径</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529145253669.png" alt="image-20230529145253669"></p>
+<p>b. 更换npm为国内镜像</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"># npm config set registry <span class="attr">https</span>:<span class="comment">//registry.npm.taobao.org</span></span><br><span class="line">npm config set registry <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529145346029.png" alt="image-20230529145346029"></p>
+<p>c. 检查镜像是否配置成功,再次执行npm config get registry，检查当前的镜像路径。如上图所示，npm默认的registry已修改为国内镜像registry。</p>
+</li>
+</ol>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529145431520.png" alt="image-20230529145431520"></p>
+<br>
+
+<h3 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h3><p>​		这个就需要去 Git 官网下载对应系统的软件了，下载地址为 <a href="https://git-scm.com/">git-scm.com</a>或者<a href="http://gitforwindows.org/">gitforwindows.org</a>，或者<a href="https://registry.npmmirror.com/binary.html?path=git-for-windows/">阿里镜像</a>。这里的 git-scm 是 Git 的官方，里面有不同系统不同平台的安装包和源代码，而 gitforwindows.org 里只有 windows 系统的安装包。阿里镜像直接Ctrl+F 搜索最新版本前缀即可，如2.40.0</p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529150142375.png" alt="image-20230529150142375"></p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529150250016.png" alt="image-20230529150250016"></p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529150357100.png" alt="image-20230529150357100"></p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529150513837.png" alt="image-20230529150513837"></p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529150533329.png" alt="image-20230529150533329"></p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529150554134.png" alt="image-20230529150554134"></p>
+<p>常用命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config -l  //查看所有配置</span><br><span class="line">git config --system --list //查看系统配置</span><br><span class="line">git config --global --list //查看用户（全局）配置</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>执行以下命令生成ssh公钥，此公钥用于你的计算机连接Github</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529151408336.png" alt="image-20230529151408336"></p>
+<ol start="2">
+<li>用记事本打开上述图片中的公钥（id_rsa.pub），复制里面的内容，然后开始在github中配置ssh密钥。</li>
+</ol>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529151714273.png" alt="image-20230529151714273"></p>
+<p><img src="https://imge.ablog168.cn//blog_img/image-20230529151744376.png" alt="image-20230529151744376"></p>
+<ol start="3">
+<li>测试连接，输入以下命令。出现连接到账户的信息，说明已经大功告成，至此完成了环境准备工作。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>建站那些事儿</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>git</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown常用语法总结</title>
     <url>/2023/05/28/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95_2023_05_28/</url>
     <content><![CDATA[<hr>
