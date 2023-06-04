@@ -1,236 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>node&amp;git的安装配置</title>
-    <url>/2023/05/29/2023-05-29_node&amp;git%E7%9A%84%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="2802a4650d06751db1cd538a293fb69bc6aa244b9aa09ae4b8a48f128fb495b1">4630436162ade97ba2718b7d0c4b3b63501b8b0e90dd70c68cacef77fafaa69c3c0cb7d58c2533cd39e1d64d1cfb35d7240cf84427f2ce535fe7f1b35a235b725519f6504d4d9e5af6a8c467ffc0164b7dd08d4d9d4170cb627a5ae061bf8948ba505b8d677f62aec6b0995b113f84eba0127ce637e174cf7910ab6cd27f4d3b4f8871d9adeac93f971d25e48a078d2adf78b002b386c4a937a264c3523523e57227a7b8fca01e1336d573cbf4f338753d87529476a0855cddd07735aea4ea4aab6b66622557f058e4db618ab78abbdfbe6faed48af2016ecefb8b2430fdbe77f64e44b015ac226d1a570262e6c89bbcbe8e6220b7e27c362b510133c6500700269d07159e17763dd9f23780e0980ac732cdf5a88b04de66a2551cf52fd4a40d45a74dac563b1ad4f4c61add3b3ee0ad81ac9b2a2d6dbfd62a387224418cf368d50697a57d66d04e2ca5a58fdea66a66708d36dcd97846ba6c5594301ac25cb55870b15a5e476f2dc0f4f320b87d7f31025eea094690815e95162fa11a21b8dfbcdeb83bfe6bd7f68dd9865970eaa437a2787cf1bda403c0b279ac756a3f80deb5de11f79dc44f4ac9cee52a7f73d879b949a49ca497360499ff4a3e4e303df64b31fa51cbeb0575228296e6c2215b8fb2398a1171ef6129a09d3d2b9991fce872e05a55c4f74cb441d571daec89aff4bb839ebc63f929e829181f7ef3ba31626658f9d2e28f077b0b3f6da84d3b6edc932d9e0f72a9f2e1165c879140515dbaf98ceb40e0070f0931e5d28fd161d13ff57e8ddef11b7ceb292160166f10aa658b0493aba5c52a035cba112fbff99eed8e65f2b7f006cb72b65fd355e68d96964345b5d9bb50443b0d8b2f5edd0c0279fb848d918dd0b02293c7f530069019301a313631a4b660b728055295dbe7fd26d2b641a44e1f749f698731820b2a4f81bdac598f78ff31af8ed1568738007db3f6067e6d2590123079f9af0773ea454550e677fd568a697771196b4e5501ac4ff3e2b2f53c7dd5efdda51213ca0a2c93bdff371c02a448d9bcd3fb96a1822b6799de3989084c55404f5fad27a143c19ea53e965fc17d49b1cca777f316b2d65fae280bcfc65957bf3d36d4efcb6f73b7a0bb4bb9970af33ae7d55c16fb96bca168b6bf1c1cb4bf7588bb1cb25a0b08c776c989bfcdad60e16d25a90d12eff3d3ad62a565299582a7cb6db26bb49e092b112650d868c6302aa78bb02c336a1927f92f92406114d1ec2c373c621165976f324fdcee55f7e9fb66382ca9679ab7b73d02abd1c9f10a0f8e87c06ee4df8dbf1570058ff4aeec42b398835c159fe8ffbd1c58ea3390b4c6e1b4ba3baf36dc23080cd2ff9af1ea10a9a7400eb68452e8f6682b5ae8dda22591514aeccac64a98859405c7c05c29182999feb23cc2c7c05af2ffb9597631256d09206cf8f798fe774dddd46aca93e9124e5f4e58bd023aea28cdc10f81d4fabdd4133a10bb3ef358105a477520b4757b6cde0941a8e7273f8723a817549a5974a5da7b39f87ade7e3ec04c7ad03701eabe9c6f7065472ff201a7efdfc3f805439bb8d53eef621cea832d192d2a1ceb79ee5d62550b7482eff250f22b4b0de1d72997057de3fdd88954f1925d476ce25de5835741425ae751f0fe4df826f878edec9e5248e370d06139973b98f1d8ca54c93d0e14957e241b839d361ccb090395c5cdbd39c2ea94577c35dd35a7b703ecac59eb2290f3abcab738cb13cfc3d96451d6861e2bdb67fc54baee9ea75d5334093fab363143e37a7efa34cb00d72f5efbed108290e5dda84a8a41d51aeb99926cf3b61cc9e52f9b8180fdfd0e0ace9d9f7de4ad7e9aafbc1ed1de56bde0b3becf46fe4df1eec9eaef836984fd69a3b30b4b41d45cc56fdccdffa40192e419136ffbf19fdfd7fb49fd8199c8c4522b941ea08db5230d671199ee007872e96485a99eb29443d4794ba5a01bf2f422c784c05cf7e937a71ce95ffa5f68cda198ae978b573193a028103584b00cf1ba9584179615cb7089a40c2fc56ae8fd6097ef454191024f370661653100e1e8e053ee6512026d065149a89c55578a345c8f3a62d1e34dbe3404df542d897dd98cc15e420f85198067b5000644557b39b653c908c2d6baa99a2bab5772f4429c63e4d8a53db55b3f341b6c1ba1aa0e637124b76f6058472e57789de189ca177aac02d04be4d5f9398d1178c337d85e4439bb7feafb8c2e966105a7d6ac3d84abf1597faf42d22f8ff0a4afa68d3a26aee0d73e3ef82aebf7b36e759d2458bb1d2a35c7072d069a1aeacae110ebed53145c9a2194efdbfb361c0e3bb5402a4cd7821ae0df531eb551d94b09ec937a5385b18e8b5aa0bcd7b5b8c5b8232782211e287030686ade265242c30822828c2279789d21bc3cebba385a13e1c84ab9f9cf5b1b8d661a09af7441cd199f6a586c8147df3a6bfc9bd5f0f1b6b8aba0890a2caf0ae6e178f1722f09a701ab9920182671c11bdb45263432efc7f3aae0f64fb10abc0041251d96bc42d5ff32040df0105f7df935f5aad625f89821f3b2433447fc852fa33283812c9aa6cce75872b7181a30cac33289fe079d40f89279bbbd27449612718aa4b14fc995f9f931d5d74ba3a613398fc5c93568005fcbeafffc9c171387237d9f681c33bf9c7cfeccab06f5ed1c224fc1dcfe6492f152345b41b986b0dbfe92f1d34f1287d76071276ed2ddaa4e1bac1e86d60f9c46a6988c21d83809f69193b1184eda793b9b091185b54ee30abdd6d61bf74548cc03b5dc725b0494a412f68e46e68f2048fe5a449df750233ffd6a6f21e02c0223a4bd7f994756084d8bc230c148070b56d690b6701c23811aa68c8fa402dce994798b7eb5a4b179d82bf62dc2f739f8b24bff3c36e7911175dba521fd91ec9bd7f4c77dcbc78182c3a248f5ee90254bba5fc75238cce709e944298a2180737331507a829c6dd4a037dc4d22602487e97c9ab9fb0b266ba462524b01ad3bf121208d538d10189db52685a828ceea9cb29bbe9324032903c716d468d3dd53d51ec2bd94c5a6801381fb4af99fb56144bde1a1bea6d4f397eaa180e4f30b3004e717ae2f6aefd0db6a2683ec870759be8de766da09db6bea6a7a1809bd629a9924dc6434fec8ab3c28b7107f58c14309ec3654a583b6485edced4731bf4726c966825054b1973909e511d853f3b0b14e7abef0f63d67907de35a7269270f2f159a3be0733ed95986a1a4bfe2c3f08c415be58086e02a34891891577cc43f8f6377c42a879a61c37b604d9e67314dd0b48ef374f18bfa73f4eb1c1c194b22c527a786e717734e2fadce4dfa460d6d9ed5be8bcf449f323f51176a8b9bd4bf6c8ef698f357d0fe9f9f6d9e3b66bd8de7ef7e4a83b42679bbc485740ef65602b233ef0db20b0a2ac346be8c91916a7a28e40adb8b7524d71bef344d5e46c83f58c42f7241c20fbbd9663261fb950390e35d6e6b22ca2a9de9204c746b80454fcad5705f58fd1d5333247245fd79adc50e36d261fed5f3c2e9819dd4deeeb3b50fa368feff54a748150a5e9f80cf76d653063ca2f3f0acfb3fac6f847f25dc26b3e555c6db86eb353922057ccd5646dda1bfff395da6442993c07508e9fd39ed9d763d8fc7dd61530912e1d4487ce94548ab788300367968f253aa9868a57ce138a79052da964ab4f8ec111aa71bf2fe64e98311a530189dbc3e3c55cba9a1fc04e9ffd5f14f286e730c50f15ff3ec8dda70c428665fae3dc046cb49b0190f3d9994825c44bfd76475bc187a759e39220d8f77b38e043a2ccdea9d9c8f634cfbe4367ad932a6791adf2d17a59eb0a37f9348006ede2b4c7ce2dd819782bd307ef6fb11661859b4444b5ab5af27ad3902e7e608470fb4f9bc86a0a06b39a90956d88ef512e5058ef62497562c5129b788a097c71f952bb6552bebd2a0ef4224235821884ef0a54ca4ab8da507158968ac76e1465584174d9ebbe360f428350a638e7bd14ccfeaf1383a805c0839661d9cebac88c93df80e245ee19c325799a0efc90f47ae4aad5f55fcc3f6234c786edd7ff59b7e41aa08f5b0174cb7296449f821688413ef832f1c23e07490bfb62994db2913b4b32a0852537c13901588fe0d015d27471d25ece03e2c6408d0f2f1b076e6a413bb2f76de94f4dab58b783c9df06b673ab1373ccd4139c4353f531e9ae3ab7c25ff4e487009525c95c391e66c395cf61f5ec89fa8224d639bd0157deb22ca8df2e70892b40dacf10babd0660b15601ca5ed0ed19afca9d0bf5b8ed9b206120c4ad894883ea6d77dc971e89e4aac28684e381b6a5683d6f113643cfd9136caf8156e3bd0fce7e6746abccd7b5bc22314e6492a7b9217193d01bda83b57eede7f9d0241e3d0a206d2647dec88f79ade26b1abe8a9f784e6314797cd6b8e0c067d0e7a12f3860897c7c248172dba611c35e4cff58da432c7b123f9fd4ba0e9dcfaecc2e5b527322c169efebc553076e582ad5c93f5d0f82e335b98a3b44b52a7476487d3aa28a85322b1b071d933c86c18dd7cd9b959dbd8e10e71e63b88dfe9884eb50ec8ab2773684283bf614bc5b41cf3e18bc489e17927514b3bf03e1de1000e53c07cb4d41983bdf995d0845fa845b6ef8307d06cfb7872715ca88ed48712bb46dc2775441fcfb89f4d307cb623d8239fb88399b47cb0aa2ef42f169e9f776780615e6acc5df89efd65cc35ae83817b2bfa747021a8d7586d79d1176cd75b084d852e370a643dd75a9d6f1f47e55146e88af672853b36e28b0fd560431676f822e8adb4e063bc328058117d4f8544261b47a1be249c48db13282c3d138a0ef56a05cd960e78d15e64231c7648f3dcaae0ebb00c886113baf47b65524d3d81a4649d58ceb833be06fd1f43194f732cc37ca041b1853b6f5af959da43c3f92863c6ca77630dd43a03d3122949a9e7f8e352f9f5510437355df6678fbbcf3af6131c567716174ad58ef043e70f687626fe212a727f90faaf673227a5543bf9c2cb0bb284912dd9da408265ba9292a93318b7e5e3b02c9fd7738fad4cc05a303efdbda1eec17484bdf4125e2d52cc1cd45c6cdc313bdcd046397f0d73bb53adb628ebbc0d76671f1001050d5cb329ac21d8a6da9b85e5604984c7061514ae6e8b6a56fb0bcb4a79d5524d66f376335a7fc17d19957ad45d01adf9ed5f34aca27acb40f6ff002c2241994a6aa82a88ad119b5033d7b8ab5a1b3a065db59102e25659ed3237cf7c4ffcc6acc2f9782bb406fcf3ce42b0d813088c2d9c2d19953db27c9ec5568f66351973222ddb603677a596eff559813d08c94e53dc6a6d47ae6fa08269d206042a2ed4e0099c0326c03022dda0d36b282684c2cb1b5c9318532b874084cc5698a1a7a6a2f37145ebf01d1c029bdb8bf8ca4825748eb9c45083e4db704df58a104d322ea5712a62a33740dddfd4dfe912bd3c66f9bc1d784dc5f5edacf0d775080ba26b832c138c1ecb734cc02de9d2e7d057f3ac2ecd3622e93df155d21bd1d11e3de98e84d2763c4b6138d67b8cdcc77dd7e08d9678f978869553f714151f8f7060fadaa72568055907ed53bc61ebc918e52a09fa84b0c03525efa82fe9481c13af8cfa824d00da2dfaa4b887886818f7f323fd412b6cc92a08023f4b39dac119539bf99776a7924f51c6d3ca24bb8545b10aed13dad5911d747c25c66694d5c2429b1412eaad0929581ca63bad5b1ce36be5661adcdc65197eaef172f1dbd2cfa68f6e2df4da1049a08ddb98cd69760c8471c46d2890c92d4781413681aeaf21186dfc4ef6015f620ba02015ca606854d16e144e50e3385e30a3bdf8289293b417906d1c50c7ad466ff47a88985c4f87affd1b859c2093261635a3b407f6902a01fea014c6a110908d0529ee72d3fa594013f3f17d0ade7f89d7906ea61b596e33fd0b28668e7d7a3eadf6745eb48598c89585ce8c07dbaa933aa0757146932f443611cc8d96559d2d107e5504d50884fb14197133fcf436a245dc3ddfe879205a5c628f21e23f777c0468dba3f9f658abe7da175b4e32ea3e43dda218734a6972c77b0d91e0064d4e8917bc6aa3d90911abc0617f1dd2aa603e115fbebec647a69c1e9052b4b758a07b777c99acd693bc4d21a1af29f2c5cc447fb00b969df57e9241a118dfe28a763d60705238050e4c403eb81aa89f3fada654b10a2ee0586155cb082d05f10277c889fb009a562f8bbc32d0155c1e70d69da7e31212bd2e1879af75d0bc3d489635f8bb275c75a88fe1525a9a4ceeb4477918559544e1aa3e82be22d7cea6fa830dc037a1aabe9df76749ca60516fcccfad7d2edead191f03b562941e076cac421933eb1cc447ffc82abdfa89eac22216f775bc860390fadf2e3bfbfc5b3fc8183c00d503d8057fdb1fe37feb4d8a2fb8870a61da57e01a536e49ec86d170732df7b5279b0b96bb992831e1cb3b10098c837b38b82e58f89e76a1f34956131e5e57929882274394f31a2136fe994c7cb9f18249b6f055887943ed7c7c33b4227f9ea81a22332831703c38ec9879d912b9fd857f88fe389c134a0c519d94df0609a852c28e0a5e7afd0f502a12ed31e782dc723429728b781a5af1833bac8bf7baa236e781275c8c92429d7d772729fdc2d8a2e35793e213022ac301be30faa978d8c948b78a2530b0c4bc8381ee008014d3c0aed7e5b09d0942ffeaa50bd40e4d36eefe2e4f44af732dc862db13ac20da3c78a329d42c5b2b156bbd8d3007633e85769440bdfdaf62ecae163c96e3d0178f21dac5a8d726c77024d264ffb35929e12703a465a57774184c71b0b52a500ec8d5ae9b097740898c032ffa40f052981a9ddba8963e5c5535f3aee0fc39a31bb2c77af5d55883a9b7da8eb8acd6e182afe94db4b34c9182ba0210d0e38b7c4df0aa567d74c5b3b74766789f0f56e6e393e7cd9eb6f6845a4c3bd8e82f442e293a0cbde23f972cc963c2f6c80581d8eac482cd609be526d09b34683f69bc3a4a33381e48d0be727bb574bb8702426e692a8408061c717f9d4d92ab185df07b61db490e4660c6aff2eeb2c48ad55bdca3a298763bccfb8d66f8d20547e14e344e2f90f315df0ebbb4a5bc2cb1f4dd46a1671179654eb88811e179943702c7d1246fb44e6ef547940100ac1ab5d24295faab09fbcd8783dbc33648f599ab0e2b6b6b3aea5bccb0406f8a88e5d1d9bb668f885db766b21c2b535c56ac13a6ea6c84a433c3ae89ba5a70fe704281c48de4bf314d9949a2fee2061ccb55a3f74b3dcdb12bfbca8ee157fa36d59885a8a107900c637eb5d4f7c230842dc6e050e84bbbf8ff63086d4997f53511199d9a072a066852357fb48617e5a0cd8c4b1e4ee3f7fa40db31a6d0296fc5274bba7187aa0faa0079cf03207950b532a8ea65280bf2b57e5abc3cd57dd3d9462e069aad34d7f27ab50b8863bb0f4d5db592e4b016dc0c1d75a3da2e2b8244a1fda47ca0ef9e902d54aaed0758caa02c747474c1d8b9d2d960acb5df398c61d0ae8d194d17b9821ceff902288e80e8e218cbe6b0ea70e4e70d0b2037ace112e3c5ba71da958604ddcf44312ebbbaa5d45f44cdd67a2870824e76edcf3ceb70828208c392ccc5e0bbea753fb8e5c5492f61d5a82d0e68a669f3a699240a0094d9c66884c5080546d0f53bee9de14cbf6bce3a6cef62e40222dc589fe5cdab4449f4cf6e137cb47851567e0b76ce86db50c86a94935fe6275298b52fd3653a6fdfdd2f548431e97855627e36ec6cf72c1ca5e215a5f16424b1279a90fe2e3123534529469d7c7f6eca9c13c794b36c76180954a9209d535f39e64779a07d7a17a13b1d20e4b2d00f5d320f83c1550fef1f940b756a19308922176f0221b12d07ba82c5a7a98ed0b0956c7c78c8f0e11101525e048a0e7c597651c622a90026b4aa333ed344e2b3d1e9f2f10dc5cfbbec4b57dc8716e8fe3b1cc79a30e811f2c83e564dc9134ffcd0a5ad2a136c63d130343b820044684c74b83550c61d7a97c5571edb06c2dab409abcd7a4f88c099c7665725b0cd901a7399509dc97fda69583ae3168391eaef91231340038900424e71bb85d60acbc700ad5ca072ce606d1c3941f201d892ef87261120f1d1413cd72dd54c73261cf75b2a7b71ceaffd1d5a3e5e887a3d4336fad68168b81dc0017c382d72edc7b1a83050b34bb6570146a9c71526884dff1a04a171adbb94058b9f94409235f7aaeed94b4640fb16ba90d127f276016f81ee8fa3c79468e62c2e2df9ede7c059788185e3ae8bf1773d6f8e40941a299eb0a2320f1c5e62919644d6d06127362b37d92dce80900b18dadd09a8ea9c208b02b5b84ca16ca887f73cdce62bfbafe3049510d360d95a2712e43865e5fb2a3da5fe93c5abacd5f6b12ba58a55401857938ef30555d3f96b5e654e7e72d2e404752c6b4ebc6906a05d9aff999c928b770dc20258caf2bd7f22e4a02707815da695187709869089286eea36aaafc1053e3047384ac820afe49218d2662a1aa6f289ced42c5afb4caf204fd5f461e88018d800a5da6aa678d8622755172fbe2f6dcd88cfb3af8e9045f970c8aa492a531696ac3b0292cc07953614d6a43633abbb525458257e93f9681712d6f311be2287a1d8558034ca00f34804bd813b6dee6d14141acb806e90f69f216a963123a88f5c932726ec4bd4080287f1deb60fa09169ecf87a71a051df52e53ef279f1b6558027947bb04f2ad02f7fd52e760bd786ec93b1a7faeb412c1630cf8be28821ee051605667b8d38c8c1085945714d393927991a7de7ede6cce7e6993785a7b21ce510ab4054bb7ea5e058b33b9a04b5e0fe5b1ef215fa40cbaf2ad07389395327d57cef8a0bfa8b5c248fa3b2ac071d4ba84da728a8a950dfba213d0b65b27f6e1e1ddfa4659e1cb52016ed3fad3999c9b36735aa2c8f0c98c2e104adde1c2e5cf44f28eb34f4b56f1d25c4611260a781ae24f0ac7d9d39f60ba5b0141bca4c5c23a7d5e6bcc4ddc1bf13960c3a97c006d9c434aae594b02c929b7027902d8143bba05f7434677d4d1cb917f015b7ab732372ead75767e069cf6f1ae131ba6d69f5eec759c459f00e545cf2d98b11bbe6af77037beb1dcdcc55ba8b50536bba040da2ef2f5d3063d138ff5aa186273413c19d068d787bae127294aa7cb6a9ddeed0b9d3fc5d8f48de5ee783a8bbd5faf9607a99355e701878e85c4ea412c0c7c394e44d81b0869801364a684259aeb3d7c87ee9861b9f732980ea450f6774d9e63a403101f6e83400f0716696112f1bbd3f3b41a0daf46a5013b9109277432de1b00980825c3589926bf446812375f5ba11217873845f87077904ecb35e15c87722ea06b12677bd24c1fcc807b42673d36f699f2b5fff8f0b1cde081d32d7a9425c61b0a0fbe31957bf0276996d7bc777af7fbd9090040c24c8e89ee26dc7b4c9f6fca477aa1f53b0e3f00f457bf196d90e5d737c1936087ce37c6a3d4f16d0ca327a59297b8a5228188fbb43635fed6d583aab8404ac1170edd956444de4d553e715351cc799d53bcf2fde4e6a3434bec3f448692e6d501c5f6102a833ad6c58f37b819fed8786c765aec96c391ea8f0ac2910b8d9df81c005192cfdb16e28f896115ab006edc80a9cc3765123c73d2716f67674002e8f6ef6306c464daa7b50df389535d62659fe60437f9390d0d1fa7435b26a9a10d63d85aca7b733f8f7a5e9472b957fad7369e87d3bd4ce21297a82ab6056d111acc468ed64d400b403b49ed17a60214a311288cdc5eb6ac247c5b706b1f79ee353d7ac1f16756113973acf689cda4f58448bff44cfd4112afd1bd181a7e3d854a3615c270bbe4c3f050ca09de10638c0a03cdcfcfce3cf292651d9175b9e1b187ed9104c6c4eac9025e6084166472be1cab551f8d6c503924c1d8256a1f55272d756a3afd838f98900cf3d135eb6b6e9bcef008c0ae2300f55a4319bfb1a0a7be3024d58065e6cc19447ef1ed79fd314f4fd4293fd4d55881d8acc8703781565a20b61fe22330a4ff014112c54333da317c4a3f2f25049df5ef7891c1d1324bea1d8c94338dcf42c7253c1bdf931d1ee1533806084e717fc7edf82b3fa70044e0edf0d42befe9158e49b7c278e86b2e1c6fb117b08d8753c602450fe0217be4e7b66a78dfbb7df033ff47d7bb9285e8341ecb2e7aa0a7cbefae203f834fdf5264b29da0e9534613f28912c21902a003f2f3e3587662f6e93f0f498f58e70bfc4534f514cafe9a7585a6860d31d39530662b9ca4cf578dfff7c94e4119efd140d709f197be8f9dcd7e720b182c102ed8a6b9dffe01cd93c041bf0a155368aa3d5dc49577fb47741499570515339078ac990572c65d28e80ebb5e9c9ea38173e715853dc6b8bd8d641b2520656a43232c907f026b4dc29d4092a217f77ae1596a2d2eac189c878ca02f09f0a470f28f9a73e18a8cf50eec66c277dc09fb24b10e5d7cc74df9e46c8ce495ead1934bf59e0552735868f866e59ebfcabf77ecd668c878b363001a82ab6976345ade1385005d08abdda82099fd26b5c44af39c7f8698667beb60a2200ac739c1e55c738a9fbd4f7adba3a2b2f91fa2951c1752ef322edd52491c7585bfdf8f9c713b039cb325146c8f1aaa0bd13865e79a91579caa2a2db420b0a9e339fb144718acb30e65fafaa02d63610a7c76b0b204f1e88c89db7a9d69819d620d3b74f152999942aeff6e9f0b1a7b3387819c17a19d7dfa8905088dcc5e1262a93fc262f7c21212dea9e65361a779ede5b4e7d640da160622cdd213c2d861bddaa13c5598f53ffa1f31fee6b8b56989da5e1bb70645f95a1aa1ccb7f86ff4d8ff1bf8e6e446447f2cd39df1eea0c7a82c34ae94b5cd6a631b08d30235d981fa5d2e1743e06eda748c58f577c7f1ee72571b6118e9dc89b4026d07c29994747b321a1b07bf2760400d0ecc08b7819f39d74bbce3cbd185f1b1ca593a1ddb5be7fe2027278878de0cb4a4276126f15b6836f15996f0013c5fa874fc64e8302b36a01e9f15710f3d0b9ca6676bba1a022ae0a7a6871807408223b50c5a81a4b6d41403e31a88b181864ec2cbd6f7570993a20d546e252fe7363c8d8b22a723470058e524af00cfe98ab29885f7634bc704705b06e8bab4e9503c29a9847cc66d2e0edfc63ef76d44e26265bfdeb6342e6eeae876fbf202194522275d3e6be78e9ed5fcd8e2697</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-xray">
-      <input class="hbe hbe-input-field hbe-input-field-xray" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-xray" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-xray">您好, 这里需要密码.</span>
-      </label>
-      <svg class="hbe hbe-graphic hbe-graphic-xray" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
-        <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
-        <path d="M0,2.5c0,0,298.666,0,399.333,0C448.336,2.5,513.994,13,597,13c77.327,0,135-10.5,200.999-10.5c95.996,0,402.001,0,402.001,0"></path>
-      </svg>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>ELK分布式部署</title>
+    <url>/2023/06/04/ELK%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>开发环境配置</category>
+        <category>ELK</category>
       </categories>
       <tags>
-        <tag>教程</tag>
-        <tag>git</tag>
-        <tag>node</tag>
+        <tag>分布式</tag>
+        <tag>微服务</tag>
+        <tag>ELK</tag>
+        <tag>日志</tag>
       </tags>
   </entry>
   <entry>
-    <title>markdown常用语法总结</title>
-    <url>/2023/05/28/2023_05_28_markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
+    <title>java项目安全问题</title>
+    <url>/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<p><strong>1.弱口令漏洞</strong></p>
+<blockquote>
+<p>解决方案：最好使用至少6位的数字、字母及特殊字符组合作为密码。数据库不要存储明文密码，应存储MD5加密后的密文，由于目前普通的MD5加密已经可以被破解，最好可以多重MD5加密，或者多种加密方式叠加组合。</p>
+</blockquote>
+<p><strong>2.未使用用户名及密码登录后台可直接输入后台URL登录系统。</strong></p>
+<blockquote>
+<p>解决方案：通过配置filter来过滤掉无效用户的连接请求。</p>
+</blockquote>
+<p><strong>3．JSP页面抛出的异常可能暴露程序信息。有经验的入侵者，可以从JSP程序的异常中获取很多信息，比如程序的部分架构、程序的物理路径、SQL注入爆出来的信息等。</strong></p>
+<blockquote>
+<p>解决方案：自定义一个Exception，将异常信息包装起来不要抛到页面上。</p>
+</blockquote>
+<p><strong>4.合法用户”注销”后，在未关闭浏览器的情况下，点击浏览器”后退”按钮，可从本地页面缓存中读取数据，绕过了服务端filter过滤。</strong></p>
+<blockquote>
+<blockquote>
+<p>解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：</p>
+</blockquote>
+<p>httpResponse.setHeader(“Cache-Control”,”no-cache”);<br>httpResponse.setHeader(“Cache-Control”,”no-store”);<br>httpResponse.setDateHeader(“Expires”, 0);<br>httpResponse.setHeader(“Pragma”,”no-cache”);</p>
+</blockquote>
+<p><strong>5.SQL注入漏洞。</strong></p>
+<blockquote>
+<p>解决方案：在数据库访问层中不要使用”+”来拼接SQL语句！如：</p>
+<p>String sql&#x3D; “SELECT * FROM USERS WHERE 1&#x3D;1”; if(null !&#x3D;<br>user.getUserName() &amp;&amp; !””.equals(user.getUserName())){<br>sql +&#x3D; “ and UNAME &#x3D; ‘“+user.getUserName()+”‘“; } 而应使用PreparedStatement。如：</p>
+<p>PreparedStatement pstmt &#x3D; con.prepareStatement(“SELECT * FROM USERS<br>WHERE UNAME&#x3D;?”); pstmt.setString(1, “Neeke”);<br>如果项目中使用了Hibernate框架，则推荐使用named parameter。如：</p>
+<p>String queryString &#x3D; “from Users where uname like :name”; 冒号后面是一个named<br>parameter，我们可以使用Query接口将一个参数绑定到name参数上：</p>
+<p>List result &#x3D; session.createQuery(queryString)<br>.setString(“name”, user.getUserName())<br>.list();</p>
+</blockquote>
+<p><strong>6.文件上传漏洞。前台仅使用JS对文件后缀做了过滤，这只能针对普通的用户，而恶意攻击者完全可以修改表单去掉JS校验。</strong></p>
+<blockquote>
+<p>解决方案：前台JS过滤加服务器端程序过滤。具体过滤掉哪些文件类型视具体情况而定。</p>
+</blockquote>
+<p><strong>7.可执行脚本漏洞。对用户提交的数据未转义，一些用户提交的含有JavaScript脚本的信息被直接输出到页面中从而被浏览器执行。</strong></p>
+<blockquote>
+<p>解决方案：使用org.apache.commons.lang.StringEscapeUtils对用户提交的数据进行转义。如：</p>
+<p>@RequestMapping(params&#x3D;”method&#x3D;addTopic”,method&#x3D;RequestMethod.POST)<br>public ModelAndView addTopic(HttpServletRequest request,<br>HttpServletResponse response, BbsTopic topic) { BaseAdmin user &#x3D;<br>(BaseAdmin) request.getSession().getAttribute(Constant.SESSION_USER);<br>topic.setBaseAdmin(user); topic.setTopicDate(new<br>Timestamp(System.currentTimeMillis()));<br>topic.setTopicContent(StringEscapeUtils.escapeHtml(topic.getTopicContent()));<br>topic.setTopicTitle(StringEscapeUtils.escapeHtml(topic.getTopicTitle()));<br>this.bbsTopicService.save(topic); return new ModelAndView(new<br>RedirectView(“<a href="http://bbs.do/?method=topicList&bfid=">bbs.do?method&#x3D;topicList&amp;bfid&#x3D;</a>“+ topic.getBfid())); }</p>
+</blockquote>
+<p><strong>8.Java WEB容器默认配置漏洞。如TOMCAT后台管理漏洞，默认用户名及密码登录后可直接上传war文件获取webshell。</strong></p>
+<blockquote>
+<p>解决方案：最好删除，如需要使用它来管理维护，可更改其默认路径，口令及密码。</p>
+</blockquote>
+<p><strong>9.日志，建议增加服务器的访问日志，记录来访者的IP,传递参数，对后台操作用户建立日志，记录操作内容，完善日志记录可以帮助你发现潜在危险，找到已经发生的问题。<br>10.重放攻击<br>11.僵尸网络暴力破解<br>12.登陆表单http明文提交<br>13.千万不要乱用数据类型，使用基本数据类型，少用包装类，包装类容易被攻击，不要用string去接受所有类型数据。原则上：是什么类型就用什么类型去接收。<br>14.通过架构设计，添加一层设置处理http参数。一般都是通过aop来实现.比如：对邮件，手机验证对整数最大值验证，对字符串最大长度验证<br>15.点击劫持，大概有两种方式，一是攻击者使用一个透明的iframe，覆盖在一个网页上，然后诱使用户在该页面上进行操作，此时用户将在不值钱的情况下点击透明的iframe页面，二是攻击者使用一张图片覆盖在网页，遮挡网页原有位置的含义。</strong></p>
+]]></content>
+      <categories>
+        <category>java安全</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+        <tag>sql注入</tag>
+        <tag>上传漏洞</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>corn表达式动态配置</title>
+    <url>/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<blockquote>
+<p>由于业务需求，需要提供一个能够让用户动态配置定时任务的入口，定时去同步数据</p>
+</blockquote>
+<p>1、简单的业务处理，直接使用@Scheduled注解就能开启定时任务，例如在方法上@Scheduled(cron &#x3D; “0 0&#x2F;1 * * * ?”)，书写cron表达式就能配置定时任务。</p>
+<figure class="highlight plaintext"><figcaption><span>language-java</span></figcaption><table><tr><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 每分钟触发一次</span><br><span class="line"> */</span><br><span class="line">@Scheduled(cron = &quot;0 0/1 * * * ?&quot;)</span><br><span class="line">public void execEveryDay() &#123;</span><br><span class="line">    checkPlan();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、但是随着业务复杂化，使用注解目前是满足不了动态配置定时任务的，以下代码能够实现cron表达式的动态配置。</p>
+<p>第一步，在启动类新增注解@EnableScheduling</p>
+<figure class="highlight plaintext"><figcaption><span>language-java</span></figcaption><table><tr><td class="code"><pre><span class="line">@SpringBootApplication</span><br><span class="line">@EnableScheduling</span><br><span class="line">public class testApplication &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        SpringApplication.run(testApplication .class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二步，编写定时任务类</p>
+<figure class="highlight plaintext"><figcaption><span>language-java</span></figcaption><table><tr><td class="code"><pre><span class="line">@Lazy(false)</span><br><span class="line">@Component</span><br><span class="line">@EnableScheduling</span><br><span class="line">@Slf4j</span><br><span class="line">public class OutPutTask implements SchedulingConfigurer &#123;</span><br><span class="line">	// 默认的cron表达式</span><br><span class="line">    private String cron = &quot;0 55 23 ? * *&quot;;</span><br><span class="line"></span><br><span class="line">    // 定时任务的执行顺序：由上而下按顺序执行，当服务启动时或者定时任务时间到了，先执行业务逻辑，再设置定时任务</span><br><span class="line">    @Override</span><br><span class="line">    public void configureTasks(ScheduledTaskRegistrar taskRegistrar) &#123;</span><br><span class="line">        taskRegistrar.addTriggerTask(() -&gt; &#123;</span><br><span class="line">            // addTriggerTask这一代码块用于当定时任务到了或者服务启动时，执行的业务逻辑</span><br><span class="line">            try &#123;</span><br><span class="line">                // 分布式锁，避免高并发同时执行方法</span><br><span class="line">                Boolean lockStatus = redisTemplate.opsForValue().setIfAbsent(RedisKeyPrefix.RECORD_OUT_PUT, new Date(), 1, TimeUnit.MINUTES);</span><br><span class="line">                if (lockStatus == null || !lockStatus) &#123;</span><br><span class="line">                    return;</span><br><span class="line">                &#125;</span><br><span class="line">                log.info(&quot;产能计算定时任务&#123;&#125;&quot;, new Date());</span><br><span class="line">                // 这个是自己写的自定义方法</span><br><span class="line">                recordOutput();</span><br><span class="line">            &#125; finally &#123;</span><br><span class="line">            	// 释放锁</span><br><span class="line">                redisTemplate.delete(RedisKeyPrefix.RECORD_OUT_PUT);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, triggerContext -&gt; &#123;</span><br><span class="line">            // 此代码块用于动态拿到cron表达式并设置定时任务，当定时任务时间到了，就会重新获取cron表达式，重新设置定时任务</span><br><span class="line">            cron = this.getCronString();</span><br><span class="line">            CronTrigger trigger;</span><br><span class="line">            try &#123;</span><br><span class="line">            	// 一旦设置，立即生效</span><br><span class="line">                trigger = new CronTrigger(cron);</span><br><span class="line">                return trigger.nextExecutionTime(triggerContext);</span><br><span class="line">            &#125; catch (Exception e) &#123;</span><br><span class="line">                // 如果格式有问题就按默认时间（时间为每天23点55分）</span><br><span class="line">                trigger = new CronTrigger(&quot;0 55 23 ? * *&quot;);</span><br><span class="line">                return trigger.nextExecutionTime(triggerContext);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 拿到cron表达式</span><br><span class="line">     */</span><br><span class="line">    private String getCronString() &#123;</span><br><span class="line">        // 获取时间（当前方法返回的时间格式为yyyy-MM-dd HH:mm:ss）</span><br><span class="line">        Date beginDate = dictService.getDayOutputBeginTime(new Date());</span><br><span class="line">        // 截取分钟和小时</span><br><span class="line">        String hour = beginDate.toString().substring(11, 13);</span><br><span class="line">        String min = beginDate.toString().substring(14, 16);</span><br><span class="line">        // 替换min,hour</span><br><span class="line">        String cron = &quot;0 min hour ? * *&quot;;</span><br><span class="line">        return cron.replaceAll(&quot;min&quot;, min).replaceAll(&quot;hour&quot;, hour);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后我们只需要在页面上提供一个能够让用户配置定时任务的入口或者在数据库里配置cron表达式，就能实现动态配置。<br>如果面向的用户懂得cron表达式，也可以直接让用户配置cron表达式也是可以的，省的程序员进行额外的数据处理，只要配置正确，任何处理方式都行，例如：  </p>
+<p>点击确定后，会更新数据库，<strong>当定时任务时间到了，就会触发定时任务机制，重新设置定时任务</strong>。</p>
+]]></content>
+      <categories>
+        <category>corn</category>
+      </categories>
+      <tags>
+        <tag>动态配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea常用插件</title>
+    <url>/2023/06/04/idea%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<hr>
-<h1 id="Markdown常用语法介绍"><a href="#Markdown常用语法介绍" class="headerlink" title="Markdown常用语法介绍 "></a>Markdown常用语法介绍 </h1><p>Markdown是一种使用一定的语法将普通的文本转换成HTML标签文本的编辑语言，它的特点是可以使用普通的文本编辑器来编写，只需要按照特定的语法标记就可以得到丰富多样的HTML格式的文本。本文就来介绍一些常用的Markdown语法以及推荐几款方便又实用的Markdown编辑器。</p>
-<h1 id="换行问题"><a href="#换行问题" class="headerlink" title="换行问题"></a>换行问题</h1><p>换行是markdown最基本的语法规则，也是它不同于普通文本的地方，想要在某一行之后进行换行只按常规的Enter键是不行的。换行有3种方式：</p>
-<ol>
-<li>在行的末尾添加至少两个空格，然后再接Enter另起一行；</li>
-<li>第2种方式是在需要换行的两行内容之间空一行；</li>
-<li>第3种方式是在需要换行的内容末尾添加一个换行标签，也就是<code>&lt;br&gt;</code>标签。</li>
-</ol>
-<h1 id="标题分级"><a href="#标题分级" class="headerlink" title="标题分级"></a>标题分级</h1><p>在当前行之前输入 “#”+”空格”可以使当前行被识别为标题</p>
-<blockquote>
-<p>“# “ -&gt; 一级标题是<br>“## “ -&gt; 二级标题<br>“### “ -&gt; 三级标题</p>
+<br />
+
+<p>大家好，我是shine🌟，本篇将详细介绍IDEA快捷键及插件，让你学习和开发事半功倍。IDEA的牛逼，众所皆知，不论是用来学习还是开发都是首选的IDE，拉爆其他开发工具，让你爱上代码。很多隐藏的功能等待着你去发现🔍。</p>
+<p><img src="https://img-blog.csdnimg.cn/e2280ec0e5904537909571e9c022c863.png?x-oss-,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6ICAIOaYnw==,size_20,color_FFFFFF,t_70,g_se,x_16"></p>
+<p>🌾快捷键（提高码字速度） </p>
+]]></content>
+      <categories>
+        <category>idea</category>
+      </categories>
+      <tags>
+        <tag>idea</tag>
+        <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java生成二维码</title>
+    <url>/2023/06/04/java%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81/</url>
+    <content><![CDATA[<p>一、介绍：生成二维码有很多种方法，比如微信公众号的生成二维码，但是这个二维码只能用微信扫描且会（可以带参数）自动跳转到微信的公众号页面，不支持跳转到其他网页。这里说的二维码是扫描（微信、QQ、浏览器等扫描）可以跳转到指定网址的二维码。二维码最早是由日本一家公司开发的，并且该二维码主要有两种方式：一种是QRCode 插件产生于日本 ；另一种是ZXing 插件由谷歌开发的。</p>
+<p>二、ZXing插件开发：</p>
+<p>1、引入依赖</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&lt;!-- 生成二维码，spring boot 的maven项目 导入响应jar包 --&gt;</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.google.zxing&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;core&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;<span class="number">3.1</span><span class="number">.0</span>&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line">        &lt;dependency&gt;</span><br><span class="line">            &lt;groupId&gt;com.google.zxing&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;javase&lt;/artifactId&gt;</span><br><span class="line">            &lt;version&gt;<span class="number">3.1</span><span class="number">.0</span>&lt;/version&gt;</span><br><span class="line">        &lt;/dependency&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>2、生成的代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.demo.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.awt.image.BufferedImage;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.Hashtable;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.imageio.ImageIO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.zxing.BarcodeFormat;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.EncodeHintType;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.MultiFormatWriter;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.WriterException;</span><br><span class="line"><span class="keyword">import</span> com.google.zxing.common.BitMatrix;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 需求说明：卖家在一个实体产品上贴一个二维码，买家收货后，微信扫码获取产品的详细信息</span></span><br><span class="line"><span class="comment"> * 实现说明：卖家在出货前，把服务器上的产品详情页的链接地址（含有ID）生成二维码，买家收货后微信扫码，跳转到产品信息页即可查看</span></span><br><span class="line"><span class="comment"> * 需要jar:zxing-code-2.3.jar,下载地址http://download.csdn.net/download/sanfye/8704583</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> 加内特</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">BLACK</span> <span class="operator">=</span> <span class="number">0xFF000000</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">WHITE</span> <span class="operator">=</span> <span class="number">0xFFFFFFFF</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> generateCode(<span class="string">&quot;518&quot;</span>);</span><br><span class="line">            <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;成功生成二维码&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (WriterException | IOException e) &#123;</span><br><span class="line">            System.err.println(<span class="string">&quot;生成二维码失败&quot;</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">generateCode</span><span class="params">(String productId)</span> <span class="keyword">throws</span> WriterException, IOException &#123;</span><br><span class="line">        <span class="comment">// 这里是URL，扫描之后就跳转到这个界面</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">text</span> <span class="operator">=</span> <span class="string">&quot;https://www.baidu.com/?uudi=&quot;</span> + productId;</span><br><span class="line">        <span class="type">String</span> <span class="variable">path</span> <span class="operator">=</span> <span class="string">&quot;E:/&quot;</span>; <span class="comment">// 图片生成的位置</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">width</span> <span class="operator">=</span> <span class="number">400</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">height</span> <span class="operator">=</span> <span class="number">400</span>;</span><br><span class="line">        <span class="comment">// 二维码图片格式</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">format</span> <span class="operator">=</span> <span class="string">&quot;jpg&quot;</span>;</span><br><span class="line">        <span class="comment">// 设置编码，防止中文乱码</span></span><br><span class="line">        Hashtable&lt;EncodeHintType, Object&gt; ht = <span class="keyword">new</span> <span class="title class_">Hashtable</span>&lt;EncodeHintType, Object&gt;();</span><br><span class="line">        ht.put(EncodeHintType.CHARACTER_SET, <span class="string">&quot;UTF-8&quot;</span>);</span><br><span class="line">        <span class="comment">// 设置二维码参数(编码内容，编码类型，图片宽度，图片高度,格式)</span></span><br><span class="line">        <span class="type">BitMatrix</span> <span class="variable">bitMatrix</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MultiFormatWriter</span>().encode(text, BarcodeFormat.QR_CODE, width, height, ht);</span><br><span class="line">        <span class="comment">// 生成二维码(定义二维码输出服务器路径)</span></span><br><span class="line">        <span class="type">File</span> <span class="variable">outputFile</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">File</span>(path);</span><br><span class="line">        <span class="keyword">if</span> (!outputFile.exists()) &#123;</span><br><span class="line">            <span class="comment">// 创建文件夹</span></span><br><span class="line">            outputFile.mkdir();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">b_width</span> <span class="operator">=</span> bitMatrix.getWidth();</span><br><span class="line">        <span class="type">int</span> <span class="variable">b_height</span> <span class="operator">=</span> bitMatrix.getHeight();</span><br><span class="line">        <span class="comment">// 建立图像缓冲器</span></span><br><span class="line">        <span class="type">BufferedImage</span> <span class="variable">image</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedImage</span>(b_width, b_height, BufferedImage.TYPE_3BYTE_BGR);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> <span class="number">0</span>; x &lt; b_width; x++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">y</span> <span class="operator">=</span> <span class="number">0</span>; y &lt; b_height; y++) &#123;</span><br><span class="line">                image.setRGB(x, y, bitMatrix.get(x, y) ? BLACK : WHITE);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 生成二维码</span></span><br><span class="line">        ImageIO.write(image, format, <span class="keyword">new</span> <span class="title class_">File</span>(path + <span class="string">&quot;/code.&quot;</span> + format));</span><br><span class="line">        <span class="comment">// 二维码的名称</span></span><br><span class="line">        <span class="comment">// code.jpg</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、生成的二维码图片：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210304164500997.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dfdF95X3k=,size_16,color_FFFFFF,t_70"></p>
+]]></content>
+      <categories>
+        <category>二维码</category>
+      </categories>
+      <tags>
+        <tag>二维码</tag>
+        <tag>QRcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mybatis-plus连表查询</title>
+    <url>/2023/06/04/mybatis-plus%E8%BF%9E%E8%A1%A8%E6%9F%A5%E8%AF%A2/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>mybatis</category>
+      </categories>
+      <tags>
+        <tag>mybatis</tag>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开发小笔记(持续更新)</title>
+    <url>/2023/06/05/%E5%BC%80%E5%8F%91%E5%B0%8F%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<br>
+
+<p>持续更新中……</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务占用cpu过高排查</title>
+    <url>/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/</url>
+    <content><![CDATA[<blockquote>
+<p><strong>先用top命令找出CPU占比最高的</strong></p>
 </blockquote>
-<h2 id="标题分级另一种写法"><a href="#标题分级另一种写法" class="headerlink" title="标题分级另一种写法"></a>标题分级另一种写法</h2><p>在当前行的下一行输入一个或者多个”&#x3D;”和”-“可以使当前行被识别为标题</p>
+<figure class="highlight plaintext"><figcaption><span>language-powershell</span></figcaption><table><tr><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20201230214810341.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODM0MzU1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>CPU占用最高的是java进程，它的 <code>进程ID：3362</code></p>
 <blockquote>
-<p>“这是一个一级标题”<br>“&#x3D;”</p>
-<p>“这是一个二级标题”<br>“-“</p>
+<p><strong>ps -ef 或者 jps 进一步定位，得知是怎样的程序</strong></p>
 </blockquote>
-<h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><p>使用三个或以上的 “-“ 或者 “*“ 表示(混合的不行)，且这一行只有符号，<strong>注意不要被识别为二级标题即可，意思是上面需要是空行</strong>，例如中间或者前面可以加空格。</p>
-<blockquote>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法*********  "></a><strong>语法</strong><br>***<br>******  </h2><hr>
-</blockquote>
-<h1 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h1><p>使用 (<code>*</code>或者<code>_</code> )和( <code>**</code>或者<code>__</code>) 分别表示斜体和粗体，删除线使用两个 <code>~</code> 表示</p>
-<blockquote>
-<p><strong>语法</strong><br>*我是斜体*<br><em>我是斜体</em><br>**我是加粗**<br><strong>我是加粗</strong><br>~~我是删除~~<br>***我是又粗又斜***<br><em><strong>我是又粗又斜</strong></em></p>
-</blockquote>
-<h1 id="超链接和图片引用"><a href="#超链接和图片引用" class="headerlink" title="超链接和图片引用"></a>超链接和图片引用</h1><h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><h3 id="内联超链接"><a href="#内联超链接" class="headerlink" title="内联超链接"></a>内联超链接</h3><p>使用<code>[链接文字](链接地址)</code>来表示，如果要给链接一个提示信息，可以在链接用引号把文字包围起来，就像这样<code>[链接文字](链接地址+空格+&quot;文字说明&quot;)</code></p>
-<blockquote>
-<p><strong>语法</strong><br>[链接例子《就是外在文字》](<a href="http://www.baidu.com/">http://www.baidu.com/</a>“ 我是说明文字：我其实就是HTML 的&lt;a&gt; 标签的 Title 属性”)</p>
-</blockquote>
-<h3 id="自动超链接"><a href="#自动超链接" class="headerlink" title="自动超链接"></a>自动超链接</h3><p>以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用<code>&lt;&gt;</code>包起来， Markdown 就会自动把它转成链接</p>
-<blockquote>
-<p><strong>语法</strong><br>&lt;<a href="http://example.com//%3E">http://example.com/\&gt;</a></p>
-</blockquote>
-<h3 id="引用式链接"><a href="#引用式链接" class="headerlink" title="引用式链接"></a>引用式链接</h3><p>在任意地方使用<code>[链接引用标记]:链接地址+空格+&quot;文字说明&quot;</code> 来定义引用的链接地址,然后使用<code>[链接文字][链接引用标记]</code>放在需要插入链接的地方</p>
-<blockquote>
-<p><strong>语法</strong><br>[link1]:<a href="http://www.baidu.com/">http://www.baidu.com/</a> “baidu.com 其实就是HTML 的&lt;a&gt; 标签的 Title 属性”<br>[引用式链接例子《就是外在文字》][link1]</p>
-</blockquote>
-<h4 id="引用式链接-简化"><a href="#引用式链接-简化" class="headerlink" title="引用式链接-简化"></a>引用式链接-简化</h4><p>该功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，只要在链接文字后面加上一个空的方括号，如果你要让 “Google” 链接到 <a href="http://google.com/">google.com</a>,这么写就行</p>
-<blockquote>
-<p><strong>语法</strong><br>[Google][]<br>[Google]: <a href="http://google.com/">http://google.com/</a></p>
-</blockquote>
-<h2 id="图片引用"><a href="#图片引用" class="headerlink" title="图片引用"></a>图片引用</h2><h3 id="内联式图片引用"><a href="#内联式图片引用" class="headerlink" title="内联式图片引用"></a>内联式图片引用</h3><p>图片引用仅在超链接前多了一个 <code>!</code> ，一般是<code>![图片文字](图片地址+空格+&quot;文字说明&quot;)</code></p>
-<blockquote>
-<p><strong>语法</strong><br>![图片例子《就是Alt属性》](<a href="http://www.baidu.com/images/logo.png">http://www.baidu.com/images/logo.png</a> “我是说明文字：我其实就是HTML 的&lt;a&gt; 标签的 Title 属性”)</p>
-</blockquote>
-<h3 id="引用式图片引用"><a href="#引用式图片引用" class="headerlink" title="引用式图片引用"></a>引用式图片引用</h3><p>在任意地方使用<code>[图片引用标记]:图片地址+空格+&quot;文字说明&quot;</code> 来定义引用的图片链接地址,然后使用<code>[图片文字][图片引用标记]</code>放在需要插入图片链接的地方</p>
-<blockquote>
-<p><strong>语法</strong><br>[link2]:<a href="http://www.baidu.com/images/logo.png">http://www.baidu.com/images/logo.png</a> “baidu.com 其实就是HTML 的&lt;a&gt; 标签的 Title 属性”<br>![引用式图片链接例子《就是Alt属性》][link2]</p>
-</blockquote>
-<h2 id="带有链接的图片"><a href="#带有链接的图片" class="headerlink" title="带有链接的图片"></a>带有链接的图片</h2><p>部分markdown编辑器只需要将链接代码套在图片代码外边就可以实现。</p>
-<blockquote>
-<p><strong>语法</strong><br>[![图片例子](<a href="http://www.baidu.com/images/logo.png">http://www.baidu.com/images/logo.png</a> “图片说明文字”)](<a href="http://www.baidu.com/">http://www.baidu.com/</a> “链接说明文字”)</p>
-</blockquote>
-<h1 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h1><p>使用 <code>-</code>、<code>+</code> 和 <code>*</code>+<code>空格</code> +<code>文字内容</code> 表示无序列表<br>可用<code>tab</code> 或者<code>空格</code> + <code>-</code>、<code>+</code> 或者 <code>*</code> +<code>文字内容</code>使列表嵌套<br><strong>成功嵌套的条件是</strong> 下一层的<code>-</code>、<code>+</code> 和 <code>*</code> 的前面的空白长度满足以下条件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">tab长度×(层数-<span class="number">1</span>) &lt; 空白长度 ≤ tab长度×层数</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>language-powershell</span></figcaption><table><tr><td class="code"><pre><span class="line">[root@192 ~] ps -ef | grep 3362 | grep -v grep</span><br><span class="line">root       3362   2340 42 21:47 pts/0    00:02:30 java HelloWorldApp</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>  + 第一层<br>    * 第二层<br>              + 第三层</p>
-<p>  + 再来一个第一层</p>
+<p><strong>定位到具体的线程或者代码</strong></p>
 </blockquote>
-<h1 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h1><p>使用 <code>1.</code> +<code>空格</code> +<code>文字内容</code> 表示有序列表，可嵌套。<br>可用<code>tab</code> 或者<code>空格</code> + <code>-</code>、<code>+</code> 或者 <code>*</code> +<code>文字内容</code>使列表嵌套<br><strong>成功嵌套的条件是</strong> 下一层的<code>-</code>、<code>+</code> 和 <code>*</code> 的前面的空白长度满足以下条件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">tab长度×(层数-<span class="number">1</span>) &lt; 空白长度 ≤ tab长度×层数</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>language-powershell</span></figcaption><table><tr><td class="code"><pre><span class="line">ps -mp 3362 -o THREAD,tid,time</span><br></pre></td></tr></table></figure>
 
+<p><img src="https://img-blog.csdnimg.cn/20201230220404953.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODM0MzU1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>如图所示，引起CPU过高的 <code>线程ID：3363</code></p>
 <blockquote>
-<p><strong>语法</strong><br> 1. 第一层<br>   1. 第二层<br>    1. 第三层</p>
-<p>  2. 再来一个第一层<br><strong>实例</strong></p>
-<ol>
-<li><p>第一层</p>
-</li>
-<li><p>第二层.1</p>
-</li>
-<li><p>第二层.2</p>
-<ol>
-<li>第三层.1</li>
-<li>第三层.2</li>
-</ol>
-</li>
-<li><p>第二层.3</p>
-</li>
-<li><p>在列表结束敲二个空行，在第二个空行中写入任何内容都可以重开一个计数列表</p>
-</li>
-</ol>
+<p><strong>将线程ID转换为16进制格式（英文小写）</strong></p>
 </blockquote>
-<h1 id="文字引用"><a href="#文字引用" class="headerlink" title="文字引用"></a>文字引用</h1><p>使用 <code>&gt;</code> 表示，可以有多个 <code>&gt;</code>，表示层级更深</p>
-<p>要从深层到浅层需要在浅层上方留一个有与层数相同个数 <code>&gt;</code>的空行</p>
+<p>3365 转换为16进制结果：d23<br><img src="https://img-blog.csdnimg.cn/20201230220804137.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODM0MzU1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <blockquote>
-<p><strong>语法</strong><br>&gt;文字内容<br>&gt;文字内容<br>&gt;&gt;文字内容<br>&gt;<br>&gt;文字内容<br>&gt;文字内容<br><strong>实例</strong><br>文字内容<br>文字内容</p>
-<blockquote>
-<p>文字内容</p>
+<p>jstack</p>
 </blockquote>
-<p>文字内容<br>文字内容</p>
-</blockquote>
-<h1 id="行内代码块-java、html、text、nginx等"><a href="#行内代码块-java、html、text、nginx等" class="headerlink" title="行内代码块(java、html、text、nginx等)"></a>行内代码块(java、html、text、nginx等)</h1><p>使用 “ ` “ 把代码包围起来即可</p>
-<blockquote>
-<p><strong>语法</strong><br>`a &#x3D; 1`</p>
-</blockquote>
-<p>如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：</p>
-<blockquote>
-<p><strong>语法</strong><br>`` There is a literal backtick (`) here.``</p>
-</blockquote>
-<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>使用四个空格缩进表示代码块，</p>
-<blockquote>
-<p><strong>语法</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="title function_">print</span><span class="params">(<span class="string">&quot;hello world&quot;</span>)</span></span><br><span class="line">def <span class="title function_">show_time</span><span class="params">()</span>:</span><br><span class="line"><span class="keyword">return</span> time.time()</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>一些 IDE 支持行数提示和着色，一般使用三个 “ ` “ 表示，例如<br>代码块使用3个 “ ` “包围起来表示，而且代码块的第一行的3个 “ ` “ 后面可以写上代码的编程语言，方便Markdown转化之后进行高亮显示，如写上python或者js</p>
-<blockquote>
-<p><strong>语法</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">```python</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="title function_">print</span><span class="params">(<span class="string">&quot;hello world&quot;</span>)</span></span><br><span class="line">def <span class="title function_">show_time</span><span class="params">()</span>:</span><br><span class="line"><span class="keyword">return</span> time.time()</span><br><span class="line">`` `</span><br></pre></td></tr></table></figure>
-</blockquote>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>表格由3个部分组成</p>
-<p>第一个部分是表格的标题，使用<code>|</code>来作为列的分割<br>第二个部分是表示列的对齐方式，有左对齐、居中对齐和居右对齐三种类型，直接看例子吧， <code>---</code> 表示了默认的<strong>左对齐</strong> ， <code>:---</code> 表示 <strong>左对齐</strong> ， <code>---:</code> 表示 <strong>右对齐</strong> ， <code>:---:</code> 表示<strong>居中对齐</strong><br>第三个部分就是内容了，表示方式跟标题一样，可以有多行</p>
-<blockquote>
-<p><strong>语法</strong><br>|左对齐标题|右对齐标题|居中对齐标题|<br>|-|——: |:——: |<br>|居左|居右|居中|<br>|测试文本|测试文本|测试文本|<br><strong>实例</strong></p>
-<table>
-<thead>
-<tr>
-<th>左对齐标题</th>
-<th align="right">右对齐标题</th>
-<th align="center">居中对齐标题</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>居左</td>
-<td align="right">居右</td>
-<td align="center">居中</td>
-</tr>
-<tr>
-<td>测试文本</td>
-<td align="right">测试文本</td>
-<td align="center">测试文本</td>
-</tr>
-</tbody></table>
-</blockquote>
-<h1 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h1><p>不同的Markdown解析器原理不同，不一定支持流程图<br>obsidian 支持 mermaid 流程图。其他的流程图也许要安装插件<br>mermaid文档: <a href="https://mermaid-js.github.io/mermaid/#/README">https://mermaid-js.github.io/mermaid/#/README</a><br>mermaid在线编辑器: <a href="https://mermaid-js.github.io/mermaid-live-editor">https://mermaid-js.github.io/mermaid-live-editor</a></p>
-<blockquote>
-<p><strong>语法</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">```mermaid </span><br><span class="line">sequenceDiagram</span><br><span class="line">Alice-&gt;&gt;John: Hello John, how are you?</span><br><span class="line">loop Healthcheck</span><br><span class="line">John-&gt;&gt;John: Fight against hypochondria</span><br><span class="line">end</span><br><span class="line">Note right of John: Rational thoughts!</span><br><span class="line">John--&gt;&gt;Alice: Great!</span><br><span class="line">John-&gt;&gt;Bob: How about you?</span><br><span class="line">Bob--&gt;&gt;John: Jolly good!</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
-</blockquote>
-<blockquote>
-<p><strong>实例</strong><br>Alice John Bob Hello John, how are you? Fight against hypochondria loop [Healthcheck] Rational thoughts! Great! How about you? Jolly good! Alice John Bob</p>
-</blockquote>
-<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><p>支持 LaTeX 编辑显示支持，<br>使用 <code>$</code> 表示，其中一个 <code>$</code> 表示在行内，两个 <code>$</code> 表示独占一行。</p>
-<blockquote>
-<p>eg : ∑ i &#x3D; 1 n a i &#x3D; 0 \sum_{i&#x3D;1}^n a_i&#x3D;0 ∑i&#x3D;1nai&#x3D;0</p>
-</blockquote>
-<p>参考教程：<a href="https://1024th.github.io/MathJax_Tutorial_CN">https://1024th.github.io/MathJax_Tutorial_CN</a></p>
-<p>推荐一个常用的数学公式在线编译网站：<a href="https://www.latexlive.com/">https://www.latexlive.com</a></p>
-<h1 id="HTML引用"><a href="#HTML引用" class="headerlink" title="HTML引用"></a>HTML引用</h1><p>直接在Markdown里面写HTML即可</p>
-<h2 id="CSS-样式相关"><a href="#CSS-样式相关" class="headerlink" title="CSS 样式相关"></a>CSS 样式相关</h2><h3 id="样式标签"><a href="#样式标签" class="headerlink" title="样式标签"></a>样式标签</h3><blockquote>
-<p>&lt;b&gt;加粗&lt;&#x2F;b&gt;<br>&lt;strong&gt;加粗&lt;&#x2F;strong&gt;<br>&lt;i&gt;倾斜&lt;&#x2F;i&gt;<br>&lt;em&gt;倾斜&lt;&#x2F;em&gt;<br>&lt;u&gt;下划线&lt;&#x2F;u&gt;<br>&lt;ins&gt;下划线&lt;&#x2F;ins&gt;<br>&lt;s&gt;删除线&lt;&#x2F;s&gt;<br>&lt;del&gt;删除线&lt;&#x2F;del&gt;<br>&lt;sub&gt;下标&lt;&#x2F;sub&gt;<br>&lt;sup&gt;上标&lt;&#x2F;sup&gt;</p>
-</blockquote>
-<h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><blockquote>
-<p>&lt;b style&#x3D;”font-size:80px; color:red”&gt;加粗&lt;&#x2F;b&gt;</p>
-</blockquote>
-<h3 id="lt-style-gt-标签"><a href="#lt-style-gt-标签" class="headerlink" title="&lt;style&gt;标签"></a>&lt;style&gt;标签</h3><blockquote>
-<p>&lt;style&gt;<br>h1{<br>font-size:80px;<br>color:#7ecef4;<br>text-intent:10px;<br>}<br>&lt;&#x2F;style&gt;</p>
-</blockquote>
-<h3 id="lt-link-gt-引用外部CSS"><a href="#lt-link-gt-引用外部CSS" class="headerlink" title="&lt;link&gt;引用外部CSS"></a>&lt;link&gt;引用外部CSS</h3><blockquote>
-<p>&lt;link href&#x3D;”main.css” rel&#x3D;”stylesheet”&gt;</p>
-</blockquote>
-<p>这种方式，某些Markdown渲染器可以，反正obsidian是不行</p>
-<h2 id="HTML-内容相关"><a href="#HTML-内容相关" class="headerlink" title="HTML 内容相关"></a>HTML 内容相关</h2><p>在Markdown中可以展示出网页内容<br>支持的也就是普通的内容，交互式的标签基本都被和谐了<br>HTML教程：<a href="https://www.runoob.com/html/html-tutorial.html">https://www.runoob.com/html/html-tutorial.html</a></p>
-<blockquote>
-<p><strong>例子，用html的 <code>&lt;a&gt;</code> 和 <code>&lt;img&gt;</code> 标签实现带连接的图片</strong><br>&lt;a href &#x3D;”超链接地址”&gt;&lt;img src&#x3D;”图片地址”&gt;&lt;&#x2F;a&gt;</p>
-</blockquote>
-<h2 id="JavaScript-脚本相关"><a href="#JavaScript-脚本相关" class="headerlink" title="JavaScript 脚本相关"></a>JavaScript 脚本相关</h2><p>很多Markdown渲染器是不允许js跑起来的</p>
-<blockquote>
-<p><strong>外部引用和直接写这两种基本都跑不起来</strong><br>&lt;script src&#x3D;”javascript.js”&gt;&lt;&#x2F;script&gt;</p>
-<p>&lt;script&gt;<br>console.log(“hello world!”)<br>&lt;&#x2F;script&gt;<br><strong>内联事件的js可能可以跑起来,反正obsidian是不行</strong><br>&lt;div οnclick&#x3D;”(function(){ alert(1)})()”&gt;js测试按钮&lt;&#x2F;div&gt;</p>
-</blockquote>
-<h1 id="反斜杠转义"><a href="#反斜杠转义" class="headerlink" title="反斜杠转义"></a>反斜杠转义</h1><p>由于Markdown的语法基本都是用的符号表示，所以当需要直接输出某些特定的符号的时候，就必须使用反斜杠的转义作用了，使用方法很简单，跟大部分的编程语言的用法一样，只需要在特定的符号前面加上一个反斜杠就可以了，例如输出<code>\</code>本身，就需要使用<code>\\</code>来表示了。</p>
-<h1 id="Todo-List"><a href="#Todo-List" class="headerlink" title="Todo List"></a>Todo List</h1><p><code>-/+/*</code>+<code>空格</code>+<code>[</code>+<code>空格/x</code>+<code>]</code> +<code>空格</code>+文字内容</p>
-<blockquote>
-<p><strong>语法</strong></p>
+<p>格式：jstack 进程ID | grep tid（16进制小写） -A60</p>
+<figure class="highlight plaintext"><figcaption><span>language-powershell</span></figcaption><table><tr><td class="code"><pre><span class="line">jstack 3362 | grep d23 -A60</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20201230221316830.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4ODM0MzU1,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>这样，就能找出具体的异常代码位置</p>
+]]></content>
+      <categories>
+        <category>性能提升</category>
+      </categories>
+      <tags>
+        <tag>cpu飙高</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取客户端真实ip</title>
+    <url>/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/</url>
+    <content><![CDATA[<p>现在都流行显示 ip 归属地，那么我先来获取客户端的真实 ip 地址以及 mac 地址，上代码</p>
+<figure class="highlight plaintext"><figcaption><span>language-java</span></figcaption><table><tr><td class="code"><pre><span class="line">import javax.servlet.http.HttpServletRequest;</span><br><span class="line">import java.net.InetAddress;</span><br><span class="line">import java.net.NetworkInterface;</span><br><span class="line">import java.net.UnknownHostException;</span><br><span class="line">/**</span><br><span class="line"> * 常用获取客户端信息的工具</span><br><span class="line"> */</span><br><span class="line">public class NetworkUtil &#123;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取ip地址</span><br><span class="line">     */</span><br><span class="line">    public static String getIpAddress(HttpServletRequest request) &#123;</span><br><span class="line">        String ip = request.getHeader(&quot;x-forwarded-for&quot;);</span><br><span class="line">        if (ip == null || ip.length() == 0 || &quot;unknown&quot;.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getHeader(&quot;Proxy-Client-IP&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        if (ip == null || ip.length() == 0 || &quot;unknown&quot;.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getHeader(&quot;WL-Proxy-Client-IP&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        if (ip == null || ip.length() == 0 || &quot;unknown&quot;.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getHeader(&quot;HTTP_CLIENT_IP&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        if (ip == null || ip.length() == 0 || &quot;unknown&quot;.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getHeader(&quot;HTTP_X_FORWARDED_FOR&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        if (ip == null || ip.length() == 0 || &quot;unknown&quot;.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getRemoteAddr();</span><br><span class="line">        &#125;</span><br><span class="line">        // 本机访问</span><br><span class="line">        if (&quot;localhost&quot;.equalsIgnoreCase(ip) || &quot;127.0.0.1&quot;.equalsIgnoreCase(ip) || &quot;0:0:0:0:0:0:0:1&quot;.equalsIgnoreCase(ip))&#123;</span><br><span class="line">            // 根据网卡取本机配置的IP</span><br><span class="line">            InetAddress inet;</span><br><span class="line">            try &#123;</span><br><span class="line">                inet = InetAddress.getLocalHost();</span><br><span class="line">                ip = inet.getHostAddress();</span><br><span class="line">            &#125; catch (UnknownHostException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 对于通过多个代理的情况，第一个IP为客户端真实IP,多个IP按照&#x27;,&#x27;分割</span><br><span class="line">        if (null != ip &amp;&amp; ip.length() &gt; 15) &#123;</span><br><span class="line">            if (ip.indexOf(&quot;,&quot;) &gt; 15) &#123;</span><br><span class="line">                ip = ip.substring(0, ip.indexOf(&quot;,&quot;));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ip;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 获取mac地址</span><br><span class="line">     */</span><br><span class="line">    public static String getMacAddress() throws Exception &#123;</span><br><span class="line">        // 取mac地址</span><br><span class="line">        byte[] macAddressBytes = NetworkInterface.getByInetAddress(InetAddress.getLocalHost()).getHardwareAddress();</span><br><span class="line">        // 下面代码是把mac地址拼装成String</span><br><span class="line">        StringBuilder sb = new StringBuilder();</span><br><span class="line">        for (int i = 0; i &lt; macAddressBytes.length; i++) &#123;</span><br><span class="line">            if (i != 0) &#123;</span><br><span class="line">                sb.append(&quot;-&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            // mac[i] &amp; 0xFF 是为了把byte转化为正整数</span><br><span class="line">            String s = Integer.toHexString(macAddressBytes[i] &amp; 0xFF);</span><br><span class="line">            sb.append(s.length() == 1 ? 0 + s : s);</span><br><span class="line">        &#125;</span><br><span class="line">        return sb.toString().trim().toUpperCase();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好了，ip 获取到了至于查询 ip 归属地嘛<br><a href="https://github.com/lionsoul2014/ip2region">Ip2region</a></p>
+]]></content>
+      <categories>
+        <category>IP地址</category>
+      </categories>
+      <tags>
+        <tag>ip地址</tag>
+        <tag>mac地址</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown常用语法</title>
+    <url>/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>目录</p>
+<br />
+
 <ul>
-<li>[ ] 待办事项  </li>
-<li>[x] 已完成的待办事项<br><strong>实例</strong></li>
+<li><ul>
+<li><a href="#1-%E5%BF%AB%E6%8D%B7%E9%94%AE">1. 快捷键</a></li>
+<li><a href="#2-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95">2. 基本语法</a><ul>
+<li><a href="#21-%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE%E6%96%9C%E4%BD%93%E7%B2%97%E4%BD%93%E5%88%A0%E9%99%A4%E7%BA%BF">2.1 字体设置斜体、粗体、删除线</a></li>
+<li><a href="#22-%E5%88%86%E7%BA%A7%E6%A0%87%E9%A2%98">2.2 分级标题</a></li>
+<li><a href="#23-%E9%93%BE%E6%8E%A5">2.3 链接</a></li>
+<li><a href="#24-%E5%88%86%E5%89%B2%E7%BA%BF">2.4 分割线</a></li>
+<li><a href="#25-%E4%BB%A3%E7%A0%81%E5%9D%97">2.5 代码块</a></li>
+<li><a href="#26-%E5%BC%95%E7%94%A8">2.6 引用</a></li>
+<li><a href="#27-%E5%88%97%E8%A1%A8">2.7 列表</a></li>
+<li><a href="#28-%E8%A1%A8%E6%A0%BC">2.8 表格</a></li>
 </ul>
-<ul>
-<li><input disabled="" type="checkbox"> 待办事项</li>
-<li><input checked="" disabled="" type="checkbox"> 已完成的待办事项</li>
+</li>
+<li><a href="#3-%E5%B8%B8%E7%94%A8%E6%8A%80%E5%B7%A7">3. 常用技巧</a><ul>
+<li><a href="#31-%E6%8D%A2%E8%A1%8C">3.1 换行</a></li>
+<li><a href="#32-%E7%BC%A9%E8%BF%9B%E5%AD%97%E7%AC%A6">3.2 缩进字符</a></li>
+<li><a href="#33-%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7">3.3 特殊符号</a></li>
+<li><a href="#34-%E5%AD%97%E4%BD%93%E5%AD%97%E5%8F%B7%E4%B8%8E%E9%A2%9C%E8%89%B2">3.4 字体、字号与颜色</a></li>
+<li><a href="#35-%E9%93%BE%E6%8E%A5%E7%9A%84%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C">3.5 链接的高级操作</a><ul>
+<li><a href="#1%E8%A1%8C%E5%86%85%E5%BC%8F">1.行内式</a></li>
+<li><a href="#2%E5%8F%82%E8%80%83%E5%BC%8F%E9%93%BE%E6%8E%A5">2.参考式链接</a></li>
+<li><a href="#3%E5%86%85%E5%AE%B9%E7%9B%AE%E5%BD%95">3.内容目录</a></li>
+<li><a href="#4%E9%94%9A%E7%82%B9">4.锚点</a></li>
+<li><a href="#5%E6%B3%A8%E8%84%9A">5.注脚</a></li>
 </ul>
-</blockquote>
-<h1 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h1><p>在文档末尾写上<code>[</code>+<code>^+数字</code>+<code>]:</code>+文字内容 声明一个脚注<br>然后就跟文献引用一样，在要引用该脚注的文字后插入<code>[</code>+<code>^+数字</code>+<code>]</code>即可</p>
-<blockquote>
-<p><strong>语法</strong><br>该方法根据实验证明有效[^1]<br>[^1]:文章链接</p>
-</blockquote>
+</li>
+<li><a href="#36-%E8%83%8C%E6%99%AF%E8%89%B2">3.6 背景色</a></li>
+<li><a href="#37-emoji%E8%A1%A8%E6%83%85%E7%AC%A6%E5%8F%B7">3.7 emoji表情符号</a></li>
+</ul>
+</li>
+<li><a href="#4-%E9%AB%98%E7%AB%AF%E7%94%A8%E6%B3%95">4. 高端用法</a><ul>
+<li><a href="#41-latex%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">4.1 Latex数学公式</a></li>
+<li><a href="#42-%E6%B5%81%E7%A8%8B%E5%9B%BE">4.2 流程图</a></li>
+<li><a href="#43-%E5%88%B6%E4%BD%9C%E4%B8%80%E4%BB%BD%E5%BE%85%E5%8A%9E%E4%BA%8B%E5%AE%9C-todo-%E5%88%97%E8%A1%A8">4.3 制作一份待办事宜—-Todo 列表</a></li>
+<li><a href="#44-%E7%BB%98%E5%88%B6-%E5%BA%8F%E5%88%97%E5%9B%BE">4.4 绘制 序列图</a></li>
+<li><a href="#45-%E7%BB%98%E5%88%B6-%E7%94%98%E7%89%B9%E5%9B%BE">4.5 绘制 甘特图</a></li>
+</ul>
+</li>
+<li><a href="#5-markdown%E5%B7%A5%E5%85%B7">5. Markdown工具</a></li>
+</ul>
+</li>
+</ul>
+<br />
+
+<p><strong>前言</strong><br>写过博客或者github上面的文档的，应该知道Markdown语法的重要性，不知道的朋友们也别着急，一篇博客轻松搞定Markdown语法。话说这个语法超级简单，一看就会，不信你点进来看看。</p>
+<ol>
+<li>快捷键</li>
+</ol>
 ]]></content>
       <categories>
         <category>markdown</category>
       </categories>
       <tags>
-        <tag>语法</tag>
         <tag>markdown</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>docker十五问</title>
+    <url>/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/</url>
+    <content><![CDATA[<br />
+
+]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+        <tag>docker</tag>
+        <tag>容器</tag>
       </tags>
   </entry>
   <entry>
     <title>Java中代码优化的30个小技巧</title>
-    <url>/2023/05/28/2023_05_28_java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/</url>
+    <url>/2023/05/28/java%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<br />
 
 <h2 id="1-用String-format拼接字符串"><a href="#1-用String-format拼接字符串" class="headerlink" title="1.用String.format拼接字符串 "></a>1.用String.format拼接字符串 </h2><p><em><strong>String.format</strong></em>方法拼接url请求参数，日志打印等字符串。</p>
@@ -484,678 +552,137 @@
 <p>bye</p>
 <br />]]></content>
       <categories>
-        <category>java</category>
+        <category>代码优化</category>
       </categories>
       <tags>
         <tag>优化</tag>
-        <tag>代码</tag>
       </tags>
   </entry>
   <entry>
-    <title>十分钟让你熟练掌握linux命令</title>
-    <url>/2023/05/28/2023_05_28_linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <title>java常用第三方工具库</title>
+    <url>/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/</url>
+    <content><![CDATA[<br />
+
+<h3 id="Java常用工具类库"><a href="#Java常用工具类库" class="headerlink" title="Java常用工具类库"></a>Java常用工具类库</h3><ul>
+<li><a href="#1_java_2">1. java自带工具方法</a></li>
+<li><a href="#2_apache_commons_118">2. apache commons工具类库</a><ul>
+<li></li>
+<li><a href="#21_commonslangjavalang_121">2.1 commons-lang，java.lang的增强版</a></li>
+<li><a href="#22_commonscollections__211">2.2 commons-collections 集合工具类</a></li>
+<li><a href="#23_commonbeanutils__269">2.3 common-beanutils 操作对象</a></li>
+<li><a href="#24_commonsio__335">2.4 commons-io 文件流处理</a></li>
+</ul>
+</li>
+<li><a href="#3_Google_guava_383">3. Google guava工具类库</a></li>
+<li><a href="#4_Hutool_510">4. Hutool工具类库</a></li>
+<li><a href="#5_json_527">5. json处理工具</a></li>
+</ul>
+<br />
+
+]]></content>
+      <categories>
+        <category>java工具类库</category>
+      </categories>
+      <tags>
+        <tag>hutool</tag>
+        <tag>apache common</tag>
+        <tag>guava</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令</title>
+    <url>/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<hr>
 <p><a href="https://blog.csdn.net/weixin_44624117/article/details/101368670">1、常用Linux命令</a><br><a href="https://blog.csdn.net/lydms/article/details/128926048">2、Linux下脚本编写</a><br><a href="https://blog.csdn.net/weixin_44624117/article/details/103768670">3、windows下CMD常用命令</a></p>
 <hr>
 <br />
 
+<h3 id="文章目录"><a href="#文章目录" class="headerlink" title="文章目录"></a>文章目录</h3><ul>
+<li><ul>
+<li><a href="#_35">一、目录操作</a><ul>
+<li></li>
+<li><a href="#1_99">1、批量操作</a></li>
+</ul>
+</li>
+<li><a href="#_108">二、文件操作</a></li>
+<li><a href="#font_colordd0000font_186">三、文件内容操作（查看日志，更改配置文件）</a><ul>
+<li></li>
+<li><a href="#1grep_245">1、grep(检索文件内容)</a></li>
+<li><a href="#2awk_262">2、awk(数据统计)</a></li>
+<li><a href="#3sed_321">3、sed(替换文件内容)</a></li>
+<li><a href="#4_391">4、管道操作符`|`</a></li>
+<li><a href="#5cut_436">5、cut(数据裁剪)</a></li>
+</ul>
+</li>
+<li><a href="#_466">四、系统日志位置</a></li>
+<li><a href="#_483">五、创建与删除软连接</a></li>
+<li><a href="#_501">六、压缩和解压缩</a></li>
+<li><a href="#Linux_554">七、Linux下文件的详细信息</a></li>
+<li><a href="#docker_577">八、常用的docker容器的命令：</a></li>
+<li><a href="#_609">九、运维常用命令</a><ul>
+<li></li>
+<li><a href="#1_610">1、查看服务器端口号是否可用</a></li>
+</ul>
+</li>
+<li><a href="#yum_753">十、yum常用命令</a></li>
+<li><a href="#_764">十一、其他命令</a><ul>
+<li></li>
+<li><a href="#1xargs_765">1、xargs</a></li>
+<li><a href="#2curl_885">2、curl语法</a></li>
+<li><a href="#3_903">3、查询支持解析器</a></li>
+</ul>
+</li>
+<li><a href="#Linux_927">十二、Linux内核优化</a></li>
+<li><a href="#_941">十三、用户权限操作</a><ul>
+<li></li>
+<li><a href="#1_943">1、用户操作</a></li>
+<li><a href="#2_1025">2、添加组</a></li>
+<li><a href="#3sudo_1057">3、sudo用户权限操作</a></li>
+<li><a href="#4_1072">4、更换文件所有者</a></li>
+</ul>
+</li>
+<li><a href="#TOP_1088">十四、TOP</a><ul>
+<li></li>
+<li><a href="#1_1100">1、统计信息区</a></li>
+<li><a href="#2_1142">2、进程信息区</a></li>
+</ul>
+</li>
+<li><a href="#_1174">十五、文件安装</a><ul>
+<li></li>
+<li><a href="#1lrzsz_1175">1、文件下载(lrzsz)</a></li>
+</ul>
+</li>
+<li><a href="#PDF_1190">十六、文章PDF版本</a></li>
+</ul>
+</li>
+</ul>
+<br />
 
+<hr>
 <p>Linux 系统目录</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">├── bin -&gt; usr/bin # 用于存放二进制命令</span><br><span class="line">├── boot # 内核及引导系统程序所在的目录</span><br><span class="line">├── dev # 所有设备文件的目录（如磁盘、光驱等）</span><br><span class="line">├── etc # 配置文件默认路径、服务启动命令存放目录</span><br><span class="line">├── home # 用户家目录，root用户为/root</span><br><span class="line">├── lib -&gt; usr/lib # 32位库文件存放目录</span><br><span class="line">├── lib64 -&gt; usr/lib64 # 64位库文件存放目录</span><br><span class="line">├── media # 媒体文件存放目录</span><br><span class="line">├── mnt # 临时挂载设备目录</span><br><span class="line">├── opt # 自定义软件安装存放目录</span><br><span class="line">├── proc # 进程及内核信息存放目录</span><br><span class="line">├── root # Root用户家目录</span><br><span class="line">├── run # 系统运行时产生临时文件，存放目录</span><br><span class="line">├── sbin -&gt; usr/sbin # 系统管理命令存放目录</span><br><span class="line">├── srv # 服务启动之后需要访问的数据目录</span><br><span class="line">├── sys # 系统使用目录</span><br><span class="line">├── tmp # 临时文件目录</span><br><span class="line">├── usr # 系统命令和帮助文件目录</span><br><span class="line">└── var # 存放内容易变的文件的目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><figcaption><span>language-shell</span></figcaption><table><tr><td class="code"><pre><span class="line">├── bin -&gt; usr/bin # 用于存放二进制命令</span><br><span class="line">├── boot # 内核及引导系统程序所在的目录</span><br><span class="line">├── dev # 所有设备文件的目录（如磁盘、光驱等）</span><br><span class="line">├── etc # 配置文件默认路径、服务启动命令存放目录</span><br><span class="line">├── home # 用户家目录，root用户为/root</span><br><span class="line">├── lib -&gt; usr/lib # 32位库文件存放目录</span><br><span class="line">├── lib64 -&gt; usr/lib64 # 64位库文件存放目录</span><br><span class="line">├── media # 媒体文件存放目录</span><br><span class="line">├── mnt # 临时挂载设备目录</span><br><span class="line">├── opt # 自定义软件安装存放目录</span><br><span class="line">├── proc # 进程及内核信息存放目录</span><br><span class="line">├── root # Root用户家目录</span><br><span class="line">├── run # 系统运行时产生临时文件，存放目录</span><br><span class="line">├── sbin -&gt; usr/sbin # 系统管理命令存放目录</span><br><span class="line">├── srv # 服务启动之后需要访问的数据目录</span><br><span class="line">├── sys # 系统使用目录</span><br><span class="line">├── tmp # 临时文件目录</span><br><span class="line">├── usr # 系统命令和帮助文件目录</span><br><span class="line">└── var # 存放内容易变的文件的目录</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="一、目录操作"><a href="#一、目录操作" class="headerlink" title="一、目录操作 "></a>一、目录操作 </h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pwd				查看当前工作目录</span><br><span class="line">clear 			清除屏幕</span><br><span class="line">cd ~			当前用户目录</span><br><span class="line">cd /			根目录</span><br><span class="line">cd -			上一次访问的目录</span><br><span class="line">cd ..			上一级目录</span><br></pre></td></tr></table></figure>
-
-<p><strong>查看目录内信息</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ll				查看当前目录下内容（LL的小写）</span><br></pre></td></tr></table></figure>
-
-<p><strong>创建目录</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir aaa		在当前目录下创建aaa目录，相对路径；</span><br><span class="line">mkdir ./bbb		在当前目录下创建bbb目录，相对路径；</span><br><span class="line">mkdir /ccc		在根目录下创建ccc目录，绝对路径；</span><br></pre></td></tr></table></figure>
-
-<p><strong>递归创建目录（会创建里面没有的目录文件夹）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir -p temp/nginx </span><br></pre></td></tr></table></figure>
-
-<p><strong>搜索命令</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find / -name &#x27;b&#x27;		查询根目录下（包括子目录），名以b的目录和文件；</span><br><span class="line">find / -name &#x27;b*&#x27;		查询根目录下（包括子目录），名以b开头的目录和文件； </span><br></pre></td></tr></table></figure>
-
-<p><strong>重命名</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv 原先目录 文件的名称   mv tomcat001 tomcat </span><br></pre></td></tr></table></figure>
-
-<p><strong>剪切命令(有目录剪切到制定目录下，没有的话剪切为指定目录）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv	/aaa /bbb		    将根目录下的aaa目录，移动到bbb目录下(假如没有bbb目录，则重命名为bbb)；</span><br><span class="line">mv	bbbb usr/bbb		将当前目录下的bbbb目录，移动到usr目录下，并且修改名称为bbb；</span><br><span class="line">mv	bbb usr/aaa			将当前目录下的bbbb目录，移动到usr目录下，并且修改名称为aaa；</span><br></pre></td></tr></table></figure>
-
-<p><strong>复制目录</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cp -r /aaa /bbb			将/目录下的aaa目录复制到/bbb目录下，在/bbb目录下的名称为aaa</span><br><span class="line">cp -r /aaa /bbb/aaa		将/目录下的aa目录复制到/bbb目录下，且修改名为aaa;</span><br></pre></td></tr></table></figure>
-
-<p><strong>强制式删除指定目录</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf /bbb			强制删除/目录下的bbb目录。如果bbb目录中还有子目录，也会被强制删除，不会提示；</span><br></pre></td></tr></table></figure>
-
-<p><strong>删除目录</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -r /bbb			普通删除。会询问你是否删除每一个文件</span><br><span class="line">rmdir test01		目录的删除</span><br></pre></td></tr></table></figure>
-
-<p>查看树状目录结构</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tree test01/</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/50cfc9a5d07a410d8a49cabe470b288f.png" alt="在这里插入图片描述"></p>
-<h3 id="1、批量操作"><a href="#1、批量操作" class="headerlink" title="1、批量操作"></a>1、批量操作</h3><p>需要采用<code>&#123;&#125;</code>进行参数的传入了。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir &#123;dirA,dirB&#125;  # 批量创建测试目录</span><br><span class="line">touch dirA/&#123;A1,A2,A3&#125;     # dirA创建三个文件dirA/A1,dirA/A2,dirA/A3</span><br></pre></td></tr></table></figure>
-
-<h2 id="二、文件操作"><a href="#二、文件操作" class="headerlink" title="二、文件操作"></a>二、文件操作</h2><p><strong>删除</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -r a.java		删除当前目录下的a.java文件（每次回询问是否删除y：同意）</span><br></pre></td></tr></table></figure>
-
-<p><strong>强制删除</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf a.java		强制删除当前目录下的a.java文件</span><br><span class="line">rm -rf ./a*			强制删除当前目录下以a开头的所有文件；</span><br><span class="line">rm -rf ./*			强制删除当前目录下所有文件（慎用）；</span><br></pre></td></tr></table></figure>
-
-<p>创建文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">touch testFile</span><br></pre></td></tr></table></figure>
-
-<p>递归删除.pyc格式的文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &#x27;*.pyc&#x27; -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-
-<p>打印当前文件夹下指定大小的文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &quot;*&quot; -size 145800c -print</span><br></pre></td></tr></table></figure>
-
-<p>递归删除指定大小的文件(145800)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &quot;*&quot; -size 145800c -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-
-<p>递归删除指定大小的文件，并打印出来</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find . -name &quot;*&quot; -size 145800c -print -exec rm -rf &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>&quot;.&quot;</code> 表示从当前目录开始递归查找</li>
-<li><code>&quot; -name &#39;*.exe&#39; &quot;</code>根据名称来查找，要查找所有以.exe结尾的文件夹或者文件</li>
-<li><code>&quot; -type f &quot;</code>查找的类型为文件</li>
-<li><code>&quot;-print&quot;</code> 输出查找的文件目录名</li>
-<li><code>-size 145800c</code> 指定文件的大小</li>
-<li><code>-exec rm -rf &#123;&#125; \;</code> 递归删除（前面查询出来的结果）</li>
-</ul>
-<p>split拆分文件</p>
-<p>split命令：可以将一个大文件分割成很多个小文件，有时需要将文件分割成更小的片段，比如为提高可读性，生成日志等。</p>
-<blockquote>
-<p>b：值为每一输出档案的大小，单位为 byte。<br>-C：每一输出档中，单行的最大 byte 数。<br>-d：使用数字作为后缀。<br>-l：值为每一输出档的行数大小。<br>-a：指定后缀长度(默认为2)。</p>
-</blockquote>
-<p>使用split命令将上面创建的date.file文件分割成大小为10KB的小文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost split]# split -b 10k date.file </span><br><span class="line">[root@localhost split]# ls</span><br><span class="line">date.file  xaa  xab  xac  xad  xae  xaf  xag  xah  xai  xaj</span><br></pre></td></tr></table></figure>
-
-<p>文件被分割成多个带有字母的后缀文件，如果想用数字后缀可使用-d参数，同时可以使用-a length来指定后缀的长度：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost split]# split -b 10k date.file -d -a 3</span><br><span class="line">[root@localhost split]# ls</span><br><span class="line">date.file  x000  x001  x002  x003  x004  x005  x006  x007  x008  x009</span><br></pre></td></tr></table></figure>
-
-<p>为分割后的文件指定文件名的前缀：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@localhost split]# split -b 10k date.file -d -a 3 split_file</span><br><span class="line">[root@localhost split]# ls</span><br><span class="line">date.file  split_file000  split_file001  split_file002  split_file003  split_file004  split_file005  split_file006  split_file007  split_file008  split_file009</span><br></pre></td></tr></table></figure>
-
-<p>使用-l选项根据文件的行数来分割文件，例如把文件分割成每个包含10行的小文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">split -l 10 date.file</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、文件内容操作（查看日志，更改配置文件）"><a href="#三、文件内容操作（查看日志，更改配置文件）" class="headerlink" title="三、文件内容操作（查看日志，更改配置文件）"></a>三、文件内容操作（查看日志，更改配置文件）</h2><p><strong>修改文件内容</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim a.java   	进入一般模式</span><br><span class="line">i(按键)   		进入插入模式(编辑模式)</span><br><span class="line">ESC(按键)  		退出</span><br><span class="line">:wq 			保存退出（shift+：调起输入框）</span><br><span class="line">:q！			不保存退出（shift+：调起输入框）（内容有更改）(强制退出，不保留更改内容)</span><br><span class="line">:q		  	不保存退出（shift+：调起输入框）（没有内容更改）</span><br><span class="line">ctrl-f ctrl-b    	整页翻页</span><br><span class="line">ctrl-e			向下滚一行</span><br><span class="line">ctrl-y			向上滚一行</span><br><span class="line">Shift + g		查看该脚本的最后一行</span><br><span class="line">键盘按下小写gg		查看该脚本的第一行</span><br></pre></td></tr></table></figure>
-
-<p><strong>文件内容的查看</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat a.java		查看a.java文件的最后一页内容；</span><br><span class="line">more a.java		从第一页开始查看a.java文件内容，按回车键一行一行进行查看，</span><br><span class="line">                    	按空格键一页一页进行查看，q退出；</span><br><span class="line">less a.java		从第一页开始查看a.java文件内容，按回车键一行一行的看，</span><br><span class="line">                    	按空格键一页一页的看，支持使用PageDown和PageUp翻页，q退出；</span><br></pre></td></tr></table></figure>
-
-<p><strong>总结下more 和 less的区别:</strong></p>
-<ol>
-<li>less可以按键盘上下方向键显示上下内容,more不能通过上下方向键控制显示</li>
-<li>less不必读整个文件，加载速度会比more更快</li>
-<li>less退出后shell不会留下刚显示的内容,而more退出后会在shell上留下刚显示的内容.</li>
-<li>由于more不能后退.</li>
-</ol>
-<p><strong>实时查看文件后几行(实时查看日志)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tail -f a.java			查看a.java文件的后10行内容；</span><br></pre></td></tr></table></figure>
-
-<p><strong>前后几行查看</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">head a.java			查看a.java文件的前10行内容；</span><br><span class="line">tail -f a.java			查看a.java文件的后10行内容；</span><br><span class="line">head -n 7 a.java		查看a.java文件的前7行内容；</span><br><span class="line">tail -n 7 a.java		查看a.java文件的后7行内容；</span><br></pre></td></tr></table></figure>
-
-<p><strong>文件内部搜索指定的内容</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行；</span><br><span class="line">grep -n under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行及行号；</span><br><span class="line">grep -v under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示没搜索到的行；</span><br><span class="line">grep -i under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行；</span><br><span class="line">grep -ni under 123.txt		在123.txt文件中搜索under字符串，大小写敏感，显示行及行号；</span><br></pre></td></tr></table></figure>
-
-<p><strong>终止当前操作</strong></p>
-<p><code>Ctrl+c</code>和<code>Ctrl+z</code>都是中断命令，但是作用却不一样。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ctrl+z</span><br><span class="line">ctrl+c</span><br></pre></td></tr></table></figure>
-
-<p><strong>Ctrl+Z</strong> 就扮演了类似的角色，将任务中断，但是任务并没有结束，在进程中只是维持挂起的状态，用户可以使用fg&#x2F;bg操作前台或后台的任务，fg命令重新启动前台被中断的任务，bg命令把被中断的任务放在后台执行。<br><strong>Ctrl+C</strong>也扮演类似的角色，强制中断程序的执行。</p>
-<p><strong>重定向功能</strong><br>可以使用 &gt; 或 &lt; 将命令的输出的命令重定向到test.txt文件中（没有则创建一个）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &#x27;Hello World&#x27; &gt; /root/test.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="1、grep-检索文件内容"><a href="#1、grep-检索文件内容" class="headerlink" title="1、grep(检索文件内容)"></a>1、grep(检索文件内容)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep [options] pattern file</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>全称：Global Regular Expression Print。</li>
-<li>作用：查找文件里符合条件的字符串。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//	从test开头文件中，查找含有start的行</span><br><span class="line">grep &quot;start&quot; test*</span><br><span class="line">// 查看包含https的行，并展示前1行(-A)，后1行(-B)</span><br><span class="line">grep -A 1 -B 1 &quot;https&quot; wget-log</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、awk-数据统计"><a href="#2、awk-数据统计" class="headerlink" title="2、awk(数据统计)"></a>2、awk(数据统计)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk [options] &#x27;cmd&#x27; file</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>一次读取一行文本，按输入分隔符进行切片，切成多个组成部分。</li>
-<li>将切片直接保存在内建的变量中，$1,$2…($0表示行的全部)。</li>
-<li>支持对单个切片的判断，支持循环判断，默认分隔符为空格。</li>
-<li>-F 指定分隔符(默认为空格)</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/8aa520d43c214eceb85dd9109d11985b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAaGFfbHlkbXM=,size_17,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<p><strong>1. 将<code>email.out</code>进行切分，打印出第1&#x2F;3列内容</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$3&#125;&#x27; email.out  </span><br></pre></td></tr></table></figure>
-
-<p><strong>2. 将<code>email.out</code>进行切分，打印出第1&#x2F;3列内容</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$3&#125;&#x27; email.out </span><br></pre></td></tr></table></figure>
-
-<p><strong>3. 将<code>email.out</code>进行切分，当第1列为tcp,第2列为1的列，全部打印</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;$1==&quot;tcp&quot; &amp;&amp; $2==1&#123;print $0&#125;&#x27; email.out</span><br></pre></td></tr></table></figure>
-
-<p><strong>4. 在上面的基础上将表头进行打印(NR表头)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;($1==&quot;tcp&quot; &amp;&amp; $2==1)|| NR==1 &#123;print $0&#125;&#x27; email.out</span><br></pre></td></tr></table></figure>
-
-<p><strong>5. 以<code>,</code>为分隔符，切分数据，并打印第二列的内容</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk -F &quot;,&quot; &#x27;&#123;print $2&#125;&#x27; test.txt</span><br></pre></td></tr></table></figure>
-
-<p><strong>6. 将日志中第1&#x2F;3列进行打印，并对第1列的数据进行分类统计</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk &#x27;&#123;print $1,$3&#125;&#x27; email.out | awk &#x27;&#123;count[$1]++&#125; END &#123;for(i in count) print i &quot;\t&quot; count[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/15d767bbcf4f4a5db0a36142829e6169.png" alt="请添加图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/f6cf47f790d74ec6b902f11badc61d11.png" alt="请添加图片描述"></p>
-<p><strong>7. 根据逗号<code>,</code>切分数据，并将第一列存在文件<code>test01.txt</code>中</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">awk -F &quot;,&quot; &#x27;&#123;print $1 &gt;&gt; &quot;test01.txt&quot;&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、sed-替换文件内容"><a href="#3、sed-替换文件内容" class="headerlink" title="3、sed(替换文件内容)"></a>3、sed(替换文件内容)</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed [option] &#x27;sed commond&#x27; filename</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>全名Stream Editor，流编辑器</li>
-<li>适合用于对文本行内容进行处理</li>
-<li>sed commond为正则表达式</li>
-<li>sed commond中为三个&#x2F;，分别为源内容，替换后的内容</li>
-</ul>
-<p><strong>sed替换标记</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">g # 表示行内全面替换。  </span><br><span class="line">p # 表示打印行。  </span><br><span class="line">w # 表示把行写入一个文件。  </span><br><span class="line">x # 表示互换模板块中的文本和缓冲区中的文本。  </span><br><span class="line">y # 表示把一个字符翻译为另外的字符（但是不用于正则表达式）</span><br><span class="line">\1 # 子串匹配标记</span><br><span class="line">&amp; # 已匹配字符串标记</span><br></pre></td></tr></table></figure>
-
-<p><strong>1. 替换解析</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/^Str/String/&#x27; replace.java </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/292866c8325a4b10b413de20cde5ccb4.png" alt="请添加图片描述"></p>
-<p><strong>2. 将末尾的.替换为；(转义.)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/\.$/\;/&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3. 全文将Jack替换为me(g是全部替换,不加只替换首个)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;s/Jack/me/g/ replace.java</span><br></pre></td></tr></table></figure>
-
-<p><strong>4. 删除replace.java中的空格(d是删除)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;/^ *$/d&#x27; replace.java</span><br></pre></td></tr></table></figure>
-
-<p><strong>5. 删除包含Interger的行(d是删除)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sed -i &#x27;/Interger/d&#x27; replace.java</span><br></pre></td></tr></table></figure>
-
-<p><strong>6.多命令一起执行</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;input&#x27; 123.txt | sed &#x27;s/\&quot;//g; s/,/\n/g&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><strong>7. 替换后将数据保存在文中</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep  123.txt | sed -n &#x27;s/\&quot;//gw test01.txt&#x27;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4、管道操作符"><a href="#4、管道操作符" class="headerlink" title="4、管道操作符|"></a>4、管道操作符<code>|</code></h3><ul>
-<li>可将指令连接起来，前一个指令的输出作为后一个指令的输入</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">find ~ |grep &quot;test&quot;</span><br><span class="line">find ~                //查找当前用户所有文件</span><br><span class="line">grep &quot;test&quot;            //从文件中</span><br></pre></td></tr></table></figure>
-
-<p>使用管道注意的要点</p>
-<ul>
-<li>只处理前一个命令正确输出，不处理错误输出。</li>
-<li>右边命令必须能够接收标准输入流，否则传递过程中数据会被抛弃</li>
-<li>sed，awk，grep，cut，head，top，less，more，c，join，sort，split等</li>
-</ul>
-<p><strong>1.从email.log文件中查询包含error的行</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;error&#x27; email.log</span><br></pre></td></tr></table></figure>
-
-<p><strong>2.获取到error的行,并取[]含有数字的</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;error&#x27; email.log | grep -o &#x27;\[0-9\]&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3. 并过滤掉含有当前进程</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -ef|grep tomcat |grep -v </span><br></pre></td></tr></table></figure>
-
-<p><strong>4. 替换后将数据保存在文中</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep  123.txt | sed -n &#x27;s/\&quot;//gw test01.txt&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><strong>5. 将文件<code>123.txt</code>，按<code>,</code>切分，去除<code>&quot;</code>，按<code>:</code>切分后，将第一列存到文件<code>test01.txt</code>中</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grep &#x27;input&#x27; 123.txt | awk -F &#x27;,&#x27; &#x27;&#123;print $2&#125;&#x27; | sed &#x27;s/\&quot;//g; s/,/\n/g&#x27; | awk -F &quot;:&quot; &#x27;&#123;print $1 &gt;&gt; &quot;test01.txt&quot;&#125;&#x27;</span><br></pre></td></tr></table></figure>
-
-<h3 id="5、cut-数据裁剪"><a href="#5、cut-数据裁剪" class="headerlink" title="5、cut(数据裁剪)"></a>5、cut(数据裁剪)</h3><ul>
-<li>从文件的每一行剪切字节、字符和字段并将这些字节、字符和字段输出。</li>
-<li>也可采用管道输入。</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>选项参数</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-f</td>
-<td>列号，提取第几列</td>
-</tr>
-<tr>
-<td>-d</td>
-<td>分隔符，按照指定分隔符分割列，默认是制表符”\t”</td>
-</tr>
-</tbody></table>
-<p>文件截取</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos shell]# cut -d &quot;：&quot; -f 1 cut.txt </span><br><span class="line">1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
-
-<p>管道截取</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos shell]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin</span><br><span class="line"></span><br><span class="line"># 按:分割。截取第3列</span><br><span class="line">[root@VM-0-9-centos shell]# echo $PATH | cut -d &quot;:&quot; -f 3</span><br><span class="line">/usr/sbin</span><br><span class="line"></span><br><span class="line"># 按:分割。截取第3列之后数据</span><br><span class="line">[root@VM-0-9-centos shell]# echo $PATH | cut -d &quot;:&quot; -f 3-</span><br><span class="line">/usr/sbin:/usr/bin:/root/bin</span><br><span class="line">[root@VM-0-9-centos shell]# </span><br></pre></td></tr></table></figure>
-
-<h2 id="四、系统日志位置"><a href="#四、系统日志位置" class="headerlink" title="四、系统日志位置"></a>四、系统日志位置</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/redhat-release			查看操作系统版本</span><br><span class="line">/var/log/message			系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一</span><br><span class="line">/var/log/message			系统启动后的信息和错误日志，是Red Hat Linux中最常用的日志之一 </span><br><span class="line">/var/log/secure				与安全相关的日志信息 </span><br><span class="line">/var/log/maillog			与邮件相关的日志信息 </span><br><span class="line">/var/log/cron				与定时任务相关的日志信息 </span><br><span class="line">/var/log/spooler			与UUCP和news设备相关的日志信息 </span><br><span class="line">/var/log/boot.log			守护进程启动和停止相关的日志消息 </span><br></pre></td></tr></table></figure>
-
-<p><strong>查看某文件下的用户操作日志</strong><br>到达操作的目录下，执行下面的程序：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat .bash_history</span><br></pre></td></tr></table></figure>
-
-<h2 id="五、创建与删除软连接"><a href="#五、创建与删除软连接" class="headerlink" title="五、创建与删除软连接"></a>五、创建与删除软连接</h2><p><strong>1、创建软连接</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -s /usr/local/app /data</span><br></pre></td></tr></table></figure>
-
-<p>注意：创建软连接时，data目录后不加 &#x2F; (加上后是查找其下一级目录)；</p>
-<p><img src="https://img-blog.csdnimg.cn/20191104170912257.png" alt="在这里插入图片描述"><br><strong>2、删除软连接</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf /data</span><br></pre></td></tr></table></figure>
-
-<p>注意：取消软连接最后没有&#x2F;，rm -rf 软连接。加上&#x2F;是删除文件夹；</p>
-<p><img src="https://img-blog.csdnimg.cn/20191104172803658.png" alt="在这里插入图片描述"></p>
-<h2 id="六、压缩和解压缩"><a href="#六、压缩和解压缩" class="headerlink" title="六、压缩和解压缩"></a>六、压缩和解压缩</h2><p><strong>tar</strong><br><img src="https://img-blog.csdnimg.cn/b9c15842223742d58e62b8912548a4d5.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAaGFfbHlkbXM=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<p>tar</p>
-<p>压缩(-c)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar -cvf start.tar a.java b.java		//将当前目录下a.java、b.java打包</span><br><span class="line">tar -cvf start.tar ./*				//将当前目录下的所欲文件打包压缩成haha.tar文件</span><br><span class="line"></span><br><span class="line">tar -zcvf start.tar.gz a.java b.java		//将当前目录下a.java、b.java打包</span><br><span class="line">tar -zcvf start.tar.gz ./*			//将当前目录下的所欲文件打包压缩成start.tar.gz文件</span><br></pre></td></tr></table></figure>
-
-<p>解压缩(-x)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar -xvf start.tar				//解压start.tar压缩包，到当前文件夹下；</span><br><span class="line">tar -xvf start.tar -C usr/local 		//（C为大写，中间无空格）</span><br><span class="line">						//解压start.tar压缩包，到/usr/local目录下；</span><br><span class="line"></span><br><span class="line">tar -zxvf start.tar.gz				//解压start.tar.gz压缩包，到当前文件夹下；</span><br><span class="line">tar -zxvf start.tar.gz -C usr/local 		//（C为大写，中间无空格）</span><br><span class="line">						//解压start.tar.gz压缩包，到/usr/local目录下；</span><br></pre></td></tr></table></figure>
-
-<p>解压缩<code>tar.xz</code>文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tar xf node-v12.18.1-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
-
-<p>unzip&#x2F;zip</p>
-<p>压缩(zip)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">zip lib.zip tomcat.jar					//将单个文件压缩(lib.zip)</span><br><span class="line">zip -r lib.zip lib/					//将目录进行压缩(lib.zip)</span><br><span class="line">zip -r lib.zip tomcat-embed.jar xml-aps.jar		//将多个文件压缩为zip文件(lib.zip)	</span><br></pre></td></tr></table></figure>
-
-<p>解压缩(unzip)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">unzip file1.zip  					//解压一个zip格式压缩包</span><br><span class="line">unzip -d /usr/app/com.lydms.english.zip			//将`english.zip`包，解压到指定目录下`/usr/app/`</span><br></pre></td></tr></table></figure>
-
-<h2 id="七、Linux下文件的详细信息"><a href="#七、Linux下文件的详细信息" class="headerlink" title="七、Linux下文件的详细信息"></a>七、Linux下文件的详细信息</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> R:Read  w:write  x: execute执行</span><br><span class="line">-rw-r--r-- 1 root root  34942 Jan 19  2018 bootstrap.jar</span><br><span class="line">前三位代表当前用户对文件权限：可以读/可以写/不能执行</span><br><span class="line">中间三位代表当前组的其他用户对当前文件的操作权限：可以读/不能写/不能执行</span><br><span class="line">后三位其他用户对当前文件权限：可以读/不能写/不能执行</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20190925153418897.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDYyNDExNw==,size_16,color_FFFFFF,t_70" alt="文件"></p>
-<p><strong>更改文件的权限</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chmod u+x web.xml （---x------）		为文件拥有者（user）添加执行权限；</span><br><span class="line">chmod g+x web.xml （------x---）		为文件拥有者所在组（group）添加执行权限；</span><br><span class="line">chmod 111 web.xml  （---x--x--x）		为所有用户分类，添加可执行权限；</span><br><span class="line">chmod 222 web.xml （--w--w--w-）		为所有用户分类，添加可写入权限；	</span><br><span class="line">chmod 444 web.xml （-r--r--r--）		为所有用户分类，添加可读取权限；</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/5cebd0bd95c6497d97cb18bcab4c8d2e.png#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="八、常用的docker容器的命令："><a href="#八、常用的docker容器的命令：" class="headerlink" title="八、常用的docker容器的命令："></a>八、常用的docker容器的命令：</h2><p><strong>1、下载镜像</strong><br>Linux服务器下载安装包镜像命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.huaweicloud.com/elasticsearch/7.8.0/elasticsearch-7.8.0-windows-x86_64.zip</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://mirrors.huaweicloud.com/">华为开源镜像站</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://mirrors.huaweicloud.com/</span><br></pre></td></tr></table></figure>
-
-<p><strong>2、常用命令</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#1、查看docker中下载好的镜像：</span><br><span class="line">docker images</span><br><span class="line"> #2、查询需要的容器名称：</span><br><span class="line">docker search mysql</span><br><span class="line">#3、将需要的docker容器下载运行到本地(名称、端口号、msyql密码、ID)：</span><br><span class="line">docker run -di --name=first -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root 26d26dsfsd31a</span><br><span class="line">#4、查看运行的docker容器：</span><br><span class="line">docker ps</span><br><span class="line">#5、查看所有的docker容器（包括未运行的）：</span><br><span class="line">docker ps -a</span><br><span class="line">#6、停止当前运行的docker容器：</span><br><span class="line">docker stop first</span><br><span class="line">#7、启动docker容器：</span><br><span class="line">docker start first</span><br><span class="line">#8、重启docker容器：</span><br><span class="line">docker restart first</span><br><span class="line">#9、删除docker容器：</span><br><span class="line">docker rm first</span><br></pre></td></tr></table></figure>
-
-<h2 id="九、运维常用命令"><a href="#九、运维常用命令" class="headerlink" title="九、运维常用命令"></a>九、运维常用命令</h2><h3 id="1、查看服务器端口号是否可用"><a href="#1、查看服务器端口号是否可用" class="headerlink" title="1、查看服务器端口号是否可用"></a>1、查看服务器端口号是否可用</h3><p><strong>查看服务器是否可用</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ping 49.32.587.164</span><br></pre></td></tr></table></figure>
-
-<p><strong>查看服务器指定端口是否可用</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">telnet 49.32.587.164 8093</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/lydms/article/details/113698856">Telnet安装</a></p>
-<p>这是我写过的一个Linux安装Telnet的文章。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/lydms/article/details/113698856</span><br></pre></td></tr></table></figure>
-
-<p><strong>1、shutdown(关闭计算机)</strong></p>
-<p>shutdown是最常用也是最安全的关机和重启命令，它会在关机之前调用fsck检查磁盘，其中-h和-r是最常用的参数：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-h：停止系统服务并关机  </span><br><span class="line">-r： 停止系统服务后重启  </span><br></pre></td></tr></table></figure>
-
-<p>案例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">shutdown -h now  --立即关机  </span><br><span class="line">shutdown -h 10:53  --到10:53关机，如果该时间小于当前时间，则到隔天  </span><br><span class="line">shutdown -h +10  --10分钟后自动关机  </span><br><span class="line">shutdown -r now  --立即重启  </span><br><span class="line">shutdown -r +30 &#x27;The System Will Reboot in 30 Mins&#x27;   --30分钟后重启并并发送通知给其它在线用户  </span><br></pre></td></tr></table></figure>
-
-<p><strong>2、查看处于各种连接状态数量(ESTABLISHED、CLOSE_WAIT、TIME_WAIT)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -n | awk &#x27;/^tcp/ &#123;++S[$NF]&#125; END &#123;for(a in S) print a, S[a]&#125;&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200710160201853.png" alt="在这里插入图片描述"><br>查看处于<code>ESTABLISHED</code>状态连接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nt | awk &#x27;&#123;if($NF==&quot;ESTABLISHED&quot;)&#123;wait[$5]++&#125;&#125;END&#123;for(i in wait) print i,wait[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>查看处于<code>CLOSE_WAIT</code>状态连接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nt | awk &#x27;&#123;if($NF==&quot;CLOSE_WAIT&quot;)&#123;wait[$5]++&#125;&#125;END&#123;for(i in wait) print i,wait[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>查看处于<code>TIME_WAIT</code>状态连接</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nt | awk &#x27;&#123;if($NF==&quot;TIME_WAIT&quot;)&#123;wait[$5]++&#125;&#125;END&#123;for(i in wait) print i,wait[i]&#125;&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3、ping命令</strong><br>对 <a href="http://www.lydms.com/">www.lydms.com</a> 发送 4 个 ping 包, 检查与其是否联通</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ping -c 4 www.lydms.com</span><br></pre></td></tr></table></figure>
-
-<p><strong>4、netstat 命令</strong><br><code>netstat 命令用于显示各种网络相关信息，如网络连接, 路由表, 接口状态等等;</code><br>列出所有处于监听状态的tcp端口:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -lt</span><br></pre></td></tr></table></figure>
-
-<p>查看所有的端口信息, 包括 PID 和进程名称</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -tulpn</span><br></pre></td></tr></table></figure>
-
-<p><strong>5、查看当前端口号占用情况</strong><br>1.用于查看某一端口的占用情况</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">lsof -i:8080</span><br></pre></td></tr></table></figure>
-
-<p>2.显示tcp，udp的端口和进程等相关情况</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -tunlp</span><br></pre></td></tr></table></figure>
-
-<p>3.指定端口号的进程情况</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -tunlp|grep 8080</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.查看PID进程信息</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -aux |grep 28990</span><br></pre></td></tr></table></figure>
-
-<p>根据PID，查看JVM中各线程信息(‘0x9eb’为nid值)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jstack 2246|grep &#x27;0x9eb&#x27; -A 50</span><br></pre></td></tr></table></figure>
-
-<p><strong>6、ps 命令</strong><br>过滤得到当前系统中的 ssh 进程信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps aux | grep &#x27;ssh&#x27;</span><br></pre></td></tr></table></figure>
-
-<p><strong>7、管道命令</strong><br><code>简单来说, Linux 中管道的作用是将上一个命令的输出作为下一个命令的输入, 像 pipe 一样将各个命令串联起来执行, 管道的操作符是 |</code><br>管道命令查看当前运行的程序中，名称为java的程序</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -ef|grep java</span><br></pre></td></tr></table></figure>
-
-<p>查看&#x2F;etc&#x2F;passwd文件中的root内容</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/passwd | grep &#x27;root&#x27;</span><br></pre></td></tr></table></figure>
-
-<p>查看当前系统的ip连接（Windows和Linux通用）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure>
-
-<p>将sh test.sh任务放到后台，并将打印的日志输出到<code>nohup.out</code>文件中，<strong>终端不再能够接收任何输入（标准输入）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nohup sh test.sh  &amp;</span><br></pre></td></tr></table></figure>
-
-<p>将sh test.sh任务放到后台，并将打印的日志输出到<code>test.out</code>文件中，<strong>终端不再能够接收任何输入（标准输入）</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nohup sh test.sh &gt;&gt; test.out  &amp;</span><br></pre></td></tr></table></figure>
-
-<p>将sh test.sh任务放到后台，并将打印的日志输出到nohup.out文件中，<strong>终端能够接收任何输入</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nohup sh test.sh  &amp;</span><br></pre></td></tr></table></figure>
-
-<p>8、添加Host地址<br>打开配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/hosts</span><br></pre></td></tr></table></figure>
-
-<p>在打开的文件中添加</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">49.235.32.164 www.lydms.com</span><br></pre></td></tr></table></figure>
-
-<p>保存文件后，重启网络</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/init.d/network restart</span><br></pre></td></tr></table></figure>
-
-<p>重新加载成功：<br><img src="https://img-blog.csdnimg.cn/20200921141541487.jpg#pic_center" alt="在这里插入图片描述"></p>
-<h2 id="十、yum常用命令"><a href="#十、yum常用命令" class="headerlink" title="十、yum常用命令"></a>十、yum常用命令</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install iptables-services			下载并安装iptables</span><br><span class="line">yum list					列出当前系统中安装的所有包</span><br><span class="line">yum search package_name				在rpm仓库中搜寻软件包</span><br><span class="line">yum update package_name.rpm			更新当前系统中所有安装的rpm包</span><br><span class="line">yum update package_name				更新一个rpm包</span><br><span class="line">yum remove package_name				删除一个rpm包</span><br><span class="line">yum clean all					删除所有缓存的包和头文件</span><br></pre></td></tr></table></figure>
-
-<h2 id="十一、其他命令"><a href="#十一、其他命令" class="headerlink" title="十一、其他命令"></a>十一、其他命令</h2><h3 id="1、xargs"><a href="#1、xargs" class="headerlink" title="1、xargs"></a>1、xargs</h3><p>给其他命令传递参数的一个过滤器</p>
-<p><strong>补充说明</strong></p>
-<p><strong>xargs 命令</strong> 是给其他命令传递参数的一个过滤器，也是组合多个命令的一个工具。它擅长将标准输入数据转换成命令行参数，xargs 能够处理管道或者 stdin 并将其转换成特定命令的命令参数。xargs 也可以将单行或多行文本输入转换为其他格式，例如多行变单行，单行变多行。xargs 的默认命令是 echo，空格是默认定界符。这意味着通过管道传递给 xargs 的输入将会包含换行和空白，不过通过 xargs 的处理，换行和空白将被空格取代。xargs 是构建单行命令的重要组件之一。</p>
-<p><strong>xargs 命令用法</strong></p>
-<p>xargs 用作替换工具，读取输入数据重新格式化后输出。</p>
-<p><code>-n</code>：指定每行输出数量</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat test.txt | xargs -n3</span><br><span class="line">a b c</span><br><span class="line">d e f</span><br><span class="line">g h i</span><br><span class="line">j k l</span><br><span class="line">m n o</span><br></pre></td></tr></table></figure>
-
-<p><code>-d</code>：按指定内容分隔文本</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos ~] echo &quot;nameXnameXnameXname&quot; | xargs -dX</span><br><span class="line">name name name name</span><br></pre></td></tr></table></figure>
-
-<p><code>-l</code>：文本命令替换</p>
-<p>xargs 的一个 选项 -I ，使用 -I 指定一个替换字符串{}，这个字符串在 xargs 扩展时会被替换掉，当 -I 与 xargs 结合使用，每一个参数命令都会被执行一次：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls *.jpg | xargs -n1 -I cp &#123;&#125; /data/images</span><br></pre></td></tr></table></figure>
-
-<p><code>-t</code>：将执行的命令，打印出来</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-t echo&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ls * |xargs -t -n1 -I &#123;&#125; cp -r &#123;&#125; /root/ddd/ echo&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结合使用—指定X切分，并每行2个</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@VM-0-9-centos ~] echo &quot;nameXnameXnameXname&quot; | xargs -dX -n2</span><br><span class="line">name name</span><br><span class="line">name name</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>查看历史使用命令</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history</span><br></pre></td></tr></table></figure>
-
-<p>过滤与<code>es</code>相关命令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">history | grep es</span><br></pre></td></tr></table></figure>
-
-<p><strong>查看占用资源</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -au			占用的资源是从进程启动开始，计算的平均占用资源，比如cpu等</span><br><span class="line">top			实时占用的资源；</span><br></pre></td></tr></table></figure>
-
-<p><strong>查看当前目录所占存储</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">du -lh					查看当前文件下各文件夹占用存储空间</span><br><span class="line">du -sh					查看当前文件夹所占存储空间</span><br><span class="line">du --max-depth=&lt;目录层数&gt; 		超过指定层数的目录后，予以忽略。</span><br><span class="line">du --max-depth=1 			只查看当前目录下文件占用的存储空间</span><br></pre></td></tr></table></figure>
-
-<p><strong>管道命令：</strong><br>根据项目查看进程，更加PID查看项目，以及项目路径</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ps -ef 						查看所有的进程</span><br><span class="line">ps -ef | grep mysql				查看mysql相关的进程</span><br></pre></td></tr></table></figure>
-
-<p>通过进程PID查看所占用的端口号</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">netstat -nap |grep 进程ID(PID)</span><br></pre></td></tr></table></figure>
-
-<p><strong>查看Linux下系统存储使用率</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">df -h			查看系统硬盘使用情况</span><br></pre></td></tr></table></figure>
-
-<p><strong>杀死进程(根据PID)</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">kill -9 2630		进程pid</span><br></pre></td></tr></table></figure>
-
-<p><strong>关闭防火墙</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service iptables stop      临时关闭防火墙</span><br><span class="line">chkconfig iptables off     防火墙开启不启动</span><br><span class="line">service iptables status    查看防火墙状态</span><br></pre></td></tr></table></figure>
-
-<p><strong>开机启动选项</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">msconfig					查看开机启动选项</span><br><span class="line">chkconfig					查看开机启动服务列表</span><br></pre></td></tr></table></figure>
-
-<p><strong>查看MySQL服务的程序的状态</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">service mysql start        开启MySQL    </span><br><span class="line">service mysql status       查看MySQL的状态    </span><br><span class="line">service mysql stop         关闭MySQL    </span><br></pre></td></tr></table></figure>
-
-<p><strong>查看系统变量</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo $USER   	输出某个变量</span><br><span class="line">set	         输出所有变量</span><br></pre></td></tr></table></figure>
-
-<h3 id="2、curl语法"><a href="#2、curl语法" class="headerlink" title="2、curl语法"></a>2、curl语法</h3><p><strong>GET请求</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">curl &quot;http://www.wangchujiang.com&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>POST请求</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#  普通文本</span><br><span class="line">curl -d&#x27;login=emma＆password=123&#x27; -X POST https://wangchujiang.com/login</span><br><span class="line">#  Json格式</span><br><span class="line">curl -l -H &quot;Content-type: application/json&quot; -X POST -d &#x27;&#123;&quot;phone&quot;:&quot;13521389587&quot;,&quot;password&quot;:&quot;test&quot;&#125;&#x27; http://wangchujiang.com/apis/users.json</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>详细可以看我写的另一篇：<a href="https://blog.csdn.net/lydms/article/details/127655845">curl语法整理</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/lydms/article/details/127655845</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、查询支持解析器"><a href="#3、查询支持解析器" class="headerlink" title="3、查询支持解析器"></a>3、查询支持解析器</h3><p>Centos默认的解析器是<code>bash</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
-
-<p>列表</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/sh</span><br><span class="line"># Centos默认的解析器是bash</span><br><span class="line">/bin/bash</span><br><span class="line">/sbin/nologin</span><br><span class="line">/usr/bin/sh</span><br><span class="line">/usr/bin/bash</span><br><span class="line">/usr/sbin/nologin</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/csh</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/3624493cd41a411e9a4724402bf1e5c3.png" alt="在这里插入图片描述"><br>指定解析器执行<br>脚本以<code>#!/bin/bash</code>开头（指定解析器）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">echo &quot;helloworld&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="十二、Linux内核优化"><a href="#十二、Linux内核优化" class="headerlink" title="十二、Linux内核优化"></a>十二、Linux内核优化</h2><p>打开配置文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
-
-<p>加载新的配置(需开启防火墙iptables，否则会报错)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sysctl -p</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.cnblogs.com/lldsn/p/10489593.html">收藏的详情地址</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://www.cnblogs.com/lldsn/p/10489593.html</span><br></pre></td></tr></table></figure>
-
-<h2 id="十三、用户权限操作"><a href="#十三、用户权限操作" class="headerlink" title="十三、用户权限操作"></a>十三、用户权限操作</h2><h3 id="1、用户操作"><a href="#1、用户操作" class="headerlink" title="1、用户操作"></a>1、用户操作</h3><p>添加用户<code>sum</code>:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">useradd --d /usr/sum -m sum</span><br></pre></td></tr></table></figure>
-
-<p>关于useradd的某些参数：</p>
-<p><strong>-u：</strong> 指定 UID，这个 UID 必须是大于等于500，并没有其他用户占用的 UID</p>
-<p><strong>-g：</strong> 指定默认组，可以是 GID 或者 GROUPNAME，同样也必须真实存在</p>
-<p><strong>-G：</strong> 指定额外组</p>
-<p><strong>-c：</strong> 指定用户的注释信息</p>
-<p><strong>-d：</strong> 指定用户的家目录</p>
-<p>已创建的用户<code>sum</code>设置密码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">passwd sum</span><br></pre></td></tr></table></figure>
-
-<p>用户添加<code>root</code>权限</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">visudo</span><br></pre></td></tr></table></figure>
-
-<p>找到<code>root</code>用户权限位置<br>添加与<code>root</code>用户相同权限</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">## Allow root to run any commands anywhere</span><br><span class="line">root    ALL=(ALL)       ALL</span><br><span class="line">eses    ALL=(ALL)       ALL</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/5e5c085c3e4649dda55ce82d405d23f9.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBAaGFfbHlkbXM=,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<p>新建的用户在面显示</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/passwd</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200827143920513.png#pic_center" alt="反反复复"></p>
-<p>切换下刚才添加的用户</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">su sum</span><br></pre></td></tr></table></figure>
-
-<p>sum: x:1000:1000:: &#x2F;usr&#x2F;sum :&#x2F;bin&#x2F;bash<br>sum: x:0:1000:: &#x2F;usr&#x2F;sum :&#x2F;bin&#x2F;bash</p>
-<p>回到root用户</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
-
-<p><strong>修改已有用户信息<code>usermod</code></strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">usermod 选项 用户名</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/6750ee77e3354cfaa983de3683019ad0.png" alt="请添加图片描述"></p>
-<p>删除用户文件夹</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rm -rf /usr/sum</span><br></pre></td></tr></table></figure>
-
-<p>删除用户<code>sum</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">userdel sum</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/e57effd8b85b49fd8b87b9e1c16b5f58.png" alt="请添加图片描述"></p>
-<h3 id="2、添加组"><a href="#2、添加组" class="headerlink" title="2、添加组"></a>2、添加组</h3><p><strong>添加用户组</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">groupadd groupname</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/5fe1a6b1a99d406dbe90115777933fb4.png" alt="请添加图片描述"><br><strong>修改用户组</strong><br>使用者权限：管理员用户</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">groupmod 选项 用户组</span><br><span class="line">groupmod  -n new-usergroup  usergroup</span><br></pre></td></tr></table></figure>
-
-<p>常用的选项有：</p>
-<ul>
-<li>-g GID 为用户组指定新的组标识号。</li>
-<li>-o 与-g选项同时使用，用户组的新GID可以与系统已有用户组的GID相同。</li>
-<li>-n新用户组 将用户组的名字改为新名字<br><img src="https://img-blog.csdnimg.cn/6147e2f2c09c4bd6ad4e17decbe9a870.png" alt="在这里插入图片描述"></li>
-</ul>
-<p><strong>删除用户组</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">groupdel groupname</span><br></pre></td></tr></table></figure>
-
-<p>可以看到自己的分组和分组id</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat /etc/group</span><br></pre></td></tr></table></figure>
-
-<h3 id="3、sudo用户权限操作"><a href="#3、sudo用户权限操作" class="headerlink" title="3、sudo用户权限操作"></a>3、sudo用户权限操作</h3><blockquote>
-<p>比如我们使用普通用户操作用户或者操作用户组、以及修改网卡配置文件的时候，需要切换到root用户才操作，此时我们可以使用sudo命令提高普通用户的操作权限，以达到操作目的</p>
-</blockquote>
-<p><code>sudo</code>：控制用户对系统命令的使用权限,root允许的操作。<br>通过sudo可以提高普通用户的操作权限。<br><strong>使用者权限</strong>：普通用户</p>
-<p>使用root用户权限执行命令，操作</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo -s</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo   vi /etc/sysconfig/network-scripts/ifcfg-ens33 </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/ea77820e3298431681dc420a6263455d.png" alt="在这里插入图片描述"></p>
-<h3 id="4、更换文件所有者"><a href="#4、更换文件所有者" class="headerlink" title="4、更换文件所有者"></a>4、更换文件所有者</h3><p>格式：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown [-R] 所有者 		文件或目录</span><br><span class="line">chown [-R] 所有者:所属组 	文件或目录</span><br></pre></td></tr></table></figure>
-
-<p>将<code>kibana-8.3.3-linux-x86_64.tar.gz</code>所有者改为用户<code>sum</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R sum /usr/sum/kibana-8.3.3-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>将<code>kibana-8.3.3-linux-x86_64.tar.gz</code>所有者改为用户<code>sum</code>、所有组改为<code>sum</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">chown -R sum:sum /usr/sum/kibana-8.3.3-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h2 id="十四、TOP"><a href="#十四、TOP" class="headerlink" title="十四、TOP"></a>十四、TOP</h2><p>实时占用的资源:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/16d9a61fc63848b888ebc3ea1136db18.jpeg#pic_center" alt="在这里插入图片描述"></p>
-<p>top命令执行结果分为两个区域：<strong>统计信息区</strong> 和<strong>进程信息区</strong></p>
-<h3 id="1、统计信息区"><a href="#1、统计信息区" class="headerlink" title="1、统计信息区"></a>1、统计信息区</h3><p><strong>TOP：任务队列信息，与uptime命令执行结果相同.</strong></p>
-<ul>
-<li>15:33:39：系统时间</li>
-<li>up 5:40：主机已运行时间</li>
-<li>2 users：用户连接数（不是用户数，who命令）</li>
-<li>load average: 1.09, 1.04, 0.98：系统平均负载，统计最近1，5，15分钟的系统平均负载</li>
-</ul>
-<p><strong>Tasks：进程信息</strong></p>
-<ul>
-<li>123 total：进程总数</li>
-<li>3 running：正在运行的进程数</li>
-<li>120 sleeping：睡眠的进程数</li>
-<li>0 stopped：停止的进程数</li>
-<li>0 zombie：僵尸进程数</li>
-</ul>
-<p><strong>%CPU(s)：CPU信息（当有多个CPU时，这些内容可能会超过两行）</strong></p>
-<ul>
-<li>42.1 us：用户空间所占CPU百分比</li>
-<li>2.0 sy：内核空间占用CPU百分比</li>
-<li>0.0 ni：用户进程空间内改变过优先级的进程占用CPU百分比</li>
-<li>49.2 id：空闲CPU百分比</li>
-<li>0.0 wa：等待输入输出的CPU时间百分比</li>
-<li>6.0 hi：硬件CPU终端占用百分比</li>
-<li>0.7 si：软中断占用百分比</li>
-<li>0.0 st：虚拟机占用百分比</li>
-</ul>
-<p><strong>KiB Mem：内存信息（与第五行的信息类似与free命令类似）</strong></p>
-<ul>
-<li>3780.9 total：物理内存总量</li>
-<li>727.4 free：已使用的内存总量</li>
-<li>668.8 used：空闲的内存总量（free + userd &#x3D; total）</li>
-<li>2384.7 buff&#x2F;cache：用作内核缓存的内存量</li>
-</ul>
-<p><strong>KiB：swap信息</strong></p>
-<ul>
-<li>2048.0 total：交换分区总量</li>
-<li>2046.0 free：已使用的交换分区总量</li>
-<li>2.0 used：空闲交换分区总量</li>
-<li>859.6 avail：缓冲的交换区总量，内存中的内容被换出到交换区，然后又被换入到内存，但是使用过的交换区没有被覆盖，交换区的这些内容已存在于内存中的交换区的大小，相应的内存再次被换出时可不必再对交换区写入。</li>
-</ul>
-<h3 id="2、进程信息区"><a href="#2、进程信息区" class="headerlink" title="2、进程信息区"></a>2、进程信息区</h3><ul>
-<li><p>PID:进程id</p>
-</li>
-<li><p>USER:进程所有者的用户名</p>
-</li>
-<li><p>PR:优先级</p>
-</li>
-<li><p>NI:nice值。负值表示高优先级，正值表示低优先级</p>
-</li>
-<li><p>RES:进程使用的、未被换出的物理内存的大小</p>
-</li>
-<li><p>%CPU:上次更新到现在的CPU时间占用百分比</p>
-</li>
-<li><p>%MEM:进程使用的物理内存百分比</p>
-</li>
-<li><p>TIME+：进程所使用的CPU时间总计，单位1&#x2F;100秒</p>
-</li>
-<li><p>COMMAND:命令名&#x2F;行</p>
-</li>
-<li><p>PPID:父进程id</p>
-</li>
-<li><p>RUSER:Real user name（看了好多，都是这样写，也不知道和user有什么区别，欢迎补充此处）</p>
-</li>
-<li><p>UID:进程所有者的id</p>
-</li>
-<li><p>VIRT:进程使用的虚拟内存总量，单位kb。VIRT&#x3D;SWAP+RES</p>
-</li>
-<li><p>GROUP:进程所有者的组名</p>
-</li>
-<li><p>TTY:启动进程的终端名。不是从终端启动的进程则显示为?</p>
-</li>
-<li><p>NI:nice值。负值表示高优先级，正值表示低优先级</p>
-</li>
-<li><p>P:最后使用的CPU，仅在多CPU环境下有意义</p>
-</li>
-<li><p>TIME:进程使用的CPU时间总计，单位秒</p>
-</li>
-<li><p>SWAP:进程使用的虚拟内存中被被换出的大小</p>
-</li>
-<li><p>CODE:可执行代码占用的物理内存大小</p>
-</li>
-<li><p>DATA:可执行代码以外的部分（数据段+栈）占用的物理内存大小</p>
-</li>
-<li><p>SHR:共享内存大小</p>
-</li>
-<li><p>nFLT:页面错误次数</p>
-</li>
-<li><p>nDRT:最后一次写入到现在，被修改过的页面数</p>
-</li>
-<li><p>S:进程状态（D&#x3D;不可中断的睡眠状态，R&#x3D;运行，S&#x3D;睡眠，T&#x3D;跟踪&#x2F;停止，Z&#x3D;僵尸进程）</p>
-</li>
-<li><p>WCHAN:若该进程在睡眠，则显示睡眠中的系统函数名</p>
-</li>
-<li><p>Flags:任务标志</p>
-</li>
-</ul>
-<h2 id="十五、文件安装"><a href="#十五、文件安装" class="headerlink" title="十五、文件安装"></a>十五、文件安装</h2><h3 id="1、文件下载-lrzsz"><a href="#1、文件下载-lrzsz" class="headerlink" title="1、文件下载(lrzsz)"></a>1、文件下载(lrzsz)</h3><p>下载文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum install -y lrzsz</span><br></pre></td></tr></table></figure>
-
-<p>上传文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rz</span><br></pre></td></tr></table></figure>
-
-<p>保存文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sz</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>linux</category>
       </categories>
       <tags>
-        <tag>命令</tag>
         <tag>linux</tag>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>接口性能优化</title>
+    <url>/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>前言 </p>
+]]></content>
+      <categories>
+        <category>代码优化</category>
+      </categories>
+      <tags>
+        <tag>接口优化</tag>
+        <tag>sql优化</tag>
       </tags>
   </entry>
 </search>
