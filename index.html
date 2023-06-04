@@ -56,7 +56,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-06-04 15:23:34'
+  postUpdate: '2023-06-04 16:37:55'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -201,127 +201,84 @@ if (false) {
 
 解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：
 
-httpResponse.setHeader(“Cache-Control”,”no-cache”);httpResponse.setHeader(“Cache-Control”,”no-store”);h ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/CormorantBridge_ZH-CN7673299694_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T08:50:00.000Z" title="发表于 2023-06-04 16:50:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T07:16:11.112Z" title="更新于 2023-06-04 15:16:11">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
-1、常用Linux命令2、Linux下脚本编写3、windows下CMD常用命令
-
-
-
-文章目录
-
-一、目录操作
-
-1、批量操作
-
-
-二、文件操作
-三、文件内容操作（查看日志，更改配置文件）
-
-1、grep(检索文件内容)
-2、awk(数据统计)
-3、sed(替换文件内容)
-4、管道操作符`|`
-5、cut(数据裁剪)
-
-
-四、系统日志位置
-五、创建与删除软连接
-六、压缩和解压缩
-七、Linux下文件的详细信息
-八、常用的docker容器的命令：
-九、运维常用命令
-
-1、查看服务器端口号是否可用
-
-
-十、yum常用命令
-十一、其他命令
-
-1、xargs
-2、curl语法
-3、查询支持解析器
-
-
-十二、Linux内核优化
-十三、用户权限操作
-
-1、用户操作
-2、添加组
-3、sudo用户权限操作
-4、更换文件所有者
-
-
-十四、TOP
-
-1、统计信息区
-2、进程信息区
-
-
-十五、文件安装
-
-1、文件下载(lrzsz)
-
-
-十六、文章PDF版本
-
-
-
-
-
-
-Linux 系统目录
-language-shell├── bin -&gt; usr/bin # 用于存放二进制命令├── boot # ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/OdocoileusVirginianus_ZH-CN6941501455_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown常用语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法">markdown常用语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T08:37:00.000Z" title="发表于 2023-06-04 16:37:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T07:13:28.844Z" title="更新于 2023-06-04 15:13:28">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/markdown/">markdown</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">目录
-
-
-
-
-1. 快捷键
-2. 基本语法
-2.1 字体设置斜体、粗体、删除线
-2.2 分级标题
-2.3 链接
-2.4 分割线
-2.5 代码块
-2.6 引用
-2.7 列表
-2.8 表格
-
-
-3. 常用技巧
-3.1 换行
-3.2 缩进字符
-3.3 特殊符号
-3.4 字体、字号与颜色
-3.5 链接的高级操作
-1.行内式
-2.参考式链接
-3.内容目录
-4.锚点
-5.注脚
-
-
-3.6 背景色
-3.7 emoji表情符号
-
-
-4. 高端用法
-4.1 Latex数学公式
-4.2 流程图
-4.3 制作一份待办事宜—-Todo 列表
-4.4 绘制 序列图
-4.5 绘制 甘特图
-
-
-5. Markdown工具
-
-
-
-
+httpResponse.setHeader(“Cache-Control”,”no-cache”);httpResponse.setHeader(“Cache-Control”,”no-store”);h ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/CormorantBridge_ZH-CN7673299694_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T08:50:00.000Z" title="发表于 2023-06-04 16:50:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T08:00:23.162Z" title="更新于 2023-06-04 16:00:23">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/linux/">linux</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Linux 系统目录
+language-shell├── bin -&gt; usr/bin # 用于存放二进制命令├── boot # 内核及引导系统程序所在的目录├── dev # 所有设备文件的目录（如磁盘、光驱等）├── etc # 配置文件默认路径、服务启动命令存放目录├── home # 用户家目录，root用户为/root├── lib -&gt; usr/lib # 32位库文件存放目录├── lib64 -&gt; usr/lib64 # 64位库文件存放目录├── media # 媒体文件存放目录├── mnt # 临时挂载设备目录├── opt # 自定义软件安装存放目录├── proc # 进程及内核信息存放目录├── root # Root用户家目录├── run # 系统运行时产生临时文件，存放目录├── sbin -&gt; usr/sbin # 系统管理命令存放目录├── srv # 服务启动之后需要访问的数据目录├── sys # 系统使用目录├── tmp # 临时文件目录├── usr # 系统命令和帮助文件目录└── var # 存放内容易变的文 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/OdocoileusVirginianus_ZH-CN6941501455_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown常用语法"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法">markdown常用语法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T08:37:00.000Z" title="发表于 2023-06-04 16:37:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T08:11:22.738Z" title="更新于 2023-06-04 16:11:22">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/markdown/">markdown</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
 
 前言写过博客或者github上面的文档的，应该知道Markdown语法的重要性，不知道的朋友们也别着急，一篇博客轻松搞定Markdown语法。话说这个语法超级简单，一看就会，不信你点进来看看。
 
 快捷键
 
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/BiodiverseCostaRica_ZH-CN5524154131_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="corn表达式动态配置"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置">corn表达式动态配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T08:30:00.000Z" title="发表于 2023-06-04 16:30:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T07:04:24.560Z" title="更新于 2023-06-04 15:04:24">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/corn/">corn</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+
+
+
+功能
+快捷键
+
+
+
+加粗
+Ctrl + B
+
+
+斜体
+Ctrl + I
+
+
+引用
+Ctrl + Q
+
+
+插入链接
+Ctrl + L
+
+
+插入代码
+Ctrl + K
+
+
+插入图片
+Ctrl + G
+
+
+提升标题
+Ctrl + H
+
+
+有序列表
+Ctrl + O
+
+
+无序列表
+Ctrl + U
+
+
+横线
+Ctrl + R
+
+
+撤销
+Ctrl + Z
+
+
+重做
+Ctrl + Y
+
+
+
+基本语法
+
+2.1 字体设置斜体、粗体、删除线*这里是文字*这里是文字**这里是文字*****这里是文字***~~这里是文字~~  
+
+2.2 分级标题写法1：
+一级标题## 二级标题### 三级标题#### 四级标题##### 五级标题###### 六级标题 这个写法和 **文字**效果是一样的
+写法2：   
+这是一个一级标题  或者  
+二级标题  
+
+
+
+
+2.3 链接（1）插入本地图片链接 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/BiodiverseCostaRica_ZH-CN5524154131_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="corn表达式动态配置"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置">corn表达式动态配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T08:30:00.000Z" title="发表于 2023-06-04 16:30:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T07:04:24.560Z" title="更新于 2023-06-04 15:04:24">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/corn/">corn</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
 由于业务需求，需要提供一个能够让用户动态配置定时任务的入口，定时去同步数据
 
 1、简单的业务处理，直接使用@Scheduled注解就能开启定时任务，例如在方法上@Scheduled(cron &#x3D; “0 0&#x2F;1 * * * ?”)，书写cron表达式就能配置定时任务。
@@ -329,9 +286,33 @@ language-java/** * 每分钟触发一次 */@Scheduled(cron = &quot;0 0/1 * * * ?
 
 2、但是随着业务复杂化，使用注解目前是满足不了动态配置定时任务的，以下代码能够实现cron表达式的动态配置。
 第一步，在启动类新增注解@EnableScheduling
-language-java@SpringBootApplication@EnableSchedulingpublic class testApplication &#123;    public static void main(String[] args) &#123;     ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="接口性能优化"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/EuropeanHoneybee_ZH-CN5191293837_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="接口性能优化"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="接口性能优化">接口性能优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T07:40:00.000Z" title="发表于 2023-06-04 15:40:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T06:58:10.196Z" title="更新于 2023-06-04 14:58:10">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/">代码优化</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">前言 
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/" title="获取客户端真实ip"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/SumatranRhino_ZH-CN4529744910_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取客户端真实ip"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/" title="获取客户端真实ip">获取客户端真实ip</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T07:37:00.000Z" title="发表于 2023-06-04 15:37:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T06:52:44.808Z" title="更新于 2023-06-04 14:52:44">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/IP%E5%9C%B0%E5%9D%80/">IP地址</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">现在都流行显示 ip 归属地，那么我先来获取客户端的真实 ip 地址以及 mac 地址，上代码
-language-javaimport javax.servlet.http.HttpServletRequest;import java.net.InetAddress;import java.net.NetworkInterface;import java.net.UnknownHostException;/** * 常用获取客户端信息的工具 */public class NetworkUtil &#123;    /**     * 获取ip地址     */    public static String getIpAddress(HttpServletRequest request) &#123;        String ip = request.getHeader(&quot;x-forwarded-for&quot;);        if (ip == null || ip.length() == 0 || &quot;unknown&quot;.equalsIgnore ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/" title="服务占用cpu过高排查"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/AmericanWetlands_ZH-CN7534567518_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务占用cpu过高排查"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/" title="服务占用cpu过高排查">服务占用cpu过高排查</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T07:12:00.000Z" title="发表于 2023-06-04 15:12:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T07:19:14.603Z" title="更新于 2023-06-04 15:19:14">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%80%A7%E8%83%BD%E6%8F%90%E5%8D%87/">性能提升</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+language-java@SpringBootApplication@EnableSchedulingpublic class testApplication &#123;    public static void main(String[] args) &#123;     ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="接口性能优化"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/EuropeanHoneybee_ZH-CN5191293837_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="接口性能优化"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" title="接口性能优化">接口性能优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T07:40:00.000Z" title="发表于 2023-06-04 15:40:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T08:15:57.291Z" title="更新于 2023-06-04 16:15:57">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96/">代码优化</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/%E6%8E%A5%E5%8F%A3%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">前言 接口性能优化对于从事后端开发的同学来说，肯定再熟悉不过了，因为它是一个跟开发语言无关的公共问题。
+该问题说简单也简单，说复杂也复杂。
+有时候，只需加个索引就能解决问题。
+有时候，需要做代码重构。
+有时候，需要增加缓存。
+有时候，需要引入一些中间件，比如mq。
+有时候，需要需要分库分表。
+有时候，需要拆分服务。
+等等。。。
+导致接口性能问题的原因千奇百怪，不同的项目不同的接口，原因可能也不一样。
+本文我总结了一些行之有效的，优化接口性能的办法，给有需要的朋友一个参考。
+1.索引接口性能优化大家第一个想到的可能是：优化索引。
+没错，优化索引的成本是最小的。
+你通过查看线上日志或者监控报告，查到某个接口用到的某条sql语句耗时比较长。
+这时你可能会有下面这些疑问：
+
+该sql语句加索引了没？
+
+加的索引生效了没？
+
+mysql选错索引了没？
+
+
+1.1 没加索引sql语句中where条件的关键字段，或者order by后面的排序字段，忘了加索引，这个问题在项目中很常见。
+项目刚开始的时候，由于表中的数据量小，加不加索引sql查询性能差别不大。
+后来，随着业务的发展，表中数据量越来越多， ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/" title="获取客户端真实ip"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/SumatranRhino_ZH-CN4529744910_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="获取客户端真实ip"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/" title="获取客户端真实ip">获取客户端真实ip</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T07:37:00.000Z" title="发表于 2023-06-04 15:37:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T06:52:44.808Z" title="更新于 2023-06-04 14:52:44">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/IP%E5%9C%B0%E5%9D%80/">IP地址</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/%E8%8E%B7%E5%8F%96%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9C%9F%E5%AE%9Eip/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">现在都流行显示 ip 归属地，那么我先来获取客户端的真实 ip 地址以及 mac 地址，上代码
+language-javaimport javax.servlet.http.HttpServletRequest;import java.net.InetAddress;import java.net.NetworkInterface;import java.net.UnknownHostException;/** * 常用获取客户端信息的工具 */public class NetworkUtil &#123;    /**     * 获取ip地址     */    public static String getIpAddress(HttpServletRequest request) &#123;        String ip = request.getHeader(&quot;x-forwarded-for&quot;);        if (ip == null || ip.length() == 0 || &quot;unknown&quot;.equalsIgnore ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/" title="服务占用cpu过高排查"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/AmericanWetlands_ZH-CN7534567518_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="服务占用cpu过高排查"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/" title="服务占用cpu过高排查">服务占用cpu过高排查</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T07:12:00.000Z" title="发表于 2023-06-04 15:12:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T08:17:08.601Z" title="更新于 2023-06-04 16:17:08">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%80%A7%E8%83%BD%E6%8F%90%E5%8D%87/">性能提升</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/%E6%9C%8D%E5%8A%A1%E5%8D%A0%E7%94%A8cpu%E8%BF%87%E9%AB%98%E6%8E%92%E6%9F%A5/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
 先用top命令找出CPU占比最高的
 
 language-powershelltop
@@ -360,27 +341,26 @@ jstack
 language-powershelljstack 3362 | grep d23 -A60
 
 这样，就能找出具体的异常代码位置
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/" title="java常用第三方工具库"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/SouthKaibabTrail_ZH-CN1186135534_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java常用第三方工具库"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/" title="java常用第三方工具库">java常用第三方工具库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T06:55:00.000Z" title="发表于 2023-06-04 14:55:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T06:47:08.290Z" title="更新于 2023-06-04 14:47:08">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/java%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/">java工具类库</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
-
-Java常用工具类库
-1. java自带工具方法
-2. apache commons工具类库
-
-2.1 commons-lang，java.lang的增强版
-2.2 commons-collections 集合工具类
-2.3 common-beanutils 操作对象
-2.4 commons-io 文件流处理
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/" title="java常用第三方工具库"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/SouthKaibabTrail_ZH-CN1186135534_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java常用第三方工具库"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/" title="java常用第三方工具库">java常用第三方工具库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T06:55:00.000Z" title="发表于 2023-06-04 14:55:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T08:19:09.544Z" title="更新于 2023-06-04 16:19:09">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/java%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/">java工具类库</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/java%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
 
 
-3. Google guava工具类库
-4. Hutool工具类库
-5. json处理工具
+java自带工具方法 
 
+jdk本身自带很多工具库，比如util包下，rt扩展下的，collectios带s的集合工具类，string自身的substring，isEmpty等。
+language-javapackage com.zrj.tool.utils;import org.junit.Test;import java.util.ArrayList;import java.util.Arrays;import java.util.List;import java.util.Objects;import java.util.stream.Collectors;/** * java自带utils * jdk自带util工具类有很多 * Collections 集合工具类 * String的substring等 * * Date类型 * * @author zrj * @date 2021/7/1 * @since V1.0 **/public class JavaUtils &#123;    /**     * List集合测试工具     * &lt;p&gt;     * ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/" title="docker十五问"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/45611798552.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker十五问"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/" title="docker十五问">docker十五问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T06:30:00.000Z" title="发表于 2023-06-04 14:30:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T08:22:16.584Z" title="更新于 2023-06-04 16:22:16">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/docker/">docker</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
 
+前言 本文总结了Docker常见的问题和坑，采用问答的形式，分享给大家
 
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/" title="docker十五问"><img class="post-bg" src="https://imge.ablog168.cn/blog_img/45611798552.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="docker十五问"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/" title="docker十五问">docker十五问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-06-04T06:30:00.000Z" title="发表于 2023-06-04 14:30:00">2023-06-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-04T06:29:47.529Z" title="更新于 2023-06-04 14:29:47">2023-06-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/docker/">docker</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a href="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/#post-comment"><span class="valine-comment-count" data-xid="/2023/06/04/docker%E5%8D%81%E4%BA%94%E9%97%AE/"><i class="fa-solid fa-spinner fa-spin"></i></span></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+⛳️ 1.什么是Docker？
 
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://imge.ablog168.cn/2023-05-28/16146513808882246.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">shine</div><div class="author-info__description">专注于个人经验与技术的分享</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/lmg-168"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://gitee.com/lmg-168" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:787268950@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">本站上线于2023年5月25日，主要用于个人项目经验总结和技术分享。大家如果有任何问题，或是本站存有bug，请至留言板留言，我会及时回复您的。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/06/05/%E5%BC%80%E5%8F%91%E5%B0%8F%E7%AC%94%E8%AE%B0/" title="开发小笔记(持续更新)"><img src="https://imge.ablog168.cn/blog_img/WildLupine_ZH-CN6623952879_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开发小笔记(持续更新)"/></a><div class="content"><a class="title" href="/2023/06/05/%E5%BC%80%E5%8F%91%E5%B0%8F%E7%AC%94%E8%AE%B0/" title="开发小笔记(持续更新)">开发小笔记(持续更新)</a><time datetime="2023-06-05T07:40:00.000Z" title="发表于 2023-06-05 15:40:00">2023-06-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="java项目安全问题"><img src="https://imge.ablog168.cn/blog_img/PontdArcole_ZH-CN5348049357_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java项目安全问题"/></a><div class="content"><a class="title" href="/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="java项目安全问题">java项目安全问题</a><time datetime="2023-06-04T11:37:00.000Z" title="发表于 2023-06-04 19:37:00">2023-06-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令"><img src="https://imge.ablog168.cn/blog_img/CormorantBridge_ZH-CN7673299694_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"/></a><div class="content"><a class="title" href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a><time datetime="2023-06-04T08:50:00.000Z" title="发表于 2023-06-04 16:50:00">2023-06-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法"><img src="https://imge.ablog168.cn/blog_img/OdocoileusVirginianus_ZH-CN6941501455_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown常用语法"/></a><div class="content"><a class="title" href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法">markdown常用语法</a><time datetime="2023-06-04T08:37:00.000Z" title="发表于 2023-06-04 16:37:00">2023-06-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置"><img src="https://imge.ablog168.cn/blog_img/BiodiverseCostaRica_ZH-CN5524154131_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="corn表达式动态配置"/></a><div class="content"><a class="title" href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置">corn表达式动态配置</a><time datetime="2023-06-04T08:30:00.000Z" title="发表于 2023-06-04 16:30:00">2023-06-04</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+📖 Docker 是一个开源的应用容器引擎，基于go 语言开发并遵循了apache2.0 协议开源📖 Docker 是在Linux 容器里运行应用的开源工具，是一种轻量级的”虚拟机”📖 Docker 的容器技术可以在一台主机上轻松为任何应用创建一个轻量级的，可移植的，自给自足的容器也可以这样形象的比喻：Docker 的Logo设计为蓝色鲸鱼，拖着许多集装箱，鲸鱼可以看作为宿主机，集装箱可以理解为相互隔离的容器，每个集装箱中都包含自己的应用程序。
+
+⛳️ 2.Docker的应用场景有哪些？
+Web 应用的自动化打包和发布。自动化测试和持续集成、发布。在服务型环境中部署和调整数据库或其他的后台应用。从头编译或者扩展现有的 OpenShift 或 Cloud Foundry 平台来搭建自己的 PaaS 环境。
+
+📢📢📢 在这里我重点介绍下Docker作为内部开发环境的场景
+
+在容器技术出现之前，公司往往是通过为每个开发人员提供一台或者多台虚拟机来充当开发测试环境。开发测 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://imge.ablog168.cn/2023-05-28/16146513808882246.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">shine</div><div class="author-info__description">专注于个人经验与技术的分享</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/lmg-168"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://gitee.com/lmg-168" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:787268950@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">本站上线于2023年5月25日，主要用于个人项目经验总结和技术分享。大家如果有任何问题，或是本站存有bug，请至留言板留言，我会及时回复您的。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/06/05/%E5%BC%80%E5%8F%91%E5%B0%8F%E7%AC%94%E8%AE%B0/" title="开发小笔记(持续更新)"><img src="https://imge.ablog168.cn/blog_img/WildLupine_ZH-CN6623952879_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="开发小笔记(持续更新)"/></a><div class="content"><a class="title" href="/2023/06/05/%E5%BC%80%E5%8F%91%E5%B0%8F%E7%AC%94%E8%AE%B0/" title="开发小笔记(持续更新)">开发小笔记(持续更新)</a><time datetime="2023-06-05T07:40:00.000Z" title="发表于 2023-06-05 15:40:00">2023-06-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="java项目安全问题"><img src="https://imge.ablog168.cn/blog_img/PontdArcole_ZH-CN5348049357_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="java项目安全问题"/></a><div class="content"><a class="title" href="/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="java项目安全问题">java项目安全问题</a><time datetime="2023-06-04T11:37:00.000Z" title="发表于 2023-06-04 19:37:00">2023-06-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令"><img src="https://imge.ablog168.cn/blog_img/CormorantBridge_ZH-CN7673299694_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux常用命令"/></a><div class="content"><a class="title" href="/2023/06/04/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" title="linux常用命令">linux常用命令</a><time datetime="2023-06-04T08:50:00.000Z" title="发表于 2023-06-04 16:50:00">2023-06-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法"><img src="https://imge.ablog168.cn/blog_img/OdocoileusVirginianus_ZH-CN6941501455_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown常用语法"/></a><div class="content"><a class="title" href="/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/" title="markdown常用语法">markdown常用语法</a><time datetime="2023-06-04T08:37:00.000Z" title="发表于 2023-06-04 16:37:00">2023-06-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置"><img src="https://imge.ablog168.cn/blog_img/BiodiverseCostaRica_ZH-CN5524154131_1920x1080.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="corn表达式动态配置"/></a><div class="content"><a class="title" href="/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" title="corn表达式动态配置">corn表达式动态配置</a><time datetime="2023-06-04T08:30:00.000Z" title="发表于 2023-06-04 16:30:00">2023-06-04</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             <a class="card-more-btn" href="/categories/" title="查看更多">
@@ -388,7 +368,7 @@ Java常用工具类库
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ELK/"><span class="card-category-list-name">ELK</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/IP%E5%9C%B0%E5%9D%80/"><span class="card-category-list-name">IP地址</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/corn/"><span class="card-category-list-name">corn</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/docker/"><span class="card-category-list-name">docker</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/idea/"><span class="card-category-list-name">idea</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/java%E5%AE%89%E5%85%A8/"><span class="card-category-list-name">java安全</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/java%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/"><span class="card-category-list-name">java工具类库</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/linux/"><span class="card-category-list-name">linux</span><span class="card-category-list-count">1</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.15em; color: rgb(99, 148, 27)">分布式</a><a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 1.15em; color: rgb(170, 120, 177)">微服务</a><a href="/tags/ELK/" style="font-size: 1.15em; color: rgb(5, 122, 10)">ELK</a><a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 1.15em; color: rgb(192, 93, 65)">日志</a><a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 1.15em; color: rgb(146, 56, 87)">安全</a><a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 1.15em; color: rgb(163, 18, 27)">sql注入</a><a href="/tags/%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" style="font-size: 1.15em; color: rgb(105, 112, 46)">上传漏洞</a><a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.45em; color: rgb(156, 152, 5)">运维</a><a href="/tags/%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" style="font-size: 1.15em; color: rgb(182, 49, 154)">动态配置</a><a href="/tags/idea/" style="font-size: 1.15em; color: rgb(170, 14, 148)">idea</a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.15em; color: rgb(15, 24, 151)">插件</a><a href="/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/" style="font-size: 1.15em; color: rgb(124, 77, 117)">二维码</a><a href="/tags/QRcode/" style="font-size: 1.15em; color: rgb(104, 190, 184)">QRcode</a><a href="/tags/mybatis/" style="font-size: 1.15em; color: rgb(128, 24, 76)">mybatis</a><a href="/tags/sql/" style="font-size: 1.15em; color: rgb(68, 5, 93)">sql</a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.15em; color: rgb(29, 172, 160)">笔记</a><a href="/tags/cpu%E9%A3%99%E9%AB%98/" style="font-size: 1.15em; color: rgb(180, 7, 161)">cpu飙高</a><a href="/tags/ip%E5%9C%B0%E5%9D%80/" style="font-size: 1.15em; color: rgb(86, 0, 6)">ip地址</a><a href="/tags/mac%E5%9C%B0%E5%9D%80/" style="font-size: 1.15em; color: rgb(8, 93, 22)">mac地址</a><a href="/tags/markdown/" style="font-size: 1.15em; color: rgb(47, 121, 26)">markdown</a><a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 1.15em; color: rgb(159, 167, 37)">语法</a><a href="/tags/docker/" style="font-size: 1.15em; color: rgb(125, 198, 147)">docker</a><a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 1.15em; color: rgb(83, 30, 78)">容器</a><a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(163, 10, 163)">优化</a><a href="/tags/hutool/" style="font-size: 1.15em; color: rgb(71, 136, 154)">hutool</a><a href="/tags/apache-common/" style="font-size: 1.15em; color: rgb(173, 148, 93)">apache common</a><a href="/tags/guava/" style="font-size: 1.15em; color: rgb(171, 106, 148)">guava</a><a href="/tags/linux/" style="font-size: 1.15em; color: rgb(23, 148, 96)">linux</a><a href="/tags/shell/" style="font-size: 1.15em; color: rgb(53, 165, 109)">shell</a><a href="/tags/%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(138, 191, 20)">接口优化</a><a href="/tags/sql%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(70, 156, 27)">sql优化</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">14</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-05-24T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">9.8k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-04T07:23:34.768Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By shine</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index"><img class="icp-icon" src="https://imge.ablog168.cn/2023-05-28/badge.png"><span>渝ICP备2023001673号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.17/fancybox/fancybox.umd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/" style="font-size: 1.15em; color: rgb(138, 1, 3)">分布式</a><a href="/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" style="font-size: 1.15em; color: rgb(168, 195, 172)">微服务</a><a href="/tags/ELK/" style="font-size: 1.15em; color: rgb(61, 7, 131)">ELK</a><a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 1.15em; color: rgb(52, 63, 29)">日志</a><a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 1.15em; color: rgb(122, 100, 11)">安全</a><a href="/tags/sql%E6%B3%A8%E5%85%A5/" style="font-size: 1.15em; color: rgb(97, 175, 151)">sql注入</a><a href="/tags/%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" style="font-size: 1.15em; color: rgb(7, 37, 111)">上传漏洞</a><a href="/tags/%E8%BF%90%E7%BB%B4/" style="font-size: 1.45em; color: rgb(154, 2, 173)">运维</a><a href="/tags/markdown/" style="font-size: 1.15em; color: rgb(142, 139, 92)">markdown</a><a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 1.15em; color: rgb(11, 173, 3)">语法</a><a href="/tags/%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/" style="font-size: 1.15em; color: rgb(26, 14, 141)">动态配置</a><a href="/tags/idea/" style="font-size: 1.15em; color: rgb(13, 190, 190)">idea</a><a href="/tags/%E6%8F%92%E4%BB%B6/" style="font-size: 1.15em; color: rgb(95, 145, 25)">插件</a><a href="/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/" style="font-size: 1.15em; color: rgb(48, 5, 106)">二维码</a><a href="/tags/QRcode/" style="font-size: 1.15em; color: rgb(198, 42, 75)">QRcode</a><a href="/tags/mybatis/" style="font-size: 1.15em; color: rgb(161, 60, 65)">mybatis</a><a href="/tags/sql/" style="font-size: 1.15em; color: rgb(7, 163, 28)">sql</a><a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 1.15em; color: rgb(21, 162, 106)">笔记</a><a href="/tags/cpu%E9%A3%99%E9%AB%98/" style="font-size: 1.15em; color: rgb(158, 138, 149)">cpu飙高</a><a href="/tags/ip%E5%9C%B0%E5%9D%80/" style="font-size: 1.15em; color: rgb(47, 148, 142)">ip地址</a><a href="/tags/mac%E5%9C%B0%E5%9D%80/" style="font-size: 1.15em; color: rgb(188, 96, 107)">mac地址</a><a href="/tags/docker/" style="font-size: 1.15em; color: rgb(107, 52, 152)">docker</a><a href="/tags/%E5%AE%B9%E5%99%A8/" style="font-size: 1.15em; color: rgb(74, 20, 101)">容器</a><a href="/tags/%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(51, 45, 91)">优化</a><a href="/tags/hutool/" style="font-size: 1.15em; color: rgb(50, 121, 43)">hutool</a><a href="/tags/apache-common/" style="font-size: 1.15em; color: rgb(182, 163, 112)">apache common</a><a href="/tags/guava/" style="font-size: 1.15em; color: rgb(188, 86, 33)">guava</a><a href="/tags/linux/" style="font-size: 1.15em; color: rgb(170, 47, 31)">linux</a><a href="/tags/shell/" style="font-size: 1.15em; color: rgb(196, 58, 47)">shell</a><a href="/tags/%E6%8E%A5%E5%8F%A3%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(97, 57, 164)">接口优化</a><a href="/tags/sql%E4%BC%98%E5%8C%96/" style="font-size: 1.15em; color: rgb(166, 114, 130)">sql优化</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><span class="card-archive-list-count">14</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">15</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2023-05-24T16:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">38k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-06-04T08:37:55.393Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By shine</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index"><img class="icp-icon" src="https://imge.ablog168.cn/2023-05-28/badge.png"><span>渝ICP备2023001673号-1</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.17/fancybox/fancybox.umd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
   function loadValine () {
     function initValine () {
       let initData = {
