@@ -1963,7 +1963,7 @@
               </div>
             </details>
 <p><br></p>
-<h4 id="mysql相关"><a href="#mysql相关" class="headerlink" title="mysql相关"></a>mysql相关</h4><details class="folding-tag" cyan><summary> 点击查看 </summary>
+<h3 id="mysql相关"><a href="#mysql相关" class="headerlink" title="mysql相关"></a>mysql相关</h3><details class="folding-tag" cyan><summary> 点击查看 </summary>
               <div class='content'>
               <ol><li><p>设置最大连接数</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SHOW VARIABLES LIKE &#x27;max_connections&#x27;; #查看当前的最大连接数</span><br><span class="line"></span><br><span class="line">SET GLOBAL max_connections=2000; #设置最大连接数</span><br></pre></td></tr></table></figure></li></ol>
               </div>
