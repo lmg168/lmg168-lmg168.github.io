@@ -1957,15 +1957,15 @@
               </div>
             </details>
 <p><br></p>
-<h4 id="mysql相关"><a href="#mysql相关" class="headerlink" title="mysql相关"></a>mysql相关</h4><details class="folding-tag" cyan><summary> 点击查看 </summary>
-              <div class='content'>
-              <ol><li><p>设置最大连接数</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SHOW VARIABLES LIKE &#x27;max_connections&#x27;; #查看当前的最大连接数</span><br><span class="line"></span><br><span class="line">SET GLOBAL max_connections=2000; #设置最大连接数</span><br></pre></td></tr></table></figure></li></ol>
-              </div>
-            </details>
-<p><br></p>
 <h3 id="idea相关"><a href="#idea相关" class="headerlink" title="idea相关"></a>idea相关</h3><details class="folding-tag" cyan><summary> 点击查看 </summary>
               <div class='content'>
               <ol><li><p>maven模块显示不是maven项目—解决</p><p>可能缺少<code>.iml</code>文件，idea无法识别</p><p><img src="https://imge.ablog168.cn//blog_img/image-20230704151328253.png" alt="image-20230704151328253"></p><p>先打开对应模块的命令终端，生成<code>iml</code>文件</p><p><img src="https://imge.ablog168.cn//blog_img/image-20230704151453872.png" alt="image-20230704151453872"></p><p>然后输入命令</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mvn idea:module</span><br></pre></td></tr></table></figure><p><img src="https://imge.ablog168.cn//blog_img/image-20230704152034746.png" alt="image-20230704152034746"></p><p>导入对应的模块</p><p><img src="https://imge.ablog168.cn//blog_img/image-20230704152115503.png" alt="image-20230704152115503"></p><p><img src="https://imge.ablog168.cn//blog_img/image-20230704152200271.png" alt="image-20230704152200271"></p><p><img src="https://imge.ablog168.cn//blog_img/image-20230704152213335.png" alt="image-20230704152213335"></p><p>然后再设置文件夹，点到对应的文件夹，再点击文件类型</p><p><img src="https://imge.ablog168.cn//blog_img/image-20230704152345022.png" alt="image-20230704152345022"></p></li></ol>
+              </div>
+            </details>
+<p><br></p>
+<h4 id="mysql相关"><a href="#mysql相关" class="headerlink" title="mysql相关"></a>mysql相关</h4><details class="folding-tag" cyan><summary> 点击查看 </summary>
+              <div class='content'>
+              <ol><li><p>设置最大连接数</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SHOW VARIABLES LIKE &#x27;max_connections&#x27;; #查看当前的最大连接数</span><br><span class="line"></span><br><span class="line">SET GLOBAL max_connections=2000; #设置最大连接数</span><br></pre></td></tr></table></figure></li></ol>
               </div>
             </details>
 <p><br></p>
