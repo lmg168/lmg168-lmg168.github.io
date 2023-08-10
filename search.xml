@@ -1,183 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ELK分布式部署</title>
-    <url>/2023/06/04/ELK%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h2 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍 "></a>一、基本介绍 </h2><h3 id="1-什么是分布式日志"><a href="#1-什么是分布式日志" class="headerlink" title="1. 什么是分布式日志"></a>1. 什么是分布式日志</h3><p>相信大家平时工作中，在生产环境中经常会遇到很多异常，报错信息，需要查看日志信息排查错误，并且这个项目是分布式应用，日志被分散在储存不同的设备上。如果你管理数十上百台服务器，还使用依次登录每台机器的传统方法查阅日志。这样是不是感觉很繁琐和效率低下。所以我们使用集中化的日志管理，分布式日志就是对大规模日志数据进行采集、追踪、处理。</p>
-<p>一般我们需要进行日志分析场景：直接在日志文件中<code>grep</code>、<code>awk</code>就可以获得自己想要的信息。但在规模较大的场景中，此方法效率低下，面临问题包括日志量太大如何归档、文本搜索太慢怎么办、如何多维度查询。需要集中化的日志管理，所有服务器上的日志收集汇总。常见解决思路是建立集中式日志收集系统，将所有节点上的日志统一收集，管理，访问。</p>
-<h3 id="2-ELK-分布式日志"><a href="#2-ELK-分布式日志" class="headerlink" title="2. ELK 分布式日志"></a>2. ELK 分布式日志</h3><p>实际上<code>ELK</code>是三款软件的简称，分别是<code>Elasticsearch</code>、 <code>Logstash</code>、<code>Kibana</code>组成。</p>
-<p><strong>Elasticsearch</strong> 基于<code>java</code>，是个开源分布式搜索引擎，它的特点有：分布式，零配置，自动发现，索引自动分片，索引副本机制，<code>restful</code>风格接口，多数据源，自动搜索负载等。</p>
-<p><strong>Kibana</strong> 基于<code>nodejs</code>，也是一个开源和免费的工具，<code>Kibana</code>可以为<code>Logstash</code>和<code>ElasticSearch</code>提供的日志分析友好的 Web 界面，可以汇总、分析和搜索重要数据日志。</p>
-<p><strong>Logstash</strong> 基于<code>java</code>，是一个开源的用于收集,分析和存储日志的工具。</p>
-<p>下面是<code>ELK</code>的工作原理： <img src="https://imge.ablog168.cn/blog_img/6c83ad78c0d4dc5c665af3d20fb5863f.png" alt="elk"></p>
-<p>假如，我们的项目部署在了 3 台服务器上，一般情况下，3 台全部需要安装 <code>Elasticsearch</code>，作为主节点的服务器上安装 <code>Kibana</code>，其中一个节点服务器上安装 <code>Logstash</code>。</p>
-<p>接下来，我们就来搭建一下。</p>
-<h2 id="二、搭建-ELK"><a href="#二、搭建-ELK" class="headerlink" title="二、搭建 ELK"></a>二、搭建 ELK</h2><p>大家搭建过程中，一定要注意版本之间的对应，如果版本不对应，会出现各种启动报错。</p>
-<p><strong>版本说明：</strong></p>
-<ul>
-<li><code>CentOS 7.9</code></li>
-<li><code>JDK 1.8</code></li>
-<li><code>Elasticsearch-8.0.0</code></li>
-<li><code>Logstash-8.0.0</code></li>
-<li><code>Kibana-8.0.0</code></li>
-</ul>
-<h3 id="1-Elasticsearch"><a href="#1-Elasticsearch" class="headerlink" title="1. Elasticsearch"></a>1. Elasticsearch</h3><h4 id="1-1-、简介"><a href="#1-1-、简介" class="headerlink" title="1.1 、简介"></a>1.1 、简介</h4><p>ElasticSearch是一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。Elasticsearch是用Java开发的，并作为Apache许可条款下的开放源码发布，是当前流行的企业级搜索引擎。</p>
-<h4 id="1-2、安装配置"><a href="#1-2、安装配置" class="headerlink" title="1.2、安装配置"></a>1.2、安装配置</h4><p>首先去官网下载：<a href="https://www.elastic.co/cn/downloads/elasticsearch">Download Elasticsearch | Elastic</a>，选择 <code>Linux</code> 版本</p>
-<p><img src="https://imge.ablog168.cn/blog_img/49744b1939f185a34333eb99d3f36c37.png" alt="image-20220221143822296"></p>
-<blockquote>
-<p>PS：官网的下载速度还是挺快的</p>
-</blockquote>
-<p>本次我使用的是虚拟机中的 <code>CentOS 7</code> ，首先将下载下来的 <code>tar</code> 包复制到虚拟机中的 <code>/usr/local</code> 下，</p>
-<ul>
-<li>解压</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf elasticsearch-8.0.0-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
-<ul>
-<li>修改配置</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/elasticsearch-8.0.0/config/</span><br><span class="line">vim elasticsearch.yml</span><br></pre></td></tr></table></figure>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">cluster.name:</span> <span class="string">my-application</span></span><br><span class="line"><span class="attr">node.name:</span> <span class="string">node-1</span></span><br><span class="line"><span class="attr">path.data:</span> <span class="string">/home/esuser/data</span>	<span class="comment"># 数据文件存放目录</span></span><br><span class="line"><span class="attr">path.logs:</span> <span class="string">/home/esuser/logs</span>	<span class="comment"># 日志文件存放目录</span></span><br><span class="line"><span class="attr">network.host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>			<span class="comment"># 对所有IP开放</span></span><br><span class="line"><span class="attr">http.port:</span> <span class="number">9200</span>					<span class="comment"># 端口号</span></span><br><span class="line"><span class="attr">discovery.seed_hosts:</span> [<span class="string">&quot;192.168.20.105&quot;</span>]</span><br><span class="line"><span class="attr">cluster.initial_master_nodes:</span> [<span class="string">&quot;node-1&quot;</span>]</span><br></pre></td></tr></table></figure>
-<p>注意：<code>path.data</code> 和 <code>path.logs</code> 目录需要自己手动创建出来 <code>mkdir</code></p>
-<blockquote>
-<p>注：这些配置默认是被注释的状态，修改之后打开注释即可</p>
-</blockquote>
-<p>除此之外，因本次我们只是测试学习，所以我们可以把安全相关的配置给关掉，都从 <code>true</code> 改为了 <code>false</code></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Enable security features</span></span><br><span class="line"><span class="attr">xpack.security.enabled:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">xpack.security.enrollment.enabled:</span> <span class="literal">false</span></span><br><span class="line"><span class="comment"># Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents</span></span><br><span class="line"><span class="attr">xpack.security.http.ssl:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">keystore.path:</span> <span class="string">certs/http.p12</span></span><br><span class="line"><span class="comment"># Enable encryption and mutual authentication between cluster nodes</span></span><br><span class="line"><span class="attr">xpack.security.transport.ssl:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<p>修改完成后保存退出编辑</p>
-<ul>
-<li>创建 esuser 用户</li>
-</ul>
-<p>因为<code>ElasticSearch</code>不支持<code>Root</code>用户直接操作，因此我们需要创建一个<code>esuser</code>用户</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建用户</span></span><br><span class="line">useradd esuser</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置密码</span></span><br><span class="line">passwd esuser</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">赋予用户权限</span></span><br><span class="line">chown -R esuser:esuser /usr/local/elasticsearch-8.0.0</span><br></pre></td></tr></table></figure>
-<h4 id="1-3、启动"><a href="#1-3、启动" class="headerlink" title="1.3、启动"></a>1.3、启动</h4><p>切换用户成 esuser 用户进行操作</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">su esuser</span><br><span class="line">cd /usr/local/elasticsearch-8.0.0/bin</span><br><span class="line">./elasticsearch -d &amp; tail -f /home/esuser/logs/my-application.log 	# 后台启动并查看启动日志</span><br></pre></td></tr></table></figure>
-<p>如果启动没有报错，宿主机浏览器访问地址：<a href="http://192.168.20.105:9200/">http://192.168.20.105:9200/</a></p>
-<p>其中 192.168.20.105 是虚拟机的静态 ip ，访问成功如下图（注意防火墙）</p>
-<p><img src="https://imge.ablog168.cn/blog_img/8b31b024d72761b8a5ad36f989beb84d.png" alt="image-20220221150331066"></p>
-<h3 id="2-Logstash"><a href="#2-Logstash" class="headerlink" title="2. Logstash"></a>2. Logstash</h3><h4 id="2-1、简介"><a href="#2-1、简介" class="headerlink" title="2.1、简介"></a>2.1、简介</h4><p><code>Logstash</code> 是一个开源的服务器端数据处理管道，能够同时从多个来源采集数据，转换数据，然后将数据发送到存储库中，本篇中我们的存储库当然就是<code>ElasticSearch</code> 了。</p>
-<h4 id="2-2、安装配置"><a href="#2-2、安装配置" class="headerlink" title="2.2、安装配置"></a>2.2、安装配置</h4><p>官网下载地址：<a href="https://www.elastic.co/cn/downloads/logstash">Download Logstash Free | Get Started Now | Elastic</a></p>
-<p><img src="https://imge.ablog168.cn/blog_img/4cfc04613f8ac7afc44ddfa261eadc74.png" alt="image-20220221150759334"></p>
-<p>将下载下来的 <code>tar</code> 包复制到虚拟机中的 <code>/usr/local</code> 下，</p>
-<ul>
-<li>解压</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf logstash-8.0.0-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
-<ul>
-<li>新增配置文件</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/logstash-8.0.0/bin</span><br><span class="line">touch logstash-elasticsearch.conf</span><br><span class="line">vim logstash-elasticsearch.conf</span><br></pre></td></tr></table></figure>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">input &#123;</span><br><span class="line">	stdin &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">output &#123;</span><br><span class="line">	elasticsearch &#123;</span><br><span class="line">		hosts =&gt; &#x27;192.168.20.105:9200&#x27;</span><br><span class="line">	&#125;</span><br><span class="line">	stdout &#123;</span><br><span class="line">		codec =&gt; rubydebug</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意里面 <code>elasticsearch</code> 的地址</p>
-<h4 id="2-3、启动"><a href="#2-3、启动" class="headerlink" title="2.3、启动"></a>2.3、启动</h4><p>此时是在 root 用户下</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/logstash-8.0.0/bin</span><br><span class="line">nohup ./logstash -f logstash-elasticsearch.conf &amp;		# 后台启动</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注：执行后台启动命令，查看 <code>nohup.out</code> 日志时发现有报错，但好像也启动成功了，不影响使用，不用 nohup 则不会报错。</p>
-</blockquote>
-<p>使用 <code>jps</code>查看当前所有 java 进程</p>
-<p><img src="https://imge.ablog168.cn/blog_img/0993d5a2d2ac963f85e82ccf19e2941f.png" alt="image-20220221152813960"></p>
-<p>发现启动成功了。</p>
-<h3 id="3-Kibana"><a href="#3-Kibana" class="headerlink" title="3. Kibana"></a><em>3. Kibana</em></h3><h4 id="3-1、简介"><a href="#3-1、简介" class="headerlink" title="3.1、简介"></a>3.1、简介</h4><p>Kibana 是一款开源的数据分析和可视化平台，它是 Elastic Stack 成员之一，设计用于和 Elasticsearch 协作。您可以使用 Kibana 对 Elasticsearch 索引中的数据进行搜索、查看、交互操作。您可以很方便的利用图表、表格及地图对数据进行多元化的分析和呈现。</p>
-<h4 id="3-2、安装配置"><a href="#3-2、安装配置" class="headerlink" title="3.2、安装配置"></a>3.2、安装配置</h4><p>官网下载地址：<a href="https://www.elastic.co/cn/downloads/kibana">Download Kibana Free | Get Started Now | Elastic</a></p>
-<p><img src="https://imge.ablog168.cn/blog_img/c50267d3fd29500b01612f5fea5e7213.png" alt="image-20220221153019991"></p>
-<p>将下载下来的 <code>tar</code> 包复制到虚拟机中的 <code>/usr/local</code> 下，</p>
-<ul>
-<li>解压</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf kibana-8.0.0-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
-<ul>
-<li>修改配置</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/kibana-8.0.0/config/</span><br><span class="line">vim kibana.yml</span><br></pre></td></tr></table></figure>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port:</span> <span class="number">5601</span>			<span class="comment"># 端口号</span></span><br><span class="line"><span class="attr">server.host:</span> <span class="string">&quot;0.0.0.0&quot;</span>		<span class="comment"># 对所有ip开放访问</span></span><br><span class="line"><span class="attr">server.name:</span> <span class="string">&quot;my-kibana&quot;</span></span><br><span class="line"><span class="attr">elasticsearch.hosts:</span> [<span class="string">&quot;http://192.168.20.105:9200&quot;</span>]		<span class="comment"># es 地址</span></span><br><span class="line"><span class="attr">i18n.locale:</span> <span class="string">&quot;zh-CN&quot;</span>	<span class="comment"># 汉化</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注：这些配置默认是被注释的状态，修改之后打开注释即可</p>
-</blockquote>
-<ul>
-<li>kibana 同样不能使用 root 用户启动，所以我们使用前面创建的 esuser 用户，先授权</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">chown -R esuser:esuser /usr/local/kibana-8.0.0</span><br></pre></td></tr></table></figure>
-<h4 id="3-3、启动"><a href="#3-3、启动" class="headerlink" title="3.3、启动"></a>3.3、启动</h4><p>切换到 esuser 用户</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">su esuser</span><br></pre></td></tr></table></figure>
-<p>后台启动</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/usr/local/kibana-8.0.0/bin &amp;</span><br></pre></td></tr></table></figure>
-<p>启动成功，浏览器访问地址：<a href="http://192.168.20.105:5601/">http://192.168.20.105:5601/</a></p>
-<p>出现以下页面，说明启动成功</p>
-<p><img src="https://imge.ablog168.cn/blog_img/80a7581ca2ad6dc1a8210493b9a3e402.png" alt="image-20220221155653678"></p>
-<p>我们点击 <code>适用样例数据</code>，点击添加数据</p>
-<p><img src="https://imge.ablog168.cn/blog_img/1318a1025a55e6440b26bafc5cba50f4.png" alt="image-20220221155825927"></p>
-<p>点击 <code>Discover</code></p>
-<p><img src="https://imge.ablog168.cn/blog_img/b6d45ca7c19e1585a3a264b83cbf163e.png" alt="image-20220221155911850"></p>
-<p>就可以看到样例数据</p>
-<p><img src="https://imge.ablog168.cn/blog_img/ddd06ab10fa3d322db8947a2ba6ad564.png" alt="image-20220221155950150"></p>
-<p>到这里，我们分布式日志所需要的软件都已经安装配置并启动成功</p>
-<p>至于如何使用，感觉还需要一篇文章来写。</p>
-]]></content>
-      <categories>
-        <category>ELK</category>
-      </categories>
-      <tags>
-        <tag>分布式</tag>
-        <tag>微服务</tag>
-        <tag>ELK</tag>
-        <tag>日志</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java项目安全问题</title>
-    <url>/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<p><strong>1.弱口令漏洞</strong></p>
-<blockquote>
-<p>解决方案：最好使用至少6位的数字、字母及特殊字符组合作为密码。数据库不要存储明文密码，应存储MD5加密后的密文，由于目前普通的MD5加密已经可以被破解，最好可以多重MD5加密，或者多种加密方式叠加组合。</p>
-</blockquote>
-<p><strong>2.未使用用户名及密码登录后台可直接输入后台URL登录系统。</strong></p>
-<blockquote>
-<p>解决方案：通过配置filter来过滤掉无效用户的连接请求。</p>
-</blockquote>
-<p><strong>3．JSP页面抛出的异常可能暴露程序信息。有经验的入侵者，可以从JSP程序的异常中获取很多信息，比如程序的部分架构、程序的物理路径、SQL注入爆出来的信息等。</strong></p>
-<blockquote>
-<p>解决方案：自定义一个Exception，将异常信息包装起来不要抛到页面上。</p>
-</blockquote>
-<p><strong>4.合法用户”注销”后，在未关闭浏览器的情况下，点击浏览器”后退”按钮，可从本地页面缓存中读取数据，绕过了服务端filter过滤。</strong></p>
-<blockquote>
-<blockquote>
-<p>解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：</p>
-</blockquote>
-<p>httpResponse.setHeader(“Cache-Control”,”no-cache”);<br>httpResponse.setHeader(“Cache-Control”,”no-store”);<br>httpResponse.setDateHeader(“Expires”, 0);<br>httpResponse.setHeader(“Pragma”,”no-cache”);</p>
-</blockquote>
-<p><strong>5.SQL注入漏洞。</strong></p>
-<blockquote>
-<p>解决方案：在数据库访问层中不要使用”+”来拼接SQL语句！如：</p>
-<p>String sql= “SELECT * FROM USERS WHERE 1=1”; if(null !=<br>user.getUserName() \&amp;\&amp; !””.equals(user.getUserName())){<br>sql += “ and UNAME = ‘“+user.getUserName()+”‘“; } 而应使用PreparedStatement。如：</p>
-<p>PreparedStatement pstmt = con.prepareStatement(“SELECT * FROM USERS<br>WHERE UNAME=?”); pstmt.setString(1, “Neeke”);<br>如果项目中使用了Hibernate框架，则推荐使用named parameter。如：</p>
-<p>String queryString = “from Users where uname like :name”; 冒号后面是一个named<br>parameter，我们可以使用Query接口将一个参数绑定到name参数上：</p>
-<p>List result = session.createQuery(queryString)<br>.setString(“name”, user.getUserName())<br>.list();</p>
-</blockquote>
-<p><strong>6.文件上传漏洞。前台仅使用JS对文件后缀做了过滤，这只能针对普通的用户，而恶意攻击者完全可以修改表单去掉JS校验。</strong></p>
-<blockquote>
-<p>解决方案：前台JS过滤加服务器端程序过滤。具体过滤掉哪些文件类型视具体情况而定。</p>
-</blockquote>
-<p><strong>7.可执行脚本漏洞。对用户提交的数据未转义，一些用户提交的含有JavaScript脚本的信息被直接输出到页面中从而被浏览器执行。</strong></p>
-<blockquote>
-<p>解决方案：使用org.apache.commons.lang.StringEscapeUtils对用户提交的数据进行转义。如：</p>
-<p>@RequestMapping(params=”method=addTopic”,method=RequestMethod.POST)<br>public ModelAndView addTopic(HttpServletRequest request,<br>HttpServletResponse response, BbsTopic topic) { BaseAdmin user =<br>(BaseAdmin) request.getSession().getAttribute(Constant.SESSION_USER);<br>topic.setBaseAdmin(user); topic.setTopicDate(new<br>Timestamp(System.currentTimeMillis()));<br>topic.setTopicContent(StringEscapeUtils.escapeHtml(topic.getTopicContent()));<br>topic.setTopicTitle(StringEscapeUtils.escapeHtml(topic.getTopicTitle()));<br>this.bbsTopicService.save(topic); return new ModelAndView(new<br>RedirectView(“<a href="http://bbs.do?method=topicList&amp;bfid=">bbs.do?method=topicList\&amp;bfid=</a>“+ topic.getBfid())); }</p>
-</blockquote>
-<p><strong>8.Java WEB容器默认配置漏洞。如TOMCAT后台管理漏洞，默认用户名及密码登录后可直接上传war文件获取webshell。</strong></p>
-<blockquote>
-<p>解决方案：最好删除，如需要使用它来管理维护，可更改其默认路径，口令及密码。</p>
-</blockquote>
-<p><strong>9.日志，建议增加服务器的访问日志，记录来访者的IP,传递参数，对后台操作用户建立日志，记录操作内容，完善日志记录可以帮助你发现潜在危险，找到已经发生的问题。<br>10.重放攻击<br>11.僵尸网络暴力破解<br>12.登陆表单http明文提交<br>13.千万不要乱用数据类型，使用基本数据类型，少用包装类，包装类容易被攻击，不要用string去接受所有类型数据。原则上：是什么类型就用什么类型去接收。<br>14.通过架构设计，添加一层设置处理http参数。一般都是通过aop来实现.比如：对邮件，手机验证对整数最大值验证，对字符串最大长度验证<br>15.点击劫持，大概有两种方式，一是攻击者使用一个透明的iframe，覆盖在一个网页上，然后诱使用户在该页面上进行操作，此时用户将在不值钱的情况下点击透明的iframe页面，二是攻击者使用一张图片覆盖在网页，遮挡网页原有位置的含义。</strong></p>
-]]></content>
-      <categories>
-        <category>java安全</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>sql注入</tag>
-        <tag>上传漏洞</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown常用语法</title>
     <url>/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<p><br></p>
@@ -376,29 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title>corn表达式动态配置</title>
-    <url>/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<blockquote>
-<p>由于业务需求，需要提供一个能够让用户动态配置定时任务的入口，定时去同步数据</p>
-</blockquote>
-<p>1、简单的业务处理，直接使用@Scheduled注解就能开启定时任务，例如在方法上@Scheduled(cron = “0 0/1 * * * ?”)，书写cron表达式就能配置定时任务。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 每分钟触发一次</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Scheduled(cron = &quot;0 0/1 * * * ?&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">execEveryDay</span><span class="params">()</span> &#123;</span><br><span class="line">    checkPlan();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2、但是随着业务复杂化，使用注解目前是满足不了动态配置定时任务的，以下代码能够实现cron表达式的动态配置。</p>
-<p>第一步，在启动类新增注解@EnableScheduling</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">testApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(testApplication .class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>第二步，编写定时任务类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Lazy(false)</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OutPutTask</span> <span class="keyword">implements</span> <span class="title class_">SchedulingConfigurer</span> &#123;</span><br><span class="line">	<span class="comment">// 默认的cron表达式</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">cron</span> <span class="operator">=</span> <span class="string">&quot;0 55 23 ? * *&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 定时任务的执行顺序：由上而下按顺序执行，当服务启动时或者定时任务时间到了，先执行业务逻辑，再设置定时任务</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">configureTasks</span><span class="params">(ScheduledTaskRegistrar taskRegistrar)</span> &#123;</span><br><span class="line">        taskRegistrar.addTriggerTask(() -&gt; &#123;</span><br><span class="line">            <span class="comment">// addTriggerTask这一代码块用于当定时任务到了或者服务启动时，执行的业务逻辑</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">// 分布式锁，避免高并发同时执行方法</span></span><br><span class="line">                <span class="type">Boolean</span> <span class="variable">lockStatus</span> <span class="operator">=</span> redisTemplate.opsForValue().setIfAbsent(RedisKeyPrefix.RECORD_OUT_PUT, <span class="keyword">new</span> <span class="title class_">Date</span>(), <span class="number">1</span>, TimeUnit.MINUTES);</span><br><span class="line">                <span class="keyword">if</span> (lockStatus == <span class="literal">null</span> || !lockStatus) &#123;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                log.info(<span class="string">&quot;产能计算定时任务&#123;&#125;&quot;</span>, <span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line">                <span class="comment">// 这个是自己写的自定义方法</span></span><br><span class="line">                recordOutput();</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            	<span class="comment">// 释放锁</span></span><br><span class="line">                redisTemplate.delete(RedisKeyPrefix.RECORD_OUT_PUT);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, triggerContext -&gt; &#123;</span><br><span class="line">            <span class="comment">// 此代码块用于动态拿到cron表达式并设置定时任务，当定时任务时间到了，就会重新获取cron表达式，重新设置定时任务</span></span><br><span class="line">            cron = <span class="built_in">this</span>.getCronString();</span><br><span class="line">            CronTrigger trigger;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">            	<span class="comment">// 一旦设置，立即生效</span></span><br><span class="line">                trigger = <span class="keyword">new</span> <span class="title class_">CronTrigger</span>(cron);</span><br><span class="line">                <span class="keyword">return</span> trigger.nextExecutionTime(triggerContext);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                <span class="comment">// 如果格式有问题就按默认时间（时间为每天23点55分）</span></span><br><span class="line">                trigger = <span class="keyword">new</span> <span class="title class_">CronTrigger</span>(<span class="string">&quot;0 55 23 ? * *&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> trigger.nextExecutionTime(triggerContext);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 拿到cron表达式</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String <span class="title function_">getCronString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 获取时间（当前方法返回的时间格式为yyyy-MM-dd HH:mm:ss）</span></span><br><span class="line">        <span class="type">Date</span> <span class="variable">beginDate</span> <span class="operator">=</span> dictService.getDayOutputBeginTime(<span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line">        <span class="comment">// 截取分钟和小时</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">hour</span> <span class="operator">=</span> beginDate.toString().substring(<span class="number">11</span>, <span class="number">13</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">min</span> <span class="operator">=</span> beginDate.toString().substring(<span class="number">14</span>, <span class="number">16</span>);</span><br><span class="line">        <span class="comment">// 替换min,hour</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">cron</span> <span class="operator">=</span> <span class="string">&quot;0 min hour ? * *&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> cron.replaceAll(<span class="string">&quot;min&quot;</span>, min).replaceAll(<span class="string">&quot;hour&quot;</span>, hour);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>然后我们只需要在页面上提供一个能够让用户配置定时任务的入口或者在数据库里配置cron表达式，就能实现动态配置。<br>如果面向的用户懂得cron表达式，也可以直接让用户配置cron表达式也是可以的，省的程序员进行额外的数据处理，只要配置正确，任何处理方式都行，例如：  </p>
-<p>点击确定后，会更新数据库，<strong>当定时任务时间到了，就会触发定时任务机制，重新设置定时任务</strong>。</p>
-]]></content>
-      <categories>
-        <category>corn</category>
-      </categories>
-      <tags>
-        <tag>动态配置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea常用插件</title>
     <url>/2023/06/04/idea%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<hr>
@@ -501,6 +301,206 @@
       <tags>
         <tag>idea</tag>
         <tag>插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java项目安全问题</title>
+    <url>/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<p><strong>1.弱口令漏洞</strong></p>
+<blockquote>
+<p>解决方案：最好使用至少6位的数字、字母及特殊字符组合作为密码。数据库不要存储明文密码，应存储MD5加密后的密文，由于目前普通的MD5加密已经可以被破解，最好可以多重MD5加密，或者多种加密方式叠加组合。</p>
+</blockquote>
+<p><strong>2.未使用用户名及密码登录后台可直接输入后台URL登录系统。</strong></p>
+<blockquote>
+<p>解决方案：通过配置filter来过滤掉无效用户的连接请求。</p>
+</blockquote>
+<p><strong>3．JSP页面抛出的异常可能暴露程序信息。有经验的入侵者，可以从JSP程序的异常中获取很多信息，比如程序的部分架构、程序的物理路径、SQL注入爆出来的信息等。</strong></p>
+<blockquote>
+<p>解决方案：自定义一个Exception，将异常信息包装起来不要抛到页面上。</p>
+</blockquote>
+<p><strong>4.合法用户”注销”后，在未关闭浏览器的情况下，点击浏览器”后退”按钮，可从本地页面缓存中读取数据，绕过了服务端filter过滤。</strong></p>
+<blockquote>
+<blockquote>
+<p>解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：</p>
+</blockquote>
+<p>httpResponse.setHeader(“Cache-Control”,”no-cache”);<br>httpResponse.setHeader(“Cache-Control”,”no-store”);<br>httpResponse.setDateHeader(“Expires”, 0);<br>httpResponse.setHeader(“Pragma”,”no-cache”);</p>
+</blockquote>
+<p><strong>5.SQL注入漏洞。</strong></p>
+<blockquote>
+<p>解决方案：在数据库访问层中不要使用”+”来拼接SQL语句！如：</p>
+<p>String sql= “SELECT * FROM USERS WHERE 1=1”; if(null !=<br>user.getUserName() \&amp;\&amp; !””.equals(user.getUserName())){<br>sql += “ and UNAME = ‘“+user.getUserName()+”‘“; } 而应使用PreparedStatement。如：</p>
+<p>PreparedStatement pstmt = con.prepareStatement(“SELECT * FROM USERS<br>WHERE UNAME=?”); pstmt.setString(1, “Neeke”);<br>如果项目中使用了Hibernate框架，则推荐使用named parameter。如：</p>
+<p>String queryString = “from Users where uname like :name”; 冒号后面是一个named<br>parameter，我们可以使用Query接口将一个参数绑定到name参数上：</p>
+<p>List result = session.createQuery(queryString)<br>.setString(“name”, user.getUserName())<br>.list();</p>
+</blockquote>
+<p><strong>6.文件上传漏洞。前台仅使用JS对文件后缀做了过滤，这只能针对普通的用户，而恶意攻击者完全可以修改表单去掉JS校验。</strong></p>
+<blockquote>
+<p>解决方案：前台JS过滤加服务器端程序过滤。具体过滤掉哪些文件类型视具体情况而定。</p>
+</blockquote>
+<p><strong>7.可执行脚本漏洞。对用户提交的数据未转义，一些用户提交的含有JavaScript脚本的信息被直接输出到页面中从而被浏览器执行。</strong></p>
+<blockquote>
+<p>解决方案：使用org.apache.commons.lang.StringEscapeUtils对用户提交的数据进行转义。如：</p>
+<p>@RequestMapping(params=”method=addTopic”,method=RequestMethod.POST)<br>public ModelAndView addTopic(HttpServletRequest request,<br>HttpServletResponse response, BbsTopic topic) { BaseAdmin user =<br>(BaseAdmin) request.getSession().getAttribute(Constant.SESSION_USER);<br>topic.setBaseAdmin(user); topic.setTopicDate(new<br>Timestamp(System.currentTimeMillis()));<br>topic.setTopicContent(StringEscapeUtils.escapeHtml(topic.getTopicContent()));<br>topic.setTopicTitle(StringEscapeUtils.escapeHtml(topic.getTopicTitle()));<br>this.bbsTopicService.save(topic); return new ModelAndView(new<br>RedirectView(“<a href="http://bbs.do?method=topicList&amp;bfid=">bbs.do?method=topicList\&amp;bfid=</a>“+ topic.getBfid())); }</p>
+</blockquote>
+<p><strong>8.Java WEB容器默认配置漏洞。如TOMCAT后台管理漏洞，默认用户名及密码登录后可直接上传war文件获取webshell。</strong></p>
+<blockquote>
+<p>解决方案：最好删除，如需要使用它来管理维护，可更改其默认路径，口令及密码。</p>
+</blockquote>
+<p><strong>9.日志，建议增加服务器的访问日志，记录来访者的IP,传递参数，对后台操作用户建立日志，记录操作内容，完善日志记录可以帮助你发现潜在危险，找到已经发生的问题。<br>10.重放攻击<br>11.僵尸网络暴力破解<br>12.登陆表单http明文提交<br>13.千万不要乱用数据类型，使用基本数据类型，少用包装类，包装类容易被攻击，不要用string去接受所有类型数据。原则上：是什么类型就用什么类型去接收。<br>14.通过架构设计，添加一层设置处理http参数。一般都是通过aop来实现.比如：对邮件，手机验证对整数最大值验证，对字符串最大长度验证<br>15.点击劫持，大概有两种方式，一是攻击者使用一个透明的iframe，覆盖在一个网页上，然后诱使用户在该页面上进行操作，此时用户将在不值钱的情况下点击透明的iframe页面，二是攻击者使用一张图片覆盖在网页，遮挡网页原有位置的含义。</strong></p>
+]]></content>
+      <categories>
+        <category>java安全</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+        <tag>sql注入</tag>
+        <tag>上传漏洞</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ELK分布式部署</title>
+    <url>/2023/06/04/ELK%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h2 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍 "></a>一、基本介绍 </h2><h3 id="1-什么是分布式日志"><a href="#1-什么是分布式日志" class="headerlink" title="1. 什么是分布式日志"></a>1. 什么是分布式日志</h3><p>相信大家平时工作中，在生产环境中经常会遇到很多异常，报错信息，需要查看日志信息排查错误，并且这个项目是分布式应用，日志被分散在储存不同的设备上。如果你管理数十上百台服务器，还使用依次登录每台机器的传统方法查阅日志。这样是不是感觉很繁琐和效率低下。所以我们使用集中化的日志管理，分布式日志就是对大规模日志数据进行采集、追踪、处理。</p>
+<p>一般我们需要进行日志分析场景：直接在日志文件中<code>grep</code>、<code>awk</code>就可以获得自己想要的信息。但在规模较大的场景中，此方法效率低下，面临问题包括日志量太大如何归档、文本搜索太慢怎么办、如何多维度查询。需要集中化的日志管理，所有服务器上的日志收集汇总。常见解决思路是建立集中式日志收集系统，将所有节点上的日志统一收集，管理，访问。</p>
+<h3 id="2-ELK-分布式日志"><a href="#2-ELK-分布式日志" class="headerlink" title="2. ELK 分布式日志"></a>2. ELK 分布式日志</h3><p>实际上<code>ELK</code>是三款软件的简称，分别是<code>Elasticsearch</code>、 <code>Logstash</code>、<code>Kibana</code>组成。</p>
+<p><strong>Elasticsearch</strong> 基于<code>java</code>，是个开源分布式搜索引擎，它的特点有：分布式，零配置，自动发现，索引自动分片，索引副本机制，<code>restful</code>风格接口，多数据源，自动搜索负载等。</p>
+<p><strong>Kibana</strong> 基于<code>nodejs</code>，也是一个开源和免费的工具，<code>Kibana</code>可以为<code>Logstash</code>和<code>ElasticSearch</code>提供的日志分析友好的 Web 界面，可以汇总、分析和搜索重要数据日志。</p>
+<p><strong>Logstash</strong> 基于<code>java</code>，是一个开源的用于收集,分析和存储日志的工具。</p>
+<p>下面是<code>ELK</code>的工作原理： <img src="https://imge.ablog168.cn/blog_img/6c83ad78c0d4dc5c665af3d20fb5863f.png" alt="elk"></p>
+<p>假如，我们的项目部署在了 3 台服务器上，一般情况下，3 台全部需要安装 <code>Elasticsearch</code>，作为主节点的服务器上安装 <code>Kibana</code>，其中一个节点服务器上安装 <code>Logstash</code>。</p>
+<p>接下来，我们就来搭建一下。</p>
+<h2 id="二、搭建-ELK"><a href="#二、搭建-ELK" class="headerlink" title="二、搭建 ELK"></a>二、搭建 ELK</h2><p>大家搭建过程中，一定要注意版本之间的对应，如果版本不对应，会出现各种启动报错。</p>
+<p><strong>版本说明：</strong></p>
+<ul>
+<li><code>CentOS 7.9</code></li>
+<li><code>JDK 1.8</code></li>
+<li><code>Elasticsearch-8.0.0</code></li>
+<li><code>Logstash-8.0.0</code></li>
+<li><code>Kibana-8.0.0</code></li>
+</ul>
+<h3 id="1-Elasticsearch"><a href="#1-Elasticsearch" class="headerlink" title="1. Elasticsearch"></a>1. Elasticsearch</h3><h4 id="1-1-、简介"><a href="#1-1-、简介" class="headerlink" title="1.1 、简介"></a>1.1 、简介</h4><p>ElasticSearch是一个基于Lucene的搜索服务器。它提供了一个分布式多用户能力的全文搜索引擎，基于RESTful web接口。Elasticsearch是用Java开发的，并作为Apache许可条款下的开放源码发布，是当前流行的企业级搜索引擎。</p>
+<h4 id="1-2、安装配置"><a href="#1-2、安装配置" class="headerlink" title="1.2、安装配置"></a>1.2、安装配置</h4><p>首先去官网下载：<a href="https://www.elastic.co/cn/downloads/elasticsearch">Download Elasticsearch | Elastic</a>，选择 <code>Linux</code> 版本</p>
+<p><img src="https://imge.ablog168.cn/blog_img/49744b1939f185a34333eb99d3f36c37.png" alt="image-20220221143822296"></p>
+<blockquote>
+<p>PS：官网的下载速度还是挺快的</p>
+</blockquote>
+<p>本次我使用的是虚拟机中的 <code>CentOS 7</code> ，首先将下载下来的 <code>tar</code> 包复制到虚拟机中的 <code>/usr/local</code> 下，</p>
+<ul>
+<li>解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf elasticsearch-8.0.0-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改配置</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/elasticsearch-8.0.0/config/</span><br><span class="line">vim elasticsearch.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">cluster.name:</span> <span class="string">my-application</span></span><br><span class="line"><span class="attr">node.name:</span> <span class="string">node-1</span></span><br><span class="line"><span class="attr">path.data:</span> <span class="string">/home/esuser/data</span>	<span class="comment"># 数据文件存放目录</span></span><br><span class="line"><span class="attr">path.logs:</span> <span class="string">/home/esuser/logs</span>	<span class="comment"># 日志文件存放目录</span></span><br><span class="line"><span class="attr">network.host:</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>			<span class="comment"># 对所有IP开放</span></span><br><span class="line"><span class="attr">http.port:</span> <span class="number">9200</span>					<span class="comment"># 端口号</span></span><br><span class="line"><span class="attr">discovery.seed_hosts:</span> [<span class="string">&quot;192.168.20.105&quot;</span>]</span><br><span class="line"><span class="attr">cluster.initial_master_nodes:</span> [<span class="string">&quot;node-1&quot;</span>]</span><br></pre></td></tr></table></figure>
+<p>注意：<code>path.data</code> 和 <code>path.logs</code> 目录需要自己手动创建出来 <code>mkdir</code></p>
+<blockquote>
+<p>注：这些配置默认是被注释的状态，修改之后打开注释即可</p>
+</blockquote>
+<p>除此之外，因本次我们只是测试学习，所以我们可以把安全相关的配置给关掉，都从 <code>true</code> 改为了 <code>false</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Enable security features</span></span><br><span class="line"><span class="attr">xpack.security.enabled:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">xpack.security.enrollment.enabled:</span> <span class="literal">false</span></span><br><span class="line"><span class="comment"># Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents</span></span><br><span class="line"><span class="attr">xpack.security.http.ssl:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">keystore.path:</span> <span class="string">certs/http.p12</span></span><br><span class="line"><span class="comment"># Enable encryption and mutual authentication between cluster nodes</span></span><br><span class="line"><span class="attr">xpack.security.transport.ssl:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>修改完成后保存退出编辑</p>
+<ul>
+<li>创建 esuser 用户</li>
+</ul>
+<p>因为<code>ElasticSearch</code>不支持<code>Root</code>用户直接操作，因此我们需要创建一个<code>esuser</code>用户</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建用户</span></span><br><span class="line">useradd esuser</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">设置密码</span></span><br><span class="line">passwd esuser</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">赋予用户权限</span></span><br><span class="line">chown -R esuser:esuser /usr/local/elasticsearch-8.0.0</span><br></pre></td></tr></table></figure>
+<h4 id="1-3、启动"><a href="#1-3、启动" class="headerlink" title="1.3、启动"></a>1.3、启动</h4><p>切换用户成 esuser 用户进行操作</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">su esuser</span><br><span class="line">cd /usr/local/elasticsearch-8.0.0/bin</span><br><span class="line">./elasticsearch -d &amp; tail -f /home/esuser/logs/my-application.log 	# 后台启动并查看启动日志</span><br></pre></td></tr></table></figure>
+<p>如果启动没有报错，宿主机浏览器访问地址：<a href="http://192.168.20.105:9200/">http://192.168.20.105:9200/</a></p>
+<p>其中 192.168.20.105 是虚拟机的静态 ip ，访问成功如下图（注意防火墙）</p>
+<p><img src="https://imge.ablog168.cn/blog_img/8b31b024d72761b8a5ad36f989beb84d.png" alt="image-20220221150331066"></p>
+<h3 id="2-Logstash"><a href="#2-Logstash" class="headerlink" title="2. Logstash"></a>2. Logstash</h3><h4 id="2-1、简介"><a href="#2-1、简介" class="headerlink" title="2.1、简介"></a>2.1、简介</h4><p><code>Logstash</code> 是一个开源的服务器端数据处理管道，能够同时从多个来源采集数据，转换数据，然后将数据发送到存储库中，本篇中我们的存储库当然就是<code>ElasticSearch</code> 了。</p>
+<h4 id="2-2、安装配置"><a href="#2-2、安装配置" class="headerlink" title="2.2、安装配置"></a>2.2、安装配置</h4><p>官网下载地址：<a href="https://www.elastic.co/cn/downloads/logstash">Download Logstash Free | Get Started Now | Elastic</a></p>
+<p><img src="https://imge.ablog168.cn/blog_img/4cfc04613f8ac7afc44ddfa261eadc74.png" alt="image-20220221150759334"></p>
+<p>将下载下来的 <code>tar</code> 包复制到虚拟机中的 <code>/usr/local</code> 下，</p>
+<ul>
+<li>解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf logstash-8.0.0-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+<ul>
+<li>新增配置文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/logstash-8.0.0/bin</span><br><span class="line">touch logstash-elasticsearch.conf</span><br><span class="line">vim logstash-elasticsearch.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">input &#123;</span><br><span class="line">	stdin &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">output &#123;</span><br><span class="line">	elasticsearch &#123;</span><br><span class="line">		hosts =&gt; &#x27;192.168.20.105:9200&#x27;</span><br><span class="line">	&#125;</span><br><span class="line">	stdout &#123;</span><br><span class="line">		codec =&gt; rubydebug</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意里面 <code>elasticsearch</code> 的地址</p>
+<h4 id="2-3、启动"><a href="#2-3、启动" class="headerlink" title="2.3、启动"></a>2.3、启动</h4><p>此时是在 root 用户下</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/logstash-8.0.0/bin</span><br><span class="line">nohup ./logstash -f logstash-elasticsearch.conf &amp;		# 后台启动</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：执行后台启动命令，查看 <code>nohup.out</code> 日志时发现有报错，但好像也启动成功了，不影响使用，不用 nohup 则不会报错。</p>
+</blockquote>
+<p>使用 <code>jps</code>查看当前所有 java 进程</p>
+<p><img src="https://imge.ablog168.cn/blog_img/0993d5a2d2ac963f85e82ccf19e2941f.png" alt="image-20220221152813960"></p>
+<p>发现启动成功了。</p>
+<h3 id="3-Kibana"><a href="#3-Kibana" class="headerlink" title="3. Kibana"></a><em>3. Kibana</em></h3><h4 id="3-1、简介"><a href="#3-1、简介" class="headerlink" title="3.1、简介"></a>3.1、简介</h4><p>Kibana 是一款开源的数据分析和可视化平台，它是 Elastic Stack 成员之一，设计用于和 Elasticsearch 协作。您可以使用 Kibana 对 Elasticsearch 索引中的数据进行搜索、查看、交互操作。您可以很方便的利用图表、表格及地图对数据进行多元化的分析和呈现。</p>
+<h4 id="3-2、安装配置"><a href="#3-2、安装配置" class="headerlink" title="3.2、安装配置"></a>3.2、安装配置</h4><p>官网下载地址：<a href="https://www.elastic.co/cn/downloads/kibana">Download Kibana Free | Get Started Now | Elastic</a></p>
+<p><img src="https://imge.ablog168.cn/blog_img/c50267d3fd29500b01612f5fea5e7213.png" alt="image-20220221153019991"></p>
+<p>将下载下来的 <code>tar</code> 包复制到虚拟机中的 <code>/usr/local</code> 下，</p>
+<ul>
+<li>解压</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxvf kibana-8.0.0-linux-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改配置</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/kibana-8.0.0/config/</span><br><span class="line">vim kibana.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port:</span> <span class="number">5601</span>			<span class="comment"># 端口号</span></span><br><span class="line"><span class="attr">server.host:</span> <span class="string">&quot;0.0.0.0&quot;</span>		<span class="comment"># 对所有ip开放访问</span></span><br><span class="line"><span class="attr">server.name:</span> <span class="string">&quot;my-kibana&quot;</span></span><br><span class="line"><span class="attr">elasticsearch.hosts:</span> [<span class="string">&quot;http://192.168.20.105:9200&quot;</span>]		<span class="comment"># es 地址</span></span><br><span class="line"><span class="attr">i18n.locale:</span> <span class="string">&quot;zh-CN&quot;</span>	<span class="comment"># 汉化</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：这些配置默认是被注释的状态，修改之后打开注释即可</p>
+</blockquote>
+<ul>
+<li>kibana 同样不能使用 root 用户启动，所以我们使用前面创建的 esuser 用户，先授权</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">chown -R esuser:esuser /usr/local/kibana-8.0.0</span><br></pre></td></tr></table></figure>
+<h4 id="3-3、启动"><a href="#3-3、启动" class="headerlink" title="3.3、启动"></a>3.3、启动</h4><p>切换到 esuser 用户</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">su esuser</span><br></pre></td></tr></table></figure>
+<p>后台启动</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/usr/local/kibana-8.0.0/bin &amp;</span><br></pre></td></tr></table></figure>
+<p>启动成功，浏览器访问地址：<a href="http://192.168.20.105:5601/">http://192.168.20.105:5601/</a></p>
+<p>出现以下页面，说明启动成功</p>
+<p><img src="https://imge.ablog168.cn/blog_img/80a7581ca2ad6dc1a8210493b9a3e402.png" alt="image-20220221155653678"></p>
+<p>我们点击 <code>适用样例数据</code>，点击添加数据</p>
+<p><img src="https://imge.ablog168.cn/blog_img/1318a1025a55e6440b26bafc5cba50f4.png" alt="image-20220221155825927"></p>
+<p>点击 <code>Discover</code></p>
+<p><img src="https://imge.ablog168.cn/blog_img/b6d45ca7c19e1585a3a264b83cbf163e.png" alt="image-20220221155911850"></p>
+<p>就可以看到样例数据</p>
+<p><img src="https://imge.ablog168.cn/blog_img/ddd06ab10fa3d322db8947a2ba6ad564.png" alt="image-20220221155950150"></p>
+<p>到这里，我们分布式日志所需要的软件都已经安装配置并启动成功</p>
+<p>至于如何使用，感觉还需要一篇文章来写。</p>
+]]></content>
+      <categories>
+        <category>ELK</category>
+      </categories>
+      <tags>
+        <tag>分布式</tag>
+        <tag>微服务</tag>
+        <tag>ELK</tag>
+        <tag>日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>corn表达式动态配置</title>
+    <url>/2023/06/04/cron%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<blockquote>
+<p>由于业务需求，需要提供一个能够让用户动态配置定时任务的入口，定时去同步数据</p>
+</blockquote>
+<p>1、简单的业务处理，直接使用@Scheduled注解就能开启定时任务，例如在方法上@Scheduled(cron = “0 0/1 * * * ?”)，书写cron表达式就能配置定时任务。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 每分钟触发一次</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Scheduled(cron = &quot;0 0/1 * * * ?&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">execEveryDay</span><span class="params">()</span> &#123;</span><br><span class="line">    checkPlan();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2、但是随着业务复杂化，使用注解目前是满足不了动态配置定时任务的，以下代码能够实现cron表达式的动态配置。</p>
+<p>第一步，在启动类新增注解@EnableScheduling</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">testApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(testApplication .class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第二步，编写定时任务类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Lazy(false)</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="meta">@Slf4j</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">OutPutTask</span> <span class="keyword">implements</span> <span class="title class_">SchedulingConfigurer</span> &#123;</span><br><span class="line">	<span class="comment">// 默认的cron表达式</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">cron</span> <span class="operator">=</span> <span class="string">&quot;0 55 23 ? * *&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 定时任务的执行顺序：由上而下按顺序执行，当服务启动时或者定时任务时间到了，先执行业务逻辑，再设置定时任务</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">configureTasks</span><span class="params">(ScheduledTaskRegistrar taskRegistrar)</span> &#123;</span><br><span class="line">        taskRegistrar.addTriggerTask(() -&gt; &#123;</span><br><span class="line">            <span class="comment">// addTriggerTask这一代码块用于当定时任务到了或者服务启动时，执行的业务逻辑</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">// 分布式锁，避免高并发同时执行方法</span></span><br><span class="line">                <span class="type">Boolean</span> <span class="variable">lockStatus</span> <span class="operator">=</span> redisTemplate.opsForValue().setIfAbsent(RedisKeyPrefix.RECORD_OUT_PUT, <span class="keyword">new</span> <span class="title class_">Date</span>(), <span class="number">1</span>, TimeUnit.MINUTES);</span><br><span class="line">                <span class="keyword">if</span> (lockStatus == <span class="literal">null</span> || !lockStatus) &#123;</span><br><span class="line">                    <span class="keyword">return</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                log.info(<span class="string">&quot;产能计算定时任务&#123;&#125;&quot;</span>, <span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line">                <span class="comment">// 这个是自己写的自定义方法</span></span><br><span class="line">                recordOutput();</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            	<span class="comment">// 释放锁</span></span><br><span class="line">                redisTemplate.delete(RedisKeyPrefix.RECORD_OUT_PUT);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, triggerContext -&gt; &#123;</span><br><span class="line">            <span class="comment">// 此代码块用于动态拿到cron表达式并设置定时任务，当定时任务时间到了，就会重新获取cron表达式，重新设置定时任务</span></span><br><span class="line">            cron = <span class="built_in">this</span>.getCronString();</span><br><span class="line">            CronTrigger trigger;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">            	<span class="comment">// 一旦设置，立即生效</span></span><br><span class="line">                trigger = <span class="keyword">new</span> <span class="title class_">CronTrigger</span>(cron);</span><br><span class="line">                <span class="keyword">return</span> trigger.nextExecutionTime(triggerContext);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                <span class="comment">// 如果格式有问题就按默认时间（时间为每天23点55分）</span></span><br><span class="line">                trigger = <span class="keyword">new</span> <span class="title class_">CronTrigger</span>(<span class="string">&quot;0 55 23 ? * *&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> trigger.nextExecutionTime(triggerContext);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 拿到cron表达式</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String <span class="title function_">getCronString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="comment">// 获取时间（当前方法返回的时间格式为yyyy-MM-dd HH:mm:ss）</span></span><br><span class="line">        <span class="type">Date</span> <span class="variable">beginDate</span> <span class="operator">=</span> dictService.getDayOutputBeginTime(<span class="keyword">new</span> <span class="title class_">Date</span>());</span><br><span class="line">        <span class="comment">// 截取分钟和小时</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">hour</span> <span class="operator">=</span> beginDate.toString().substring(<span class="number">11</span>, <span class="number">13</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">min</span> <span class="operator">=</span> beginDate.toString().substring(<span class="number">14</span>, <span class="number">16</span>);</span><br><span class="line">        <span class="comment">// 替换min,hour</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">cron</span> <span class="operator">=</span> <span class="string">&quot;0 min hour ? * *&quot;</span>;</span><br><span class="line">        <span class="keyword">return</span> cron.replaceAll(<span class="string">&quot;min&quot;</span>, min).replaceAll(<span class="string">&quot;hour&quot;</span>, hour);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>然后我们只需要在页面上提供一个能够让用户配置定时任务的入口或者在数据库里配置cron表达式，就能实现动态配置。<br>如果面向的用户懂得cron表达式，也可以直接让用户配置cron表达式也是可以的，省的程序员进行额外的数据处理，只要配置正确，任何处理方式都行，例如：  </p>
+<p>点击确定后，会更新数据库，<strong>当定时任务时间到了，就会触发定时任务机制，重新设置定时任务</strong>。</p>
+]]></content>
+      <categories>
+        <category>corn</category>
+      </categories>
+      <tags>
+        <tag>动态配置</tag>
       </tags>
   </entry>
   <entry>
