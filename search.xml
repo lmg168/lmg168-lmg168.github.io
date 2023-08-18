@@ -123,6 +123,61 @@
       </tags>
   </entry>
   <entry>
+    <title>java项目安全问题</title>
+    <url>/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<p><strong>1.弱口令漏洞</strong></p>
+<blockquote>
+<p>解决方案：最好使用至少6位的数字、字母及特殊字符组合作为密码。数据库不要存储明文密码，应存储MD5加密后的密文，由于目前普通的MD5加密已经可以被破解，最好可以多重MD5加密，或者多种加密方式叠加组合。</p>
+</blockquote>
+<p><strong>2.未使用用户名及密码登录后台可直接输入后台URL登录系统。</strong></p>
+<blockquote>
+<p>解决方案：通过配置filter来过滤掉无效用户的连接请求。</p>
+</blockquote>
+<p><strong>3．JSP页面抛出的异常可能暴露程序信息。有经验的入侵者，可以从JSP程序的异常中获取很多信息，比如程序的部分架构、程序的物理路径、SQL注入爆出来的信息等。</strong></p>
+<blockquote>
+<p>解决方案：自定义一个Exception，将异常信息包装起来不要抛到页面上。</p>
+</blockquote>
+<p><strong>4.合法用户”注销”后，在未关闭浏览器的情况下，点击浏览器”后退”按钮，可从本地页面缓存中读取数据，绕过了服务端filter过滤。</strong></p>
+<blockquote>
+<blockquote>
+<p>解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：</p>
+</blockquote>
+<p>httpResponse.setHeader(“Cache-Control”,”no-cache”);<br>httpResponse.setHeader(“Cache-Control”,”no-store”);<br>httpResponse.setDateHeader(“Expires”, 0);<br>httpResponse.setHeader(“Pragma”,”no-cache”);</p>
+</blockquote>
+<p><strong>5.SQL注入漏洞。</strong></p>
+<blockquote>
+<p>解决方案：在数据库访问层中不要使用”+”来拼接SQL语句！如：</p>
+<p>String sql= “SELECT * FROM USERS WHERE 1=1”; if(null !=<br>user.getUserName() \&amp;\&amp; !””.equals(user.getUserName())){<br>sql += “ and UNAME = ‘“+user.getUserName()+”‘“; } 而应使用PreparedStatement。如：</p>
+<p>PreparedStatement pstmt = con.prepareStatement(“SELECT * FROM USERS<br>WHERE UNAME=?”); pstmt.setString(1, “Neeke”);<br>如果项目中使用了Hibernate框架，则推荐使用named parameter。如：</p>
+<p>String queryString = “from Users where uname like :name”; 冒号后面是一个named<br>parameter，我们可以使用Query接口将一个参数绑定到name参数上：</p>
+<p>List result = session.createQuery(queryString)<br>.setString(“name”, user.getUserName())<br>.list();</p>
+</blockquote>
+<p><strong>6.文件上传漏洞。前台仅使用JS对文件后缀做了过滤，这只能针对普通的用户，而恶意攻击者完全可以修改表单去掉JS校验。</strong></p>
+<blockquote>
+<p>解决方案：前台JS过滤加服务器端程序过滤。具体过滤掉哪些文件类型视具体情况而定。</p>
+</blockquote>
+<p><strong>7.可执行脚本漏洞。对用户提交的数据未转义，一些用户提交的含有JavaScript脚本的信息被直接输出到页面中从而被浏览器执行。</strong></p>
+<blockquote>
+<p>解决方案：使用org.apache.commons.lang.StringEscapeUtils对用户提交的数据进行转义。如：</p>
+<p>@RequestMapping(params=”method=addTopic”,method=RequestMethod.POST)<br>public ModelAndView addTopic(HttpServletRequest request,<br>HttpServletResponse response, BbsTopic topic) { BaseAdmin user =<br>(BaseAdmin) request.getSession().getAttribute(Constant.SESSION_USER);<br>topic.setBaseAdmin(user); topic.setTopicDate(new<br>Timestamp(System.currentTimeMillis()));<br>topic.setTopicContent(StringEscapeUtils.escapeHtml(topic.getTopicContent()));<br>topic.setTopicTitle(StringEscapeUtils.escapeHtml(topic.getTopicTitle()));<br>this.bbsTopicService.save(topic); return new ModelAndView(new<br>RedirectView(“<a href="http://bbs.do?method=topicList&amp;bfid=">bbs.do?method=topicList\&amp;bfid=</a>“+ topic.getBfid())); }</p>
+</blockquote>
+<p><strong>8.Java WEB容器默认配置漏洞。如TOMCAT后台管理漏洞，默认用户名及密码登录后可直接上传war文件获取webshell。</strong></p>
+<blockquote>
+<p>解决方案：最好删除，如需要使用它来管理维护，可更改其默认路径，口令及密码。</p>
+</blockquote>
+<p><strong>9.日志，建议增加服务器的访问日志，记录来访者的IP,传递参数，对后台操作用户建立日志，记录操作内容，完善日志记录可以帮助你发现潜在危险，找到已经发生的问题。<br>10.重放攻击<br>11.僵尸网络暴力破解<br>12.登陆表单http明文提交<br>13.千万不要乱用数据类型，使用基本数据类型，少用包装类，包装类容易被攻击，不要用string去接受所有类型数据。原则上：是什么类型就用什么类型去接收。<br>14.通过架构设计，添加一层设置处理http参数。一般都是通过aop来实现.比如：对邮件，手机验证对整数最大值验证，对字符串最大长度验证<br>15.点击劫持，大概有两种方式，一是攻击者使用一个透明的iframe，覆盖在一个网页上，然后诱使用户在该页面上进行操作，此时用户将在不值钱的情况下点击透明的iframe页面，二是攻击者使用一张图片覆盖在网页，遮挡网页原有位置的含义。</strong></p>
+]]></content>
+      <categories>
+        <category>java安全</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+        <tag>sql注入</tag>
+        <tag>上传漏洞</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown常用语法</title>
     <url>/2023/06/04/Markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<p><br></p>
@@ -318,61 +373,6 @@
       <tags>
         <tag>markdown</tag>
         <tag>语法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java项目安全问题</title>
-    <url>/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<p><strong>1.弱口令漏洞</strong></p>
-<blockquote>
-<p>解决方案：最好使用至少6位的数字、字母及特殊字符组合作为密码。数据库不要存储明文密码，应存储MD5加密后的密文，由于目前普通的MD5加密已经可以被破解，最好可以多重MD5加密，或者多种加密方式叠加组合。</p>
-</blockquote>
-<p><strong>2.未使用用户名及密码登录后台可直接输入后台URL登录系统。</strong></p>
-<blockquote>
-<p>解决方案：通过配置filter来过滤掉无效用户的连接请求。</p>
-</blockquote>
-<p><strong>3．JSP页面抛出的异常可能暴露程序信息。有经验的入侵者，可以从JSP程序的异常中获取很多信息，比如程序的部分架构、程序的物理路径、SQL注入爆出来的信息等。</strong></p>
-<blockquote>
-<p>解决方案：自定义一个Exception，将异常信息包装起来不要抛到页面上。</p>
-</blockquote>
-<p><strong>4.合法用户”注销”后，在未关闭浏览器的情况下，点击浏览器”后退”按钮，可从本地页面缓存中读取数据，绕过了服务端filter过滤。</strong></p>
-<blockquote>
-<blockquote>
-<p>解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：</p>
-</blockquote>
-<p>httpResponse.setHeader(“Cache-Control”,”no-cache”);<br>httpResponse.setHeader(“Cache-Control”,”no-store”);<br>httpResponse.setDateHeader(“Expires”, 0);<br>httpResponse.setHeader(“Pragma”,”no-cache”);</p>
-</blockquote>
-<p><strong>5.SQL注入漏洞。</strong></p>
-<blockquote>
-<p>解决方案：在数据库访问层中不要使用”+”来拼接SQL语句！如：</p>
-<p>String sql= “SELECT * FROM USERS WHERE 1=1”; if(null !=<br>user.getUserName() \&amp;\&amp; !””.equals(user.getUserName())){<br>sql += “ and UNAME = ‘“+user.getUserName()+”‘“; } 而应使用PreparedStatement。如：</p>
-<p>PreparedStatement pstmt = con.prepareStatement(“SELECT * FROM USERS<br>WHERE UNAME=?”); pstmt.setString(1, “Neeke”);<br>如果项目中使用了Hibernate框架，则推荐使用named parameter。如：</p>
-<p>String queryString = “from Users where uname like :name”; 冒号后面是一个named<br>parameter，我们可以使用Query接口将一个参数绑定到name参数上：</p>
-<p>List result = session.createQuery(queryString)<br>.setString(“name”, user.getUserName())<br>.list();</p>
-</blockquote>
-<p><strong>6.文件上传漏洞。前台仅使用JS对文件后缀做了过滤，这只能针对普通的用户，而恶意攻击者完全可以修改表单去掉JS校验。</strong></p>
-<blockquote>
-<p>解决方案：前台JS过滤加服务器端程序过滤。具体过滤掉哪些文件类型视具体情况而定。</p>
-</blockquote>
-<p><strong>7.可执行脚本漏洞。对用户提交的数据未转义，一些用户提交的含有JavaScript脚本的信息被直接输出到页面中从而被浏览器执行。</strong></p>
-<blockquote>
-<p>解决方案：使用org.apache.commons.lang.StringEscapeUtils对用户提交的数据进行转义。如：</p>
-<p>@RequestMapping(params=”method=addTopic”,method=RequestMethod.POST)<br>public ModelAndView addTopic(HttpServletRequest request,<br>HttpServletResponse response, BbsTopic topic) { BaseAdmin user =<br>(BaseAdmin) request.getSession().getAttribute(Constant.SESSION_USER);<br>topic.setBaseAdmin(user); topic.setTopicDate(new<br>Timestamp(System.currentTimeMillis()));<br>topic.setTopicContent(StringEscapeUtils.escapeHtml(topic.getTopicContent()));<br>topic.setTopicTitle(StringEscapeUtils.escapeHtml(topic.getTopicTitle()));<br>this.bbsTopicService.save(topic); return new ModelAndView(new<br>RedirectView(“<a href="http://bbs.do?method=topicList&amp;bfid=">bbs.do?method=topicList\&amp;bfid=</a>“+ topic.getBfid())); }</p>
-</blockquote>
-<p><strong>8.Java WEB容器默认配置漏洞。如TOMCAT后台管理漏洞，默认用户名及密码登录后可直接上传war文件获取webshell。</strong></p>
-<blockquote>
-<p>解决方案：最好删除，如需要使用它来管理维护，可更改其默认路径，口令及密码。</p>
-</blockquote>
-<p><strong>9.日志，建议增加服务器的访问日志，记录来访者的IP,传递参数，对后台操作用户建立日志，记录操作内容，完善日志记录可以帮助你发现潜在危险，找到已经发生的问题。<br>10.重放攻击<br>11.僵尸网络暴力破解<br>12.登陆表单http明文提交<br>13.千万不要乱用数据类型，使用基本数据类型，少用包装类，包装类容易被攻击，不要用string去接受所有类型数据。原则上：是什么类型就用什么类型去接收。<br>14.通过架构设计，添加一层设置处理http参数。一般都是通过aop来实现.比如：对邮件，手机验证对整数最大值验证，对字符串最大长度验证<br>15.点击劫持，大概有两种方式，一是攻击者使用一个透明的iframe，覆盖在一个网页上，然后诱使用户在该页面上进行操作，此时用户将在不值钱的情况下点击透明的iframe页面，二是攻击者使用一张图片覆盖在网页，遮挡网页原有位置的含义。</strong></p>
-]]></content>
-      <categories>
-        <category>java安全</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>sql注入</tag>
-        <tag>上传漏洞</tag>
-        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -1963,9 +1963,15 @@
               </div>
             </details>
 <p><br></p>
-<h3 id="mysql相关"><a href="#mysql相关" class="headerlink" title="mysql相关"></a>mysql相关</h3><details class="folding-tag" cyan><summary> 点击查看 </summary>
+<h3 id="mysql相关cc"><a href="#mysql相关cc" class="headerlink" title="mysql相关cc"></a>mysql相关cc</h3><details class="folding-tag" cyan><summary> 点击查看 </summary>
               <div class='content'>
               <ol><li><p>设置最大连接数</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">SHOW VARIABLES LIKE &#x27;max_connections&#x27;; #查看当前的最大连接数</span><br><span class="line"></span><br><span class="line">SET GLOBAL max_connections=2000; #设置最大连接数</span><br></pre></td></tr></table></figure></li></ol>
+              </div>
+            </details>
+<p><br></p>
+<h3 id="webSocket相关"><a href="#webSocket相关" class="headerlink" title="webSocket相关"></a>webSocket相关</h3><details class="folding-tag" cyan><summary> 点击查看 </summary>
+              <div class='content'>
+              <font color=#0099ff size=5 face="黑体">1、springboot整合webSocket基础Demo</font><hr><p>—<font color=#0099ff size=5 face="黑体"></font></p><ul><li><p>maven依赖</p><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>shenzhanwang<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>Spring-websocket<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-websocket<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.68<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>WebSocketConfig配置类</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.socket.server.standard.ServerEndpointExporter;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * WebScoket配置处理器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">WebSocketConfig</span> &#123;</span><br><span class="line">     <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * ServerEndpointExporter 作用</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * 这个Bean会自动注册使用<span class="doctag">@ServerEndpoint</span>注解声明的websocket endpoint</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> ServerEndpointExporter <span class="title function_">serverEndpointExporter</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ServerEndpointExporter</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>webSocket服务类</p><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.websocket.OnMessage;</span><br><span class="line"><span class="keyword">import</span> javax.websocket.server.ServerEndpoint;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 该注解表示，此类为WebSocket的服务类</span></span><br><span class="line"><span class="meta">@ServerEndpoint(&quot;/webSocket/&#123;id&#125;&quot;)</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">EchoServer</span> &#123;</span><br><span class="line">    <span class="meta">@OnMessage</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">encho</span><span class="params">(String in)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;hello world&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>yaml端口配置</p><figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">server.port</span>=<span class="string">8080</span></span><br></pre></td></tr></table></figure></li></ul><ul><li><p>前端调用方式</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>SseEmitter<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;message&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">var</span> limitConnect = <span class="number">0</span>;</span></span><br><span class="line"><span class="language-javascript"><span class="title function_">init</span>();</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">function</span> <span class="title function_">init</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 8080未默认端口,可自行替换    </span></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">var</span> ws = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(<span class="string">&#x27;ws://localhost:8080/notice/2&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 获取连接状态</span></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;ws连接状态：&#x27;</span> + ws.<span class="property">readyState</span>);</span></span><br><span class="line"><span class="language-javascript"><span class="comment">//监听是否连接成功</span></span></span><br><span class="line"><span class="language-javascript">ws.<span class="property">onopen</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;ws连接状态：&#x27;</span> + ws.<span class="property">readyState</span>);</span></span><br><span class="line"><span class="language-javascript">    limitConnect = <span class="number">0</span>;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//连接成功则发送一个数据</span></span></span><br><span class="line"><span class="language-javascript">    ws.<span class="title function_">send</span>(<span class="string">&#x27;我们建立连接啦&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 接听服务器发回的信息并处理展示</span></span></span><br><span class="line"><span class="language-javascript">ws.<span class="property">onmessage</span> = <span class="keyword">function</span> (<span class="params">data</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;接收到来自服务器的消息：&#x27;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">//完成通信后关闭WebSocket连接</span></span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// ws.close();</span></span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 监听连接关闭事件</span></span></span><br><span class="line"><span class="language-javascript">ws.<span class="property">onclose</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="comment">// 监听整个过程中websocket的状态</span></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;ws连接状态：&#x27;</span> + ws.<span class="property">readyState</span>);</span></span><br><span class="line"><span class="language-javascript"><span class="title function_">reconnect</span>();</span></span><br><span class="line"><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 监听并处理error事件</span></span></span><br><span class="line"><span class="language-javascript">ws.<span class="property">onerror</span> = <span class="keyword">function</span> (<span class="params">error</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(error);</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"><span class="keyword">function</span> <span class="title function_">reconnect</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    limitConnect ++;</span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;重连第&quot;</span> + limitConnect + <span class="string">&quot;次&quot;</span>);</span></span><br><span class="line"><span class="language-javascript">    <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">init</span>();</span></span><br><span class="line"><span class="language-javascript">    &#125;,<span class="number">2000</span>);</span></span><br><span class="line"><span class="language-javascript">   </span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>在线查看是否连接成功：&gt; <a href="http://wstool.jackxiang.com/">websocket/ws/wss在线调试测试工具 (jackxiang.com)</a></p></li><li><p>​    测试结果</p><p><img src="https://imge.ablog168.cn//blog_img/image-20230818162530269.png" alt="image-20230818162530269"></p></li></ul><font color=#0099ff size=5 face="黑体">2、webSocket使用升级——聊天室</font><hr><p>待续…</p>
               </div>
             </details>
 <p><br></p>
