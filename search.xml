@@ -1,61 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>java项目安全问题</title>
-    <url>/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
-    <content><![CDATA[<p><strong>1.弱口令漏洞</strong></p>
-<blockquote>
-<p>解决方案：最好使用至少6位的数字、字母及特殊字符组合作为密码。数据库不要存储明文密码，应存储MD5加密后的密文，由于目前普通的MD5加密已经可以被破解，最好可以多重MD5加密，或者多种加密方式叠加组合。</p>
-</blockquote>
-<p><strong>2.未使用用户名及密码登录后台可直接输入后台URL登录系统。</strong></p>
-<blockquote>
-<p>解决方案：通过配置filter来过滤掉无效用户的连接请求。</p>
-</blockquote>
-<p><strong>3．JSP页面抛出的异常可能暴露程序信息。有经验的入侵者，可以从JSP程序的异常中获取很多信息，比如程序的部分架构、程序的物理路径、SQL注入爆出来的信息等。</strong></p>
-<blockquote>
-<p>解决方案：自定义一个Exception，将异常信息包装起来不要抛到页面上。</p>
-</blockquote>
-<p><strong>4.合法用户”注销”后，在未关闭浏览器的情况下，点击浏览器”后退”按钮，可从本地页面缓存中读取数据，绕过了服务端filter过滤。</strong></p>
-<blockquote>
-<blockquote>
-<p>解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：</p>
-</blockquote>
-<p>httpResponse.setHeader(“Cache-Control”,”no-cache”);<br>httpResponse.setHeader(“Cache-Control”,”no-store”);<br>httpResponse.setDateHeader(“Expires”, 0);<br>httpResponse.setHeader(“Pragma”,”no-cache”);</p>
-</blockquote>
-<p><strong>5.SQL注入漏洞。</strong></p>
-<blockquote>
-<p>解决方案：在数据库访问层中不要使用”+”来拼接SQL语句！如：</p>
-<p>String sql= “SELECT * FROM USERS WHERE 1=1”; if(null !=<br>user.getUserName() \&amp;\&amp; !””.equals(user.getUserName())){<br>sql += “ and UNAME = ‘“+user.getUserName()+”‘“; } 而应使用PreparedStatement。如：</p>
-<p>PreparedStatement pstmt = con.prepareStatement(“SELECT * FROM USERS<br>WHERE UNAME=?”); pstmt.setString(1, “Neeke”);<br>如果项目中使用了Hibernate框架，则推荐使用named parameter。如：</p>
-<p>String queryString = “from Users where uname like :name”; 冒号后面是一个named<br>parameter，我们可以使用Query接口将一个参数绑定到name参数上：</p>
-<p>List result = session.createQuery(queryString)<br>.setString(“name”, user.getUserName())<br>.list();</p>
-</blockquote>
-<p><strong>6.文件上传漏洞。前台仅使用JS对文件后缀做了过滤，这只能针对普通的用户，而恶意攻击者完全可以修改表单去掉JS校验。</strong></p>
-<blockquote>
-<p>解决方案：前台JS过滤加服务器端程序过滤。具体过滤掉哪些文件类型视具体情况而定。</p>
-</blockquote>
-<p><strong>7.可执行脚本漏洞。对用户提交的数据未转义，一些用户提交的含有JavaScript脚本的信息被直接输出到页面中从而被浏览器执行。</strong></p>
-<blockquote>
-<p>解决方案：使用org.apache.commons.lang.StringEscapeUtils对用户提交的数据进行转义。如：</p>
-<p>@RequestMapping(params=”method=addTopic”,method=RequestMethod.POST)<br>public ModelAndView addTopic(HttpServletRequest request,<br>HttpServletResponse response, BbsTopic topic) { BaseAdmin user =<br>(BaseAdmin) request.getSession().getAttribute(Constant.SESSION_USER);<br>topic.setBaseAdmin(user); topic.setTopicDate(new<br>Timestamp(System.currentTimeMillis()));<br>topic.setTopicContent(StringEscapeUtils.escapeHtml(topic.getTopicContent()));<br>topic.setTopicTitle(StringEscapeUtils.escapeHtml(topic.getTopicTitle()));<br>this.bbsTopicService.save(topic); return new ModelAndView(new<br>RedirectView(“<a href="http://bbs.do?method=topicList&amp;bfid=">bbs.do?method=topicList\&amp;bfid=</a>“+ topic.getBfid())); }</p>
-</blockquote>
-<p><strong>8.Java WEB容器默认配置漏洞。如TOMCAT后台管理漏洞，默认用户名及密码登录后可直接上传war文件获取webshell。</strong></p>
-<blockquote>
-<p>解决方案：最好删除，如需要使用它来管理维护，可更改其默认路径，口令及密码。</p>
-</blockquote>
-<p><strong>9.日志，建议增加服务器的访问日志，记录来访者的IP,传递参数，对后台操作用户建立日志，记录操作内容，完善日志记录可以帮助你发现潜在危险，找到已经发生的问题。<br>10.重放攻击<br>11.僵尸网络暴力破解<br>12.登陆表单http明文提交<br>13.千万不要乱用数据类型，使用基本数据类型，少用包装类，包装类容易被攻击，不要用string去接受所有类型数据。原则上：是什么类型就用什么类型去接收。<br>14.通过架构设计，添加一层设置处理http参数。一般都是通过aop来实现.比如：对邮件，手机验证对整数最大值验证，对字符串最大长度验证<br>15.点击劫持，大概有两种方式，一是攻击者使用一个透明的iframe，覆盖在一个网页上，然后诱使用户在该页面上进行操作，此时用户将在不值钱的情况下点击透明的iframe页面，二是攻击者使用一张图片覆盖在网页，遮挡网页原有位置的含义。</strong></p>
-]]></content>
-      <categories>
-        <category>java安全</category>
-      </categories>
-      <tags>
-        <tag>安全</tag>
-        <tag>sql注入</tag>
-        <tag>上传漏洞</tag>
-        <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ELK分布式部署</title>
     <url>/2023/06/04/ELK%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<h2 id="一、基本介绍"><a href="#一、基本介绍" class="headerlink" title="一、基本介绍 "></a>一、基本介绍 </h2><h3 id="1-什么是分布式日志"><a href="#1-什么是分布式日志" class="headerlink" title="1. 什么是分布式日志"></a>1. 什么是分布式日志</h3><p>相信大家平时工作中，在生产环境中经常会遇到很多异常，报错信息，需要查看日志信息排查错误，并且这个项目是分布式应用，日志被分散在储存不同的设备上。如果你管理数十上百台服务器，还使用依次登录每台机器的传统方法查阅日志。这样是不是感觉很繁琐和效率低下。所以我们使用集中化的日志管理，分布式日志就是对大规模日志数据进行采集、追踪、处理。</p>
@@ -175,6 +120,61 @@
         <tag>微服务</tag>
         <tag>ELK</tag>
         <tag>日志</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java项目安全问题</title>
+    <url>/2023/06/04/Java%E9%A1%B9%E7%9B%AE%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<p><strong>1.弱口令漏洞</strong></p>
+<blockquote>
+<p>解决方案：最好使用至少6位的数字、字母及特殊字符组合作为密码。数据库不要存储明文密码，应存储MD5加密后的密文，由于目前普通的MD5加密已经可以被破解，最好可以多重MD5加密，或者多种加密方式叠加组合。</p>
+</blockquote>
+<p><strong>2.未使用用户名及密码登录后台可直接输入后台URL登录系统。</strong></p>
+<blockquote>
+<p>解决方案：通过配置filter来过滤掉无效用户的连接请求。</p>
+</blockquote>
+<p><strong>3．JSP页面抛出的异常可能暴露程序信息。有经验的入侵者，可以从JSP程序的异常中获取很多信息，比如程序的部分架构、程序的物理路径、SQL注入爆出来的信息等。</strong></p>
+<blockquote>
+<p>解决方案：自定义一个Exception，将异常信息包装起来不要抛到页面上。</p>
+</blockquote>
+<p><strong>4.合法用户”注销”后，在未关闭浏览器的情况下，点击浏览器”后退”按钮，可从本地页面缓存中读取数据，绕过了服务端filter过滤。</strong></p>
+<blockquote>
+<blockquote>
+<p>解决方案：配置filter对存放敏感信息的页面限制页面缓存。如：</p>
+</blockquote>
+<p>httpResponse.setHeader(“Cache-Control”,”no-cache”);<br>httpResponse.setHeader(“Cache-Control”,”no-store”);<br>httpResponse.setDateHeader(“Expires”, 0);<br>httpResponse.setHeader(“Pragma”,”no-cache”);</p>
+</blockquote>
+<p><strong>5.SQL注入漏洞。</strong></p>
+<blockquote>
+<p>解决方案：在数据库访问层中不要使用”+”来拼接SQL语句！如：</p>
+<p>String sql= “SELECT * FROM USERS WHERE 1=1”; if(null !=<br>user.getUserName() \&amp;\&amp; !””.equals(user.getUserName())){<br>sql += “ and UNAME = ‘“+user.getUserName()+”‘“; } 而应使用PreparedStatement。如：</p>
+<p>PreparedStatement pstmt = con.prepareStatement(“SELECT * FROM USERS<br>WHERE UNAME=?”); pstmt.setString(1, “Neeke”);<br>如果项目中使用了Hibernate框架，则推荐使用named parameter。如：</p>
+<p>String queryString = “from Users where uname like :name”; 冒号后面是一个named<br>parameter，我们可以使用Query接口将一个参数绑定到name参数上：</p>
+<p>List result = session.createQuery(queryString)<br>.setString(“name”, user.getUserName())<br>.list();</p>
+</blockquote>
+<p><strong>6.文件上传漏洞。前台仅使用JS对文件后缀做了过滤，这只能针对普通的用户，而恶意攻击者完全可以修改表单去掉JS校验。</strong></p>
+<blockquote>
+<p>解决方案：前台JS过滤加服务器端程序过滤。具体过滤掉哪些文件类型视具体情况而定。</p>
+</blockquote>
+<p><strong>7.可执行脚本漏洞。对用户提交的数据未转义，一些用户提交的含有JavaScript脚本的信息被直接输出到页面中从而被浏览器执行。</strong></p>
+<blockquote>
+<p>解决方案：使用org.apache.commons.lang.StringEscapeUtils对用户提交的数据进行转义。如：</p>
+<p>@RequestMapping(params=”method=addTopic”,method=RequestMethod.POST)<br>public ModelAndView addTopic(HttpServletRequest request,<br>HttpServletResponse response, BbsTopic topic) { BaseAdmin user =<br>(BaseAdmin) request.getSession().getAttribute(Constant.SESSION_USER);<br>topic.setBaseAdmin(user); topic.setTopicDate(new<br>Timestamp(System.currentTimeMillis()));<br>topic.setTopicContent(StringEscapeUtils.escapeHtml(topic.getTopicContent()));<br>topic.setTopicTitle(StringEscapeUtils.escapeHtml(topic.getTopicTitle()));<br>this.bbsTopicService.save(topic); return new ModelAndView(new<br>RedirectView(“<a href="http://bbs.do?method=topicList&amp;bfid=">bbs.do?method=topicList\&amp;bfid=</a>“+ topic.getBfid())); }</p>
+</blockquote>
+<p><strong>8.Java WEB容器默认配置漏洞。如TOMCAT后台管理漏洞，默认用户名及密码登录后可直接上传war文件获取webshell。</strong></p>
+<blockquote>
+<p>解决方案：最好删除，如需要使用它来管理维护，可更改其默认路径，口令及密码。</p>
+</blockquote>
+<p><strong>9.日志，建议增加服务器的访问日志，记录来访者的IP,传递参数，对后台操作用户建立日志，记录操作内容，完善日志记录可以帮助你发现潜在危险，找到已经发生的问题。<br>10.重放攻击<br>11.僵尸网络暴力破解<br>12.登陆表单http明文提交<br>13.千万不要乱用数据类型，使用基本数据类型，少用包装类，包装类容易被攻击，不要用string去接受所有类型数据。原则上：是什么类型就用什么类型去接收。<br>14.通过架构设计，添加一层设置处理http参数。一般都是通过aop来实现.比如：对邮件，手机验证对整数最大值验证，对字符串最大长度验证<br>15.点击劫持，大概有两种方式，一是攻击者使用一个透明的iframe，覆盖在一个网页上，然后诱使用户在该页面上进行操作，此时用户将在不值钱的情况下点击透明的iframe页面，二是攻击者使用一张图片覆盖在网页，遮挡网页原有位置的含义。</strong></p>
+]]></content>
+      <categories>
+        <category>java安全</category>
+      </categories>
+      <tags>
+        <tag>安全</tag>
+        <tag>sql注入</tag>
+        <tag>上传漏洞</tag>
+        <tag>运维</tag>
       </tags>
   </entry>
   <entry>
@@ -1987,6 +1987,11 @@
               </div>
             </details>
 <p><br></p>
+<h3 id="TableName注解的表名动态"><a href="#TableName注解的表名动态" class="headerlink" title="@TableName注解的表名动态"></a>@TableName注解的表名动态</h3><details class="folding-tag" cyan><summary> 点击查看 </summary>
+              <div class='content'>
+              <font color=#0099ff size=5 face="黑体">1、使用背景</font><p>一个实体类对应对个表，由于数据表数据量过大，所以有时候不得不对表进行横向拆分拆分为多张表</p><font color=#0099ff size=5 face="黑体">2、实体类</font><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">    <span class="meta">@Data</span></span><br><span class="line">    <span class="meta">@EqualsAndHashCode(callSuper = false)</span></span><br><span class="line">    <span class="meta">@Accessors(chain = true)</span></span><br><span class="line">    <span class="meta">@TableName(&quot;armed_type&quot;)</span><span class="comment">// 这里</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArmedTypeEntity</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">long</span> <span class="variable">serialVersionUID</span> <span class="operator">=</span> <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String id;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">            * 民兵类别名称</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="meta">@TableField(&quot;`name`&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">            * 创建时间</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">        <span class="meta">@TableField(&quot;create_time&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> LocalDateTime createTime;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">            * 创建人id</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">        <span class="meta">@TableField(&quot;user_id&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String userId;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">            * 创建人姓名</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">        <span class="meta">@TableField(&quot;user_name&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@TableField(exist = false)</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">tableName</span> <span class="operator">=</span> <span class="string">&quot;armed_type&quot;</span>;<span class="comment">// 默认值--这里</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><font color=#0099ff size=5 face="黑体">3、配置类</font><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.DbType;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.parsers.DynamicTableNameParser;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.parsers.ITableNameHandler;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.reflection.MetaObject;</span><br><span class="line"><span class="keyword">import</span> org.mybatis.spring.annotation.MapperScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> miemie</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@since</span> 2018-08-10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@MapperScan(&quot;com.example.java.*&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MybatisPlusConfig</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 存储表名</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> ThreadLocal&lt;String&gt; table = <span class="keyword">new</span> <span class="title class_">ThreadLocal</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 分页插件注入</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> PaginationInterceptor <span class="title function_">paginationInterceptor</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="type">PaginationInterceptor</span> <span class="variable">paginationInterceptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PaginationInterceptor</span>();</span><br><span class="line"></span><br><span class="line">        <span class="type">DynamicTableNameParser</span> <span class="variable">dynamicTableNameParser</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DynamicTableNameParser</span>();</span><br><span class="line">        dynamicTableNameParser.setTableNameHandlerMap(<span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, ITableNameHandler&gt;(<span class="number">2</span>) &#123;&#123;</span><br><span class="line">            put(<span class="string">&quot;armed_type&quot;</span>, (metaObject, sql, tableName) -&gt; &#123;</span><br><span class="line">                <span class="type">String</span> <span class="variable">dynamicTableName</span> <span class="operator">=</span> getDynamicTableName(metaObject);</span><br><span class="line">                <span class="keyword">if</span> (!<span class="string">&quot;null&quot;</span>.equals(dynamicTableName))&#123;</span><br><span class="line">                    <span class="keyword">return</span> dynamicTableName;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> table.get();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;&#125;);</span><br><span class="line">        paginationInterceptor.setSqlParserList(Collections.singletonList(dynamicTableNameParser));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> paginationInterceptor;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取元数据里的动态表名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> metaObject 元数据对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 表名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String <span class="title function_">getDynamicTableName</span><span class="params">(MetaObject metaObject)</span>&#123;</span><br><span class="line">        <span class="type">Object</span> <span class="variable">originalObject</span> <span class="operator">=</span> metaObject.getOriginalObject();</span><br><span class="line">        <span class="type">JSONObject</span> <span class="variable">jsonObject</span> <span class="operator">=</span> JSON.parseObject(JSON.toJSONString(originalObject));</span><br><span class="line">        <span class="type">JSONObject</span> <span class="variable">boundSql</span> <span class="operator">=</span> jsonObject.getJSONObject(<span class="string">&quot;boundSql&quot;</span>);</span><br><span class="line">        <span class="type">JSONObject</span> <span class="variable">parameterObject</span> <span class="operator">=</span> boundSql.getJSONObject(<span class="string">&quot;parameterObject&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> String.valueOf(parameterObject.get(<span class="string">&quot;tableName&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置表名</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">setDynamicTableName</span><span class="params">(String tableName)</span>&#123;</span><br><span class="line">        table.set(tableName);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><font color=#0099ff size=5 face="黑体">4、操作表数据时</font><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 查询</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">typeList</span><span class="params">(TypeListDTO dto, BaseReturnDto&lt;Page&lt;TypeListVO&gt;&gt; data)</span> &#123;</span><br><span class="line">       <span class="comment">// 靠着一句区分表</span></span><br><span class="line">       MybatisPlusConfig.setDynamicTableName(<span class="string">&quot;armed_type_1&quot;</span>);<span class="comment">// 这里需要根据业务判断，这里是写死了的</span></span><br><span class="line">       </span><br><span class="line">       IPage&lt;ArmedTypeEntity&gt; iPage = armedTypeServerPlus.page(<span class="keyword">new</span> <span class="title class_">com</span>.baomidou.mybatisplus.extension.plugins.pagination.Page&lt;&gt;());</span><br><span class="line">       List&lt;ArmedTypeEntity&gt; list = iPage.getRecords();</span><br><span class="line">       ArrayList&lt;TypeListVO&gt; dtoList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">       <span class="keyword">for</span>(ArmedTypeEntity entity:list)&#123;</span><br><span class="line">           <span class="type">TypeListVO</span> <span class="variable">vo</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TypeListVO</span>();</span><br><span class="line">           BeanUtils.copyProperties(entity,vo);</span><br><span class="line">           dtoList.add(vo);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       data.setData(<span class="keyword">new</span> <span class="title class_">Page</span>&lt;&gt;(dtoList,<span class="number">10</span>,<span class="number">1</span>,<span class="number">10</span>));</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加-修改一样的</span></span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addType</span><span class="params">(AddTypeDTO dto, BaseReturnDto&lt;String&gt; data)</span> &#123;</span><br><span class="line">       <span class="type">ArmedTypeEntity</span> <span class="variable">entity</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArmedTypeEntity</span>();</span><br><span class="line">       entity.setId(IdUtil.simpleUUID());</span><br><span class="line">       entity.setName(<span class="string">&quot;aaa_&quot;</span>+System.currentTimeMillis());</span><br><span class="line">       entity.setUserId(System.currentTimeMillis()+<span class="string">&quot;&quot;</span>);</span><br><span class="line">       entity.setCreateTime(LocalDateTime.now());</span><br><span class="line">       entity.setUserName(<span class="string">&quot;bbbb&quot;</span>);</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 下面是根据时间来区分表的</span></span><br><span class="line">       <span class="type">LocalDate</span> <span class="variable">now</span> <span class="operator">=</span> LocalDate.now();</span><br><span class="line">       <span class="type">String</span> <span class="variable">day</span> <span class="operator">=</span> <span class="string">&quot;2023-08-31&quot;</span>;</span><br><span class="line">       <span class="type">LocalDate</span> <span class="variable">date</span> <span class="operator">=</span> LocalDate.parse(day, dateDF);</span><br><span class="line">       <span class="keyword">if</span>(now.isBefore(date))&#123;</span><br><span class="line">           entity.setTableName(<span class="string">&quot;armed_type_1&quot;</span>);<span class="comment">// 靠着一句区分表</span></span><br><span class="line">       &#125;</span><br><span class="line">       armedTypeServerPlus.save(entity);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除</span></span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">deleteType</span><span class="params">(List&lt;String&gt; ids, BaseReturnDto&lt;String&gt; data)</span> &#123;</span><br><span class="line">       <span class="comment">// 靠着一句区分表</span></span><br><span class="line">       MybatisPlusConfig.setDynamicTableName(<span class="string">&quot;armed_type&quot;</span>);<span class="comment">// 这里需要根据业务判断，这里是写死了的</span></span><br><span class="line">       </span><br><span class="line">       armedTypeServerPlus.removeByIds(ids);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+              </div>
+            </details>
 <p><br></p>
 <details class="folding-tag" cyan><summary> 点击查看 </summary>
               <div class='content'>
